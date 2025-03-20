@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML/CSS Projects</title>
+	<!--helps support display characters such as japanese  -->
+	<meta charset="UTF-8">
+	<!-- helps ensure website is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="styles.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Honk&display=swap" rel="stylesheet">
+
+<style>
+	
+		iframe{
+			display:block;
+			height:900px;
+		}
+		body{
+			background-color: white;
+		}
+	</style>
+
+</head>
+<body>
+	
+
+	<div id="navbar">
+
+		<div id="nav">
+<!-- it is nested -->
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li>
+					<!-- go to this page and find id called ipsum and go to that part of the page -->
+					<a href="lecture.html#ipsum">Projects</a>
+					<ul>
+						<li><a href="lecture.html#images">ML Projects</a>
+						<ul>
+								<li><a href="">Sub-sub-menu 1</a></li>
+								<li><a href="">Sub-sub-menu 2</a></li>
+								<li><a href="">Sub-sub-menu 3</a></li>
+							</ul>
+						</li>
+						<li><a href="html-css.html">HTML/CSS Projects</a></li>
+						<li><a href="">Research Papers</a></li>
+							
+					</ul>
+				</li>
+				<li><a href="resume/resume.html">Resume</a></li>
+			</ul>
+
+			<div class="clearfloat"></div>
+
+		</div> <!-- #nav -->
+
+	</div> <!-- #navbar -->
+
+	<h1>HTML & CSS Projects</h1>
+    <p>Below is a preview of my ITP 104 project:</p>
+
+    <!-- Iframe to show ../ITP 104/itp104-submissions-AshleyZapata/index.html -->
+    <iframe src="../ITP 104/itp104-submissions-AshleyZapata/index.html" width="100%" height="600px"></iframe>
+
+</body>
+</html>

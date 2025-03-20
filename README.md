@@ -1,2 +1,1 @@
-# personal-website
-Holds my projects, resume, and contact details
+https://ashleyzami.github.io/personal-website/

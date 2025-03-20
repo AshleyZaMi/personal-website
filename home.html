@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<!-- adding the external css -->
+	<link href="styles.css" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Honk&display=swap" rel="stylesheet">
+
+<style>
+
+
+	body{
+/*		background-color: black;*/
+		background-image: url("img/galaxy.jpg");
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: cover;
+
+	}
+	#content-container{
+		width:1100px;
+		height:auto;
+		border:6px solid black;
+		margin-top:60px;
+		margin-bottom: 0px;
+		margin-left:auto;
+		margin-right:auto;
+		background-color: #C8C3C9;
+		position:relative;
+	}
+
+	#about-me-section{
+		width:auto;
+		height:auto;
+		background-color:white;
+	}
+
+	#about-me-content{
+		padding:70px;
+	}
+
+
+	#contact-section{
+		background-color:#C8C3C9;
+		width:auto;
+		height:auto;
+		background-size: cover;
+		background-position: center;
+
+	}
+	#contact-content{
+		padding:25px;
+	}
+
+	#content-container > #about-me-section{
+		border-radius:27.5% 0% 25% 0%;
+	}
+	#content-container > #contact-section{
+		border-radius:0% 0% 100% 0%;
+	}
+	#content-container{
+		border-radius:24.5% 0% 23% 0%;
+	}
+
+	##about-me-section, #contact-section{
+		position:relative;
+	
+	}
+	h1{
+		margin:0px auto;
+/*		padding:30px 10px;*/
+		padding-top:30px;
+		padding-bottom: 0px;
+		border-radius: 0px 0px 0px 0px;
+	}
+	
+		
+	</style>
+
+</head>
+<body>
+	<div id="header">
+		<h1>Ashley Zapata Minero</h1>
+
+	</div>
+
+	<div id="navbar">
+
+		<div id="nav">
+<!-- it is nested -->
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li>
+					<!-- go to this page and find id called ipsum and go to that part of the page -->
+					<a href="lecture.html#ipsum">Projects</a>
+					<ul>
+						<li><a href="lecture.html#images">ML Projects</a>
+						<ul>
+								<li><a href="">Sub-sub-menu 1</a></li>
+								<li><a href="">Sub-sub-menu 2</a></li>
+								<li><a href="">Sub-sub-menu 3</a></li>
+							</ul>
+						</li>
+						<li><a href="html-css.html">HTML/CSS Projects</a></li>
+						<li><a href="">Research Papers</a></li>
+							
+					</ul>
+				</li>
+				<li><a href="resume/resume.html">Resume</a></li>
+			</ul>
+
+			<div class="clearfloat"></div>
+
+		</div> <!-- #nav -->
+
+	</div> <!-- #navbar -->
+
+
+<div id="content-container">
+	<!-- about me seciton -->
+	<div id="about-me-section">
+		<div id="about-me-content">
+			<h1>About Me</h1>
+
+			<!-- <h2 id="ipsum">Ipsum Content</h2> -->
+
+			<p>Hello! I’m Ashley, a junior at USC majoring in Data Science and East Asian Languages and Cultures. I have a strong interest in machine learning and data analytics, especially when it comes to uncovering hidden patterns and relationships in data.</p>
+
+			<p>In addition to my passion for technology, I love exploring the Japanese language and culture, particularly how Japan's robotics industry is rapidly evolving. I also enjoy web development, as it allows for creative expression.</p>
+
+			<p>My projects include ML algorithms, HTML/CSS websites, and research papers on Japanese cultural studies and trends. Feel free to check them out under the Projects tab! </p>
+		</div> <!-- about-me-content-->
+	</div><!-- #about-me -->
+
+
+	<div id="contact-section">
+		<div id="contact-content">
+			<p>Contact me at: </p>
+			<p><a href="@mailto:zapatami@usc.edu">zapatami@usc.edu</a></p>
+		</div><!--contact-content-->
+	</div><!-- contact-section -->	
+
+</div> <!-- #content-container -->
+
+</body>
+</html>
