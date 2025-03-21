@@ -186,40 +186,40 @@
 
 </div> <!-- .project-container -->
 <script>
-      // Add event listeners to all run buttons
-    document.querySelectorAll('.run-button').forEach(button => {
-        button.addEventListener('click', function() {
-            // Get the associated project number
-            const projectNumber = this.getAttribute('data-project');
-            
-            // Find the project images based on the project number
-            const images = document.querySelectorAll(`.project-images[data-project="${projectNumber}"] img`);
-            
-            // Show images
-            images.forEach(image => {
-                image.style.display = 'block';
-            });
-            
-            // Optionally, hide the button after clicking
-            this.style.display = 'none';
-            
-            // Load accuracy from accuracy.txt and display it
-            // Only fetch accuracy for Project 4
-       	if (projectNumber === "4") {
-           fetch('hhttps://raw.githubusercontent.com/AshleyZaMi/personal-website/refs/heads/main/Projects/Project06-Diabetes_Classification/accuracy.txt')
-		  .then(response => {
-		    if (!response.ok) {
-		      throw new Error(`HTTP error! Status: ${response.status}`);
-		    }
-		    return response.text();
-		  })
-		  .then(data => {
-		    document.getElementById('accuracy').innerText = data;
-		  })
-		  .catch(error => console.error('Error fetching accuracy.txt:', error));
-       }
-   });
- });
+  // Add event listeners to all run buttons
+  document.querySelectorAll('.run-button').forEach(button => {
+    button.addEventListener('click', function() {
+      // Get the associated project number
+      const projectNumber = this.getAttribute('data-project');
+      
+      // Find the project images based on the project number
+      const images = document.querySelectorAll(`.project-images[data-project="${projectNumber}"] img`);
+      
+      // Show images
+      images.forEach(image => {
+        image.style.display = 'block';
+      });
+      
+      // Optionally, hide the button after clicking
+      this.style.display = 'none';
+      
+      // Load accuracy from accuracy.txt and display it
+      // Only fetch accuracy for Project 4
+      if (projectNumber === "4") {
+        fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/refs/heads/main/Projects/Project06-Diabetes_Classification/accuracy.txt')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById('accuracy').innerText = data;
+          })
+          .catch(error => console.error('Error fetching accuracy.txt:', error));
+      }
+    });
+  });
 </script>
 
 </body>
