@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fonts, Position Property</title>
+	<title>ML Projects</title>
 	<link href="styles.css" rel="stylesheet">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,18 +46,58 @@
     	font-family: monospace;
     	white-space: pre-wrap;
 }
+	.project-images{
+/*	  	background-color: #f0f0f0*/
+		margin:0 auto;
+		display:block;
+
+	  }
 	  /* Initially hide the images */
 	  .project-images img{
-	  	display:none;
-	  	margin:10px 0;
+/*	  	display:block; /* Ensure image is displayed */
+		display:none;
+		width:100%; /* Allow the image to take the full width of its container */
+		height: auto; /* Maintain aspect ratio */
+		margin:10px 0;
+/*		border: 5px solid red;*/
 	  }
-	  .project-images{
-/*	  	background-color: #f0f0f0*/
-	  }
+	  
 	  #accuracy{
 	  	color:black;
 	  	/*background-color: red;
 	  	display:block;*/
+	  }
+
+	  .thumbnail {
+			margin:0 auto;
+			width: 100%; /* Allow the thumbnail container to take full width */
+			max-width: 750px; /* Set a maximum width for the container to avoid overflow */
+			overflow: hidden;		
+			/* add relative position */
+			position:relative;
+			height: auto;
+			background:none;
+			/*margin-top: 20px;
+    		padding: 10px;
+    		border: 1px solid #ccc;
+    		border-radius: 5px;*/
+		}
+	  .landscape{
+	  	width:100%;
+	  	height:auto;
+	  }
+
+
+	  .output-result-container{
+/*	  	using the same as output*/
+			margin-top: 20px;
+			width:100%;
+			display: block; /* or block depending on your layout */
+    		padding: 10px;
+    		background-color: #f0f0f0;
+    		border: 1px solid #ccc;
+    		border-radius: 5px;
+    		font-family: monospace;
 	  }
 		
 	</style>
@@ -89,7 +129,7 @@
 							
 					</ul>
 				</li>
-				<li><a href="resume/index.html">Resume</a></li>
+				<li><a href="resume/resume.html">Resume</a></li>
 			</ul>
 
 			<div class="clearfloat"></div>
@@ -111,10 +151,16 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="project-images" data-project="1">
-			<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix">
-			<img src="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" alt= "penguins bill flipper by species">
-		</div> <!-- .project-images -->
+		<div class="output-result-container">
+			<div class="project-images" data-project="1">
+				<div class="thumbnail">
+					<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix">
+				</div>
+				<div class="thumbnail">
+					<img src="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" class="landscape" alt= "penguins bill flipper by species">
+				</div>
+			</div> <!-- .project-images -->
+		</div> <!-- .output-result-container -->
 	</div>
 
 	<!-- Project 2 -->
@@ -128,9 +174,13 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="project-images" data-project="2">
-			<img src="MLProjects/Project04-Avocados/avocado.png" alt="Avocado Prices and volume Time Series">
-		</div> <!-- .project-images -->
+		<div class="output-result-container">
+			<div class="project-images" data-project="2">
+				<div class="thumbnail">
+					<img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series">
+				</div>
+			</div> <!-- .project-images -->
+		</div> <!-- .output-result-container -->
 	</div>
 
 	<!-- Project 3 -->
@@ -144,9 +194,13 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="project-images" data-project="3">
-			<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
-		</div> <!-- .project-images -->
+		<div class="output-result-container">
+			<div class="project-images" data-project="3">
+				<div class="thumbnail">
+					<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
+				</div>
+			</div> <!-- .project-images -->
+		</div> <!-- .output-result-container -->
 	</div>
 
 	<!-- Project 4 -->
@@ -160,12 +214,12 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div data-project="4">
-			<h1>Machine Learning Model Details</h1>
-
-    		<p><span id="accuracy"></span></p>
-			
-		</div> <!-- .project-images -->
+		<div class="output-result-container">
+			<div data-project="4">
+	    		<p><span id="accuracy"></span></p>
+				
+			</div> <!-- .project-images -->
+		</div> <!-- .output-result-container -->
 	</div>
 
 	<!-- Project 5 -->
@@ -183,72 +237,78 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="project-images" data-project="5">
-			<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" alt="Diabetes Decision Tree Classification Results">
+		<div class="output-result-container">
+			<div class="project-images" data-project="5">
+				<div class="thumbnail">
+					<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results">
+				</div>
 
-		</div> <!-- .project-images -->
-		<div data-project="5">
-			<p><span id="result"></span></p>
-		</div>
-	</div>
+			</div> <!-- .project-images -->
+
+			<div data-project="5">
+				<p><span id="result"></span></p>
+			</div>
+		</div> <!-- .output-result-container -->
+	</div> 
 
 
 </div> <!-- .project-container -->
 <script>
   // Add event listeners to all run buttons
-  document.querySelectorAll('.run-button').forEach(button => {
-    button.addEventListener('click', function() {
-      // Get the associated project number
-      const projectNumber = this.getAttribute('data-project');
-      
-      // Find the project images based on the project number
-      const images = document.querySelectorAll(`.project-images[data-project="${projectNumber}"] img`);
-      
-      // Show images
-      images.forEach(image => {
-        image.style.display = 'block';
-      });
-      
-      // Optionally, hide the button after clicking
-      this.style.display = 'none';
-      
-      // Load accuracy from accuracy.txt and display it
-      // Fetch and display accuracy for Project 4
-		if (projectNumber === "4") {
-		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project06-Diabetes_Classification/accuracy.txt')
-		    .then(response => {
-		      if (!response.ok) {
-		        throw new Error(`HTTP error! Status: ${response.status}`);
-		      }
-		      return response.text();
-		    })
-		    .then(data => {
-		      document.getElementById('accuracy').innerHTML = data;  // Use innerHTML instead of innerText
-		    })
-		    .catch(error => console.error('Error fetching accuracy.txt:', error));
-		}
-
-		// Fetch and display results for Project 5
-		if (projectNumber === "5") {
-		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
-		    .then(response => {
-		      if (!response.ok) {
-		        throw new Error(`HTTP error! Status: ${response.status}`);
-		      }
-		      return response.text();
-		    })
-		    .then(data => {
-		    // Replace line breaks in the fetched text with <br> tags
-		      const formattedData = data.replace(/\n/g, '<br>');  // Replace \n (newline) with <br>
-		      document.getElementById('result').innerHTML = formattedData;  // Use innerHTML to render the <br> tags
-		     
-		    })
-		    .catch(error => console.error('Error fetching result.txt:', error));
-		}
-
-
+document.querySelectorAll('.run-button').forEach(button => {
+  button.addEventListener('click', function() {
+    // Get the associated project number
+    const projectNumber = this.getAttribute('data-project');
+    
+    // Find the project images based on the project number
+    const images = document.querySelectorAll(`.project-images[data-project="${projectNumber}"] img`);
+    const container = document.querySelector(`.output-result-container[data-project="${projectNumber}"]`);
+    
+    // Show images
+    images.forEach(image => {
+      image.style.display = 'block';
     });
+    
+    if (container) {
+      container.style.display = 'block';
+    }
+    
+    // Optionally, hide the button after clicking
+    button.style.display = 'none';
+    
+    // Fetch and display accuracy for Project 4
+    if (projectNumber === "4") {
+      fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project06-Diabetes_Classification/accuracy.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById('accuracy').innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching accuracy.txt:', error));
+    }
+
+    // Fetch and display results for Project 5
+    if (projectNumber === "5") {
+      fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Format the fetched text with line breaks
+          const formattedData = data.replace(/\n/g, '<br>');
+          document.getElementById('result').innerHTML = formattedData;
+        })
+        .catch(error => console.error('Error fetching results.txt:', error));
+    }
   });
+});
 </script>
 
 </body>
