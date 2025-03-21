@@ -180,7 +180,11 @@
 		
 		<div class="project-images" data-project="5">
 			<img src="Projects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" alt="Diabetes Decision Tree Classification Results">
+
 		</div> <!-- .project-images -->
+		<div data-project="5">
+			<p><span id="result"></span></p>
+		</div>
 	</div>
 
 
@@ -228,7 +232,7 @@
             return response.text();
           })
           .then(data => {
-            document.getElementById('accuracy').innerText = data;
+            document.getElementById('result').innerText = data;
           })
           .catch(error => console.error('Error fetching accuracy.txt:', error));
       }
