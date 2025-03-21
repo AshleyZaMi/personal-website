@@ -233,7 +233,10 @@
 		      return response.text();
 		    })
 		    .then(data => {
-		      document.getElementById('result').innerHTML = data;  // Use innerHTML instead of innerText
+		    // Replace line breaks in the fetched text with <br> tags
+		      const formattedData = data.replace(/\n/g, '<br>');  // Replace \n (newline) with <br>
+		      document.getElementById('result').innerHTML = formattedData;  // Use innerHTML to render the <br> tags
+		     
 		    })
 		    .catch(error => console.error('Error fetching accuracy.txt:', error));
 		}
