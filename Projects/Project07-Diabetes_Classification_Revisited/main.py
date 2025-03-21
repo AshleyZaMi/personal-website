@@ -90,8 +90,8 @@ def main():
     #making a y_prediction based on X_test and comparing that y_prediction to y_test -> using accuracy_score helps us compare both the Gini and entropy model accuracy on new data
     accuracyGini, accuracyEntropy = prediction_and_testingAccuracy(trained_GiniDTree, trained_EntropyDTree, X_test, y_test)
     
-    print("accuracyGini: ", accuracyGini)
-    print("accuracyEntropy:", accuracyEntropy)
+    print("accuracy Gini: ", accuracyGini)
+    print("accuracy Entropy:", accuracyEntropy)
 
 
 
@@ -109,9 +109,19 @@ def main():
     fig.savefig('decisiontrees.png')
 
     #question portion:
-    print("\nQuestion 1: No the resulting models are not the same, as there is a 0.0043 difference in their accuracy.Entropy is shown to have a little bit of a better performance than Gini index, because Entropy had an accuracy score of 0.7273 while Gini had 0.7229.")
+    Question1 = "No the resulting models are not the same, as there is a 0.0043 difference in their accuracy. Entropy is shown to have a little bit of a better performance than Gini index, because Entropy had an accuracy score of 0.7273 while Gini had 0.7229."
+    Question2 = "Based on the accuracy results the Entropy model is the better model, however since the difference is negligible both models roughly perform similarly in this case."
+    print("\nQuestion 1: ", Question1)
+    print("\nQuestion 2: ", Question2)
 
-    print("\nQuestion 2: Based on the accuracy results the Entropy model is the better model, however since the difference is negligible both models roughly perform similarily in this case.")
+    #saving accuracy Gini, accuracy Entropy, Question 1 and Question 2 into a text file
+    # Save accuracy to a text file
+    f = open("results.txt", "w")  # Open the file in write mode
+    f.write(f"Model accuracy Gini: {accuracyGini}\n")  # Write the accuracyGini to the file
+    f.write(f"Model accuracy Entropy: {accuracyEntropy}\n")  # Write the accuracyGini to the file
+    f.write(f"Question 1: {Question1}\n")
+    f.write(f"Question 2: {Question2}\n")
+    f.close()  # Close the file after writing
 
 
 

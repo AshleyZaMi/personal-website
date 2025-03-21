@@ -53,8 +53,8 @@
 	  }
 	  #accuracy{
 	  	color:black;
-	  	background-color: red;
-	  	display:block;
+	  	/*background-color: red;
+	  	display:block;*/
 	  }
 		
 	</style>
@@ -158,7 +158,7 @@
 		<div data-project="4">
 			<h1>Machine Learning Model Details</h1>
 
-    		<p><strong>Model Accuracy:</strong> <span id="accuracy"></span></p>
+    		<p><span id="accuracy"></span></p>
 			
 		</div> <!-- .project-images -->
 	</div>
@@ -218,6 +218,22 @@
           })
           .catch(error => console.error('Error fetching accuracy.txt:', error));
       }
+
+      if (projectNumber === "5") {
+        fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/Projects/Project06-Diabetes_Classification/accuracy.txt')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById('accuracy').innerText = data;
+          })
+          .catch(error => console.error('Error fetching accuracy.txt:', error));
+      }
+
+
     });
   });
 </script>

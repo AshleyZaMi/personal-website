@@ -1,0 +1,4 @@
+Model accuracy Gini: 0.7229437229437229
+Model accuracy Entropy: 0.7272727272727273
+Question 1: No the resulting models are not the same, as there is a 0.0043 difference in their accuracy. Entropy is shown to have a little bit of a better performance than Gini index, because Entropy had an accuracy score of 0.7273 while Gini had 0.7229.
+Question 2: Based on the accuracy results the Entropy model is the better model, however since the difference is negligible both models roughly perform similarly in this case.
