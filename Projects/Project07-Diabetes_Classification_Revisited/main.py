@@ -117,8 +117,8 @@ def main():
     #saving accuracy Gini, accuracy Entropy, Question 1 and Question 2 into a text file
     # Save accuracy to a text file
     f = open("results.txt", "w")  # Open the file in write mode
-    f.write(f"Model accuracy Gini: {accuracyGini}\n")  # Write the accuracyGini to the file
-    f.write(f"Model accuracy Entropy: {accuracyEntropy}\n")  # Write the accuracyGini to the file
+    f.write(f"Model Accuracy Gini: {accuracyGini:.4f}\n")  # Write the accuracyGini to the file
+    f.write(f"Model Accuracy Entropy: {accuracyEntropy:.4f}\n")  # Write the accuracyGini to the file
     f.write(f"Question 1: {Question1}\n")
     f.write(f"Question 2: {Question2}\n")
     f.close()  # Close the file after writing
