@@ -14,6 +14,9 @@
 	/* Add font-face for Black Rose */
 	/* https://www.dafont.com/black-rose.font */
 /*	adding fonts*/
+	html {
+  		scroll-padding-top: 70px; /* Adjust this value to match your navbar height */
+	}
 	body{
 		margin: 0 auto;
 	}
@@ -74,9 +77,11 @@
 					<ul>
 						<li><a href="lecture.html#images">ML Projects</a>
 						<ul>
-								<li><a href="">Sub-sub-menu 1</a></li>
-								<li><a href="">Sub-sub-menu 2</a></li>
-								<li><a href="">Sub-sub-menu 3</a></li>
+								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
+								<li><a href="myProjects.html#project2">Avocados</a></li>
+								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
+								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
+								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
 							</ul>
 						</li>
 						<li><a href="html-css.html">HTML/CSS Projects</a></li>
@@ -97,7 +102,7 @@
 <div class="project-container">
 	<!-- project 1 -->
 	<div class="project">
-		<h3>Project 1 - Pretty Penguins</h3>
+		<h3 id="project1">Project 1 - Pretty Penguins</h3>
 		<p>This project creates a penguin matrix using a nested for loop, where the diagonal (when columns equal rows) displays a histogram. For scatter plots, it compares data on the top and side. The second part filters the data and displays it in separate scatter plots with different colors on the same chart, including legends, titles, and labeled axes for both parts.</p>
 
 		<!-- Button to run Python code -->
@@ -107,14 +112,14 @@
 		<div class="output">Results will be shown here.</div>
 		
 		<div class="project-images" data-project="1">
-			<img src="Projects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix">
-			<img src="Projects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" alt= "penguins bill flipper by species">
+			<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix">
+			<img src="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" alt= "penguins bill flipper by species">
 		</div> <!-- .project-images -->
 	</div>
 
 	<!-- Project 2 -->
 	<div class="project">
-		<h3>Project 2 - Avocados</h3>
+		<h3 id="project2">Project 2 - Avocados</h3>
 		<p>This project uses the avocado.csv dataset to create three plots. The first plot shows raw data, with AveragePrice vs Time and Total Volume vs Time. The second plot aggregates the data by grouping AveragePrice and Total Volume by Date, using a summing function to provide more valuable insights. The AveragePrice is adjusted for incorrect processing. The third plot applies the .rolling() method to the aggregated data to smooth out trends and highlight long-term patterns. A for loop is used to modify the graph for better representation.</p>
 	
 		<!-- Button to run Python code -->
@@ -124,13 +129,13 @@
 		<div class="output">Results will be shown here.</div>
 		
 		<div class="project-images" data-project="2">
-			<img src="Projects/Project04-Avocados/avocado.png" alt="Avocado Prices and volume Time Series">
+			<img src="MLProjects/Project04-Avocados/avocado.png" alt="Avocado Prices and volume Time Series">
 		</div> <!-- .project-images -->
 	</div>
 
 	<!-- Project 3 -->
 	<div class="project">
-		<h3>Project 3 - Diabetes Regression</h3>
+		<h3 id="project3">Project 3 - Diabetes Regression</h3>
 		<p>This project involves building a linear regression model to find the line of best fit. First, data is visually analyzed, and a correlation matrix is created to identify the highest correlated attribute. The least correlated attributes are dropped, and the highest correlation is used as a key feature for the model. The data is then cleaned, and the highest correlated attribute (x) and target data (y) are plotted. A linear regression model is trained using .fit(), with the input data reshaped into a 2D format to be compatible with sklearn. The model predicts the line of best fit, which is then plotted alongside the data with appropriate labels.</p>
 
 		<!-- Button to run Python code -->
@@ -140,13 +145,13 @@
 		<div class="output">Results will be shown here.</div>
 		
 		<div class="project-images" data-project="3">
-			<img src="Projects/Project05-Diabetes Regression/linearRegression.png" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
+			<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
 		</div> <!-- .project-images -->
 	</div>
 
 	<!-- Project 4 -->
 	<div class="project">
-		<h3>Project 4 - Diabetes Classification</h3>
+		<h3 id="project4">Project 4 - Diabetes Classification</h3>
 		<p>This project involves data wrangling steps such as gathering data, removing unusable data, creating a correlation matrix, and splitting the data into feature vectors and targets. It also includes partitioning the data into training and testing sets. For logistic regression, the model is set up, trained, and tested, with predictions made and accuracy evaluated. A set seed is used to ensure consistent training and testing data, preventing randomization in results each time. The final output is the accuracy score of the model.</p>
 
 		<!-- Button to run Python code -->
@@ -165,7 +170,7 @@
 
 	<!-- Project 5 -->
 	<div class="project">
-		<h3>Project 5 - Diabetes Classification Revisited</h3>
+		<h3 id="project5">Project 5 - Diabetes Classification Revisited</h3>
 		<p>In this project, I built a Decision Tree model using both the Gini index and Entropy criteria to compare their effectiveness. I started by wrangling the data—gathering it, removing duplicates, and handling null values. Then, I split the dataset into features (X) and the target variable (y), followed by partitioning them into training and testing sets.</p>
 
 		<p>Next, I created and trained separate Decision Tree models for both Gini and Entropy using .fit() with the respective training data. I visualized the models in a single figure with one row and two columns, labeled according to the feature names and target values ("Yes" for 1 and "No" for 0).</p>
@@ -179,7 +184,7 @@
 		<div class="output">Results will be shown here.</div>
 		
 		<div class="project-images" data-project="5">
-			<img src="Projects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" alt="Diabetes Decision Tree Classification Results">
+			<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" alt="Diabetes Decision Tree Classification Results">
 
 		</div> <!-- .project-images -->
 		<div data-project="5">
@@ -210,7 +215,7 @@
       // Load accuracy from accuracy.txt and display it
       // Fetch and display accuracy for Project 4
 		if (projectNumber === "4") {
-		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/Projects/Project06-Diabetes_Classification/accuracy.txt')
+		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project06-Diabetes_Classification/accuracy.txt')
 		    .then(response => {
 		      if (!response.ok) {
 		        throw new Error(`HTTP error! Status: ${response.status}`);
@@ -225,7 +230,7 @@
 
 		// Fetch and display results for Project 5
 		if (projectNumber === "5") {
-		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/Projects/Project07-Diabetes_Classification_Revisited/results.txt')
+		  fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
 		    .then(response => {
 		      if (!response.ok) {
 		        throw new Error(`HTTP error! Status: ${response.status}`);
@@ -238,7 +243,7 @@
 		      document.getElementById('result').innerHTML = formattedData;  // Use innerHTML to render the <br> tags
 		     
 		    })
-		    .catch(error => console.error('Error fetching accuracy.txt:', error));
+		    .catch(error => console.error('Error fetching result.txt:', error));
 		}
 
 
