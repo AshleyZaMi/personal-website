@@ -70,7 +70,7 @@
 		font-size:71px;
 	}*/
 	h1{
-		font-family: "Gloria Hallelujah", cursive;
+		font-family: Lora, sans-serif;
 		font-size:61px;
 		/*color:rgb(0,204,153);
 		background:rgba(255,255,255,0.8);
@@ -93,8 +93,8 @@
 /*	homework 05 -> height for the row and make classes for the images with their with| or set widths for each image, or set width and height for each images, but the widths cannot exceed the row width. creating thumbanail square then do some overflow hiddens and autoadjust using img 100% that's how you get it to work*/
 
 	h2{
-		font-family: "Honk", system-ui;
-		font-size: 64px;
+		font-family: Lora, sans-serif;
+/*		font-size: 64px;*/
 	}
 	
 		.clearfloat {
