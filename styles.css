@@ -104,8 +104,11 @@
 		
 		#main, #nav {
 			width: 720px;
-			margin: auto;
+			margin:0 auto;
 		}
+	
+		
+
 		.thumbnail {
 			background-color: #CCC;
 			margin: 10px;
@@ -164,8 +167,12 @@
 
 /*			higher number than 0 to keep it at the top, to make the images behind sends priority*/
 			z-index:2;
+/*			border: 3px solid red;*/
+			margin:0 auto;
+			text-align: center; /*this one is used to center the nav li's display*/
 			
 		}
+
 		#header{
 			background-color: #99D0D3;
 			height:150px;
@@ -192,7 +199,8 @@
 			width:170px;
 			line-height:50px;
 /*			border:1px solid red;*/
-			float:left;
+/*			display inline-block allows it to later be centered by using textalign:center in navbar*/
+			display:inline-block;
 			text-align: center;
 			background-color: #99D0D3;
 			position:relative;
