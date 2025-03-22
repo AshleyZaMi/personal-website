@@ -90,9 +90,9 @@
 
 	  .output-result-container{
 /*	  	using the same as output*/
-			margin-top: 20px;
-			width:100%;
-			display: block; /* or block depending on your layout */
+				display:none;
+				margin-top: 20px;
+				width:100%;
     		padding: 10px;
     		background-color: #f0f0f0;
     		border: 1px solid #ccc;
@@ -115,7 +115,7 @@
 					<!-- go to this page and find id called ipsum and go to that part of the page -->
 					<a href="">Projects</a>
 					<ul>
-						<li><a href="lecture.html#images">ML Projects</a>
+						<li><a class="active" href="lecture.html#images">ML Projects</a>
 						<ul>
 								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
 								<li><a href="myProjects.html#project2">Avocados</a></li>
@@ -151,7 +151,7 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="output-result-container">
+		<div class="output-result-container" data-project="1">
 			<div class="project-images" data-project="1">
 				<div class="thumbnail">
 					<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix">
@@ -174,7 +174,7 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="output-result-container">
+		<div class="output-result-container" data-project="2">
 			<div class="project-images" data-project="2">
 				<div class="thumbnail">
 					<img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series">
@@ -194,7 +194,7 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="output-result-container">
+		<div class="output-result-container" data-project="3">
 			<div class="project-images" data-project="3">
 				<div class="thumbnail">
 					<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
@@ -214,7 +214,7 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="output-result-container">
+		<div class="output-result-container" data-project="4">
 			<div data-project="4">
 	    		<p><span id="accuracy"></span></p>
 				
@@ -237,7 +237,7 @@
 		<!-- Output container for displaying results -->
 		<div class="output">Results will be shown here.</div>
 		
-		<div class="output-result-container">
+		<div class="output-result-container" data-project="5">
 			<div class="project-images" data-project="5">
 				<div class="thumbnail">
 					<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results">
@@ -254,7 +254,9 @@
 
 </div> <!-- .project-container -->
 <script>
-  // Add event listeners to all run buttons
+
+
+// 
 document.querySelectorAll('.run-button').forEach(button => {
   button.addEventListener('click', function() {
     // Get the associated project number
@@ -269,9 +271,13 @@ document.querySelectorAll('.run-button').forEach(button => {
       image.style.display = 'block';
     });
     
-    if (container) {
-      container.style.display = 'block';
+    if (projectNumber !== "5"){
+    	// Show the output result container
+    	container.style.display = 'flex';  // Change to 'flex' or 'block' depending on your layout
+    }else{
+    	container.style.display = 'block';
     }
+    
     
     // Optionally, hide the button after clicking
     button.style.display = 'none';
@@ -290,10 +296,10 @@ document.querySelectorAll('.run-button').forEach(button => {
         })
         .catch(error => console.error('Error fetching accuracy.txt:', error));
     }
-
-    // Fetch and display results for Project 5
+    
+    // Fetch and display results for Project 5 (or any other project as needed)
     if (projectNumber === "5") {
-      fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
+    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
         .then(response => {
           if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -306,6 +312,7 @@ document.querySelectorAll('.run-button').forEach(button => {
           document.getElementById('result').innerHTML = formattedData;
         })
         .catch(error => console.error('Error fetching results.txt:', error));
+
     }
   });
 });

@@ -10,6 +10,46 @@
 		font-family:juice;
 		src:url("fonts/OrangejusDemo.ttf");
 	}
+
+	@font-face{
+		font-family:Badly Stamped;
+		src:url("fonts/BadlyStamped.ttf");
+	}
+
+	@font-face{
+		font-family: butter;
+		src:url("fonts/butterbrotpapier.ttf");
+	}
+
+	@font-face{
+		font-family: casa;
+		src:url("fonts/Casadeamor.ttf");
+	}
+
+	@font-face{
+		font-family:three dim;
+		src:url("fonts/Threedimensional.ttf");
+	}
+
+	@font-face{
+		font-family:three dim round;
+		src:url("fonts/ThreedimensionalRound.ttf");
+	}
+
+	@font-face{
+		font-family: three dim right;
+		src:url("fonts/ThreeDimRightwards.ttf");
+	}
+
+	@font-face{
+		font-family: three dim right round;
+		src:url("fonts/ThreeDimRightwardsRound");
+	}
+
+	@font-face{
+		font-family: xero;
+		src:url("fonts/xero4.ttf");
+	}
 		
 	/* Add body font-family, Arial and sans-serif */
 		body {
@@ -161,6 +201,7 @@
 		/* Add #nav li:hover background color of #fc0 */
 		#nav li:hover{
 			background-color: #bddae0;
+			color:red;
 		}
 
 		/* Fix the #nav a tag making block instead of inline, remove underline and make white */
@@ -168,9 +209,16 @@
 			text-decoration: none;
 			color:#2d4140;
 			display:block;
+			text-align: center;
 /*			by default a tags are in line so it's better to use block to get better accesibility when hovering*/
 		}
 		#nav a:hover{
+			background-color: #bddae0;
+			color:red;
+		}
+
+		#nav .active{
+			background-color: #bddae0;
 			color:red;
 		}
 
