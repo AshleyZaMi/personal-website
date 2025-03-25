@@ -108,6 +108,9 @@
 	  #header{
 	  	height: 115px;
 	  }
+	  .color-red{
+	  	color:red;
+	  }
 		
 	</style>
 
@@ -157,6 +160,9 @@
 		<h3 id="project1">Project 1 - Pretty Penguins</h3>
 		<p>This project creates a penguin matrix using a nested for loop, where the diagonal (when columns equal rows) displays a histogram. For scatter plots, it compares data on the top and side. The second part filters the data and displays it in separate scatter plots with different colors on the same chart, including legends, titles, and labeled axes for both parts.</p>
 
+		<!-- Technical -->
+		<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, numpy</em></p>
+
 		<!-- reference to files -->
 		<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project03-pretty_penguins" target="_blank">Click to view Project 1 files</a></p>
 
@@ -182,6 +188,8 @@
 	<div class="project">
 		<h3 id="project2">Project 2 - Avocados</h3>
 		<p>This project uses the avocado.csv dataset to create three plots. The first plot shows raw data, with AveragePrice vs Time and Total Volume vs Time. The second plot aggregates the data by grouping AveragePrice and Total Volume by Date, using a summing function to provide more valuable insights. The AveragePrice is adjusted for incorrect processing. The third plot applies the .rolling() method to the aggregated data to smooth out trends and highlight long-term patterns. A for loop is used to modify the graph for better representation.</p>
+		<!-- Technical -->
+		<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, datetime</em></p>
 
 		<!-- reference to files -->
 		<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project04-Avocados" target="_blank">Click to view Project 2 files</a></p>
@@ -206,6 +214,9 @@
 		<h3 id="project3">Project 3 - Diabetes Regression</h3>
 		<p>This project involves building a linear regression model to find the line of best fit. First, data is visually analyzed, and a correlation matrix is created to identify the highest correlated attribute. The least correlated attributes are dropped, and the highest correlation is used as a key feature for the model. The data is then cleaned, and the highest correlated attribute (x) and target data (y) are plotted. A linear regression model is trained using .fit(), with the input data reshaped into a 2D format to be compatible with sklearn. The model predicts the line of best fit, which is then plotted alongside the data with appropriate labels.</p>
 
+		<!-- Technical -->
+		<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn</em></p>
+
 		<!-- reference to files -->
 		<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project05-Diabetes%20Regression" target="_blank">Click to view Project 3 files</a></p>
 
@@ -228,6 +239,9 @@
 	<div class="project">
 		<h3 id="project4">Project 4 - Diabetes Classification</h3>
 		<p>This project involves data wrangling steps such as gathering data, removing unusable data, creating a correlation matrix, and splitting the data into feature vectors and targets. It also includes partitioning the data into training and testing sets. For logistic regression, the model is set up, trained, and tested, with predictions made and accuracy evaluated. A set seed is used to ensure consistent training and testing data, preventing randomization in results each time. The final output is the accuracy score of the model.</p>
+
+		<!-- Technical -->
+		<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn, joblib</em></p>
 
 		<!-- reference to files -->
 		<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project06-Diabetes_Classification" target="_blank">Click to view Project 4 files</a></p>
@@ -254,6 +268,9 @@
 		<p>Next, I created and trained separate Decision Tree models for both Gini and Entropy using .fit() with the respective training data. I visualized the models in a single figure with one row and two columns, labeled according to the feature names and target values ("Yes" for 1 and "No" for 0).</p>
 
 		<p>To evaluate the models, I generated predictions using .predict() on the test set and calculated their accuracy using accuracy_score from sklearn. This allowed me to compare the two criteria and determine which performed better.</p>
+
+		<!-- Technical -->
+		<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn</em></p>
 
 		<!-- reference to files -->
 		<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project07-Diabetes_Classification_Revisited" target="_blank">Click to view Project 5 files</a></p>
