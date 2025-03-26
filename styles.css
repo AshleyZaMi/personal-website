@@ -251,3 +251,17 @@
 			top:0px;
 		}
 
+		#footer{
+			color:black;
+			background-size:cover;
+			background-color:#99cc99;
+			padding:5px;
+			text-align: center;
+		}
+
+		#footer p{
+			font-family:Lora, sans-serif;
+			font-size: 17px;
+		}
+
+
