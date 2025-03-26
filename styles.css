@@ -174,7 +174,7 @@
 		}
 
 		#header{
-			background-color: #99D0D3;
+			background-color: #cce7e9;
 			height:150px;
 			width:100%;
 			position:static;/* meaning it remains at the top of the page but doesn't scroll with the content.*/
