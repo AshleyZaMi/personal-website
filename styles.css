@@ -157,7 +157,7 @@
 		/* Add z-index */
 /*		wrapper is the navbar*/
 		#navbar{
-			background-color:#99D0D3;
+			background-color:black;
 			/*position fixed keeps it at the top			*/
 			position:fixed;
 /*			makes it fixed by using top,left,right*/
@@ -170,12 +170,12 @@
 /*			border: 3px solid red;*/
 			margin:0 auto;
 			text-align: center; /*this one is used to center the nav li's display*/
-			
 		}
 
 		#header{
-			background-color: #cce7e9;
-			height:150px;
+			padding-top: 20px;
+			background-color: #99D0D3;
+			height:160px;
 			width:100%;
 			position:static;/* meaning it remains at the top of the page but doesn't scroll with the content.*/
 			z-index: 1;
@@ -202,7 +202,7 @@
 /*			display inline-block allows it to later be centered by using textalign:center in navbar*/
 			display:inline-block;
 			text-align: center;
-			background-color: #99D0D3;
+			background-color: black;
 			position:relative;
 		}
 
@@ -215,7 +215,7 @@
 		/* Fix the #nav a tag making block instead of inline, remove underline and make white */
 		#nav a{
 			text-decoration: none;
-			color:#2d4140;
+			color:white;
 			display:block;
 			text-align: center;
 /*			by default a tags are in line so it's better to use block to get better accesibility when hovering*/
