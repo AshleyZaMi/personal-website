@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- adding lightbox path -->
+	<link href="lightbox/css/lightbox.css" rel="stylesheet" />
 
 <style>
 
@@ -249,7 +251,7 @@
 		<div id="about-me-content">
 			<h1>About Me</h1>
 			<div class="floatright">
-				<img  src="img/kaizen_motto_best.png" alt="Japanese motto">
+				<a href="img/kaizen_motto_best.png" data-lightbox="motto" data-title="A word I live by ↑"><img src="img/kaizen_motto_best.png" alt="Japanese motto"></a>
 				<p class="word-caption">A word I live by <i class="fas fa-arrow-up"></i></p>
 			</div>
 
@@ -288,6 +290,9 @@
     }
   });
 </script>
+
+<!-- using Lightbox2,so need the dependency of jquery -->
+	<script src="lightbox/js/lightbox-plus-jquery.js"></script>
 
 
 
