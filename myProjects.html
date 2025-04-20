@@ -19,6 +19,8 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<!-- bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	<!-- adding lightbox path -->
+	<link href="lightbox/css/lightbox.css" rel="stylesheet" />
 
 
 <style>
@@ -248,7 +250,7 @@
 		<!-- CARD 1 -->
 		<div class="col-md-4 d-flex">
 			<div class="card h-100">
-  			<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix">
+  			<a href="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" data-lightbox="project-img" data-title="Project 1 - Palmer Penguins attributes scatterplot matrix"><img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix"></a>
   				<div class="card-body">
     				<h5 class="card-title">Project 1 - Pretty Penguins</h5>
     				<p class="card-text">This project visualizes penguin data using a matrix of histograms and scatter plots, then filters and color-codes the data in labeled scatter plots with legends.</p>
@@ -259,7 +261,7 @@
 <!-- CARD 2 -->
 		<div class="col-md-4 d-flex">
 			<div class="card h-100">
-  			<img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series">
+  			<a href="MLProjects/Project04-Avocados/avocado.png" data-lightbox="project-img" data-title="Project 2 - PAvocado Prices and volume Time Series"><img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series"></a>
   				<div class="card-body">
     				<h5 class="card-title">Project 2 - Avocados</h5>
     				<p class="card-text">This project analyzes avocado sales data by creating three plots: raw data over time, aggregated trends using summed values, and smoothed patterns with a rolling average, with adjustments and loops for improved visualization.</p>
@@ -270,7 +272,7 @@
 <!-- CARD 3 -->
 		<div class="col-md-4 d-flex">
 			<div class="card h-100">
-  			<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
+  			<a href="MLProjects/Project05-Diabetes Regression/linearRegression.png" data-lightbox="project-img" data-title="Project 3 - Diabetes Data: Progression vs BMI(Linear Regression)"><img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)"></a>
   			<div class="card-body">
     				<h5 class="card-title">Project 3 - Diabetes Regression</h5>
     				<p class="card-text">This project builds a linear regression model by analyzing correlations, selecting key features, cleaning data, and training a model to predict and plot the line of best fit with labeled visuals.</p>
@@ -286,7 +288,7 @@
 		<!-- CARD 4 -->
 		<div class="col-md-4 d-flex">
 			<div class="card h-100">
-  			<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
+  			<a href="MLProjects/Project06-Diabetes_Classification/model-accuracy-img.jpg" data-lightbox="project-img" data-title="Project 4 - Diabetes Classification"><img src="MLProjects/Project06-Diabetes_Classification/model-accuracy-img.jpg" class="landscape" alt="Diabetes Classification"></a>
   			<div class="card-body">
     				<h5 class="card-title">Project 4 - Diabetes Classification</h5>
     				<p class="card-text">This project prepares and splits data for logistic regression, trains and tests the model with consistent results using a fixed seed, and evaluates its performance with an accuracy score.</p>
@@ -299,7 +301,7 @@
 			<!-- CARD 5 -->
 		<div class="col-md-4 d-flex">
 			<div class="card h-100">
-  			<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results">
+  			<a href="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" data-lightbox="project-img" data-title="Project 5 - Diabetes Decision Tree Classification Results"><img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results"></a>
   			<div class="card-body">
     				<h5 class="card-title">Project 5 - Diabetes Classification Revisited</h5>
     				<p class="card-text">This project builds and compares Decision Tree models using Gini and Entropy by cleaning data, training both models, visualizing them side by side, and evaluating their accuracy to determine the better-performing criterion.</p>
@@ -351,10 +353,10 @@
 			<div class="output-result-container" data-project="1">
 				<div class="project-images" data-project="1">
 					<div class="thumbnail">
-						<img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix">
+						<a href="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" data-lightbox="project1-img" data-title="Project 1 - Palmer Penguins attributes scatterplot matrix"><img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix"></a>
 					</div>
 					<div class="thumbnail">
-						<img src="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" class="landscape" alt= "penguins bill flipper by species">
+						<a href="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" data-lightbox="project1-img" data-title="Project 1 - penguins bill flipper by species"><img src="MLProjects/Project03-pretty_penguins/penguins_bill_flipper_by_species_sc.png" class="landscape" alt= "penguins bill flipper by species"></a>
 					</div>
 				</div> <!-- .project-images -->
 			</div> <!-- .output-result-container -->
@@ -400,7 +402,7 @@
 			<div class="output-result-container" data-project="2">
 				<div class="project-images" data-project="2">
 					<div class="thumbnail">
-						<img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series">
+						<a href="MLProjects/Project04-Avocados/avocado.png" data-lightbox="project2-img" data-title="Project 2 - PAvocado Prices and volume Time Series"><img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series"></a>
 					</div>
 				</div> <!-- .project-images -->
 			</div> <!-- .output-result-container -->
@@ -447,7 +449,7 @@
 				<div class="output-result-container" data-project="3">
 					<div class="project-images" data-project="3">
 						<div class="thumbnail">
-							<img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)">
+							<a href="MLProjects/Project05-Diabetes Regression/linearRegression.png" data-lightbox="project3-img" data-title="Project 3 - Diabetes Data: Progression vs BMI(Linear Regression)"><img src="MLProjects/Project05-Diabetes Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)"></a>
 						</div>
 					</div> <!-- .project-images -->
 				</div> <!-- .output-result-container -->
@@ -547,7 +549,7 @@
 				<div class="output-result-container" data-project="5">
 					<div class="project-images" data-project="5">
 						<div class="thumbnail">
-							<img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results">
+							<a href="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" data-lightbox="project5-img" data-title="Project 5 - Diabetes Decision Tree Classification Results"><img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results"></a>
 						</div>
 
 					</div> <!-- .project-images -->
@@ -673,6 +675,8 @@ document.querySelectorAll('.run-button').forEach(button => {
 
 	<!-- Bootstrap JS for modal functionality -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- using Lightbox2,so need the dependency of jquery -->
+	<script src="lightbox/js/lightbox-plus-jquery.js"></script>
 
 
 
