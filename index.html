@@ -162,6 +162,10 @@
 		color: #444;
 		margin-top: 5px;
 	}
+	.styling{
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+	}
 	</style>
 	
 	
@@ -179,7 +183,9 @@
 		<div class="content">
 			<h1 class="name-overlay">Ashley Zapata Minero</h1>
 			<div class="text-wrapper">
-				<p>Welcome to my site! Everything here, including the kitsune, is hand-coded with care and creativity. I'm passionate about blending technology, culture, and design ー this site is a reflection of that. I'm so glad you're here ー feel free to take a look around!</p>
+				 <!-- Element to contain animated typing -->
+  			<span class="styling" id="element"></span>
+				<!-- <p>Welcome to my site! Everything here, including the kitsune, is hand-coded with care and creativity. I'm passionate about blending technology, culture, and design ー this site is a reflection of that. I'm so glad you're here ー feel free to take a look around!</p> -->
 			</div>
 
 		</div>
@@ -293,6 +299,18 @@
 
 <!-- using Lightbox2,so need the dependency of jquery -->
 	<script src="lightbox/js/lightbox-plus-jquery.js"></script>
+
+	<!-- CDN -->
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+	<!-- setting up typing animation -->
+	<!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Welcome to my site!', 'Everything here, including the kitsune, is hand-coded with care and creativity.','I\'m passionate about blending technology, culture, and design ー this site is a reflection of that.',' I\'m so glad you\'re here ー feel free to take a look around!'],
+      typeSpeed: 50,
+    });
+  </script>
 
 
 
