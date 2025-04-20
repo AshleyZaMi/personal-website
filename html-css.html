@@ -81,7 +81,7 @@
 	
 
 <!-- NEW NAVBAR-->
-<div id="navbar" class="scrolled">
+<div id="navbar">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -133,8 +133,9 @@
 	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
 
-
+	<div class="comment">
     <p>Below is a preview of my HTML/CSS projects + labs</p>
+  </div>
 
     <!-- Iframe to show ../ITP 104/itp104-submissions-AshleyZapata/index.html -->
     <iframe src="https://ashleyzami.github.io/HTML-CSS-Portfolio/" width="100%" height="auto"></iframe>
@@ -148,7 +149,7 @@
 <script>
 
   $(window).on("scroll", function () {
-    var triggerPoint = $("#header").offset().top;
+    var triggerPoint = $(".comment").offset().top;
     var scrollPosition = $(window).scrollTop();
 
     if (scrollPosition >= triggerPoint) {
