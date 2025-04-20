@@ -8,6 +8,15 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../favicon_io/site.webmanifest">
 <link href="../styles.css" rel="stylesheet">
+<!-- Inter font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<!-- icon font -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 <style>
@@ -21,7 +30,7 @@
 		color:#32312D;
 		font-size:45px;
 		font-weight:bolder;
-		font-style:oblique;
+/*		font-style:oblique;*/
 		text-align: center;
 		margin:0px;
 		
@@ -65,7 +74,7 @@
 
 	}
 
-	.contact{
+	.contact-info{
 		background-color: #F0F4FC;
 		line-height: 1.5;
 		text-align:center;
@@ -142,7 +151,15 @@
 
 <body>
 	
-	<div id="navbar">
+	
+<!-- NEW NAVBAR -->
+<div id="navbar" class="scrolled">
+		<div id="icon-and-nav-wrapper">
+			<div id="icon-wrapper">
+				<a href="../index.html" class="logo">
+					<img src="../img/my_drawn_kitsune.png" alt="kitsune logo">
+				</a>
+			</div>
 
 		<div id="nav">
 <!-- it is nested -->
@@ -150,36 +167,51 @@
 				<li><a href="../index.html">Home</a></li>
 				<li>
 					<!-- go to this page and find id called ipsum and go to that part of the page -->
-					<a href="">Projects</a>
-					<ul>
-						<li><a href="../myProjects.html">ML Projects</a>
-						<ul>
+					<a href="">Projects  <i class="fas fa-chevron-down"></i></a>
+				
+					<ul class="proj-cont">
+						<div class="column">
+						<li><a href="../myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
+						<ul class="sub">
 								<li><a href="../myProjects.html#project1">Pretty Penguins</a></li>
 								<li><a href="../myProjects.html#project2">Avocados</a></li>
 								<li><a href="../myProjects.html#project3">Diabetes Regression</a></li>
 								<li><a href="../myProjects.html#project4">Diabetes Classification</a></li>
 								<li><a href="../myProjects.html#project5">Diabetes Classification Revisited</a></li>
-							</ul>
+						</ul>
 						</li>
-						<li><a href="../html-css.html">HTML/CSS Projects</a></li>
-						<li><a href="../research_papers.html">Research Papers</a></li>
+						</div><!-- .column -->
+						<div class="column">
+							<li><a href="../html-css.html">HTML/CSS Projects <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column -->
+
+						<div class="column">
+							<li><a href="../research_papers.html">Research Papers <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column  -->
 							
 					</ul>
+				
 				</li>
-				<li><a class="active" href="resume.html">Resume</a></li>
+				<li><a class="active" href="resume/resume.html">Resume</a></li>
+				<!-- <div class="contact-wrapper"> -->
+					<li class="contact"><a href="../contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
+				<!-- </div> -->
+
 			</ul>
 
 			<div class="clearfloat"></div>
 
-		</div> <!-- #nav -->
+		</div> <!-- #nav --> 
 
+	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
+
 
 
 <div id ="container">
 	
 
-	<div class="contact">
+	<div class="contact-info">
 			<h1>Ashley Zapata Minero</h1>
 		
 
@@ -216,8 +248,8 @@
 
 		
 		<h2>Projects</h2>
-		<p><span class="dateright">March 2025 - Current</span></p>
-			<p><strong>Personal Portfolio Website</strong> | Creator</p>
+		<p><span class="dateright">March 2025 - <em>Current</em></span></p>
+			<p><strong>Personal Portfolio Website</strong> | <em>Creator</em></p>
 			<ul>
 				<li>Designed and developed a personal portfolio website to showcase machine learning, web development, and research projects.</li>
 				<li>Utilized HTML, CSS, and JavaScript to create a responsive, visually appealing site.</li>
@@ -229,8 +261,8 @@
 			</ul>
 		
 
-		<p><span class="dateright">August 2024 - Current</span></p>
-			<p><strong>Machine Learning Projects</strong> | Creator</p>
+		<p><span class="dateright">August 2024 - <em>Current</em></span></p>
+			<p><strong>Machine Learning Projects</strong> | <em>Creator</em></p>
 			<ul>
 				<li>Created a dedicated section within the personal portfolio to highlight machine learning models, web applications, and data analysis tools.</li>
 			</ul>
@@ -239,7 +271,7 @@
 			
 		<h2>Experience</h2>
 		<p><span class="dateright">June 2021 - August 2021</span></p>
-			<p><strong><em>Tried & True Foundation</em> (Sphero Internship)</strong> | Intern</strong>
+			<p><strong><em>Tried & True Foundation</em> (Sphero Internship)</strong> | <em>Intern</em></strong>
 		</p>
 		<ul>
 			<li>Programmed a spherical robot called sphero to go through a complex maze I created and directed a video.</li>
@@ -264,35 +296,35 @@
 		</ul>
 
 	<h2>Leadership and Involvement</h2>
-	<p><span class="dateright">August 2022 – Current</span></p>
-			<p><strong>USC Language Exchange Program</strong> | Member</p>
+	<p><span class="dateright">August 2022 – <em>Current</em></span></p>
+			<p><strong>USC Language Exchange Program</strong> | <em>Member</em></p>
 			<ul>
 				<li>Exchanged Japanese and English with international students, fostering cross-cultural communication.</li>
 				<li>Built strong interpersonal skills by engaging in semester-long discussions with students and professionals.</li>
 			</ul>
 
-	<p><span class="dateright">January 2024 – Current</span></p>
-			<p><strong>Japanese Student Association</strong> | Member</p>
+	<p><span class="dateright">January 2024 – <em>Current</em></span></p>
+			<p><strong>Japanese Student Association</strong> | <em>Member</em></p>
 			<ul>
 				<li>Participated in language and cultural events, including the Undoukai Sports Festival with 13 other universities.</li>
 				<li>Engaged in language cafes to enhance Japanese proficiency in a community setting.</li>
 			</ul>
 
-	<p><span class="dateright">January 2024 – Current</span></p>
-			<p><strong>Chanoyu Tea Club</strong> | Member</p>
+	<p><span class="dateright">January 2024 – <em>Current</em></span></p>
+			<p><strong>Chanoyu Tea Club</strong> | <em>Member</em></p>
 			<ul>
 				<li>Practiced Japanese tea ceremony etiquette and deepened understanding of traditional customs.</li>
 			</ul>
 
 	<p><span class="dateright">August 2018-June 2022</span></p>
-			<p><strong>M.E.S.A</strong> | Secretary</p>
+			<p><strong>M.E.S.A</strong> | <em>Secretary</em></p>
 			<ul>
 				<li>Led participation in Civil Structures and Coding Solutions competitions, applying engineering and programming skills.</li>
 				<li>Designed a bridge structure prototype with a team, exploring innovative designs for future infrastructure. </li>
 			</ul>
 
 		<p><span class="dateright">June 2021-August 2021</span></p>
-			<p><strong>Project PAWS</strong> | Co-Founder </p>
+			<p><strong>Project PAWS</strong> | <em>Co-Founder</em> </p>
 			<ul>
 				<li>Partnered with local animal rescues and raised $350 in donations to support shelters.</li>
 			</ul>
@@ -307,7 +339,15 @@
 	<p>© 2025 Ashley Zapata Minero</p>
 
 </div> <!-- #footer-->
-
+ <!-- jquery script to change nav bar to white-->
+<script>
+	$(window).scroll(function () {
+	  if ($(this).scrollTop() > 50) {
+	    $('#navbar').addClass('scrolled');
+	  }
+	  // Don't remove the class when scrolled to the top
+	});
+ </script>
 </body>
 
 </html>

@@ -50,15 +50,20 @@
 		font-family: xero;
 		src:url("fonts/xero4.ttf");
 	}
-		
-	/* Add body font-family, Arial and sans-serif */
-		body {
-			line-height:2;
-/*		arial is part of sans-serif	*/
-			font-family:arial,sans-serif;
-			background-color: #FCE0D5;
-			margin:0 auto;
-		}
+
+
+
+	body{
+		background-color: #99D0D3;
+		background-image: url("img/galaxy.jpg");
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: cover;
+		margin:0 auto;
+		line-height: 2;
+		font-family: 'Inter',sans-serif;
+
+	}
 
 	/* Set a font-family, first Starbucks then Impact, serif for h1 */
 	/* Add font-weight and font-size of 35px */
@@ -97,171 +102,506 @@
 /*		font-size: 64px;*/
 	}
 	
-		.clearfloat {
-			clear: both;
-		}
+	.clearfloat {
+		clear: both;
+	}
+	#main, #nav{
+		width:750px;
 		
-		
-		#main, #nav {
-			width: 720px;
-			margin:0 auto;
-		}
+	}
+	p{
+		font-family:Lora, sans-serif;
+		font-size: 20px;
+	}
+
+	.thumbnail {
+		background-color: #CCC;
+		margin: 10px;
+		width: 220px;
+		height: 220px;
+		float: left;
+		overflow: hidden;		
+		/* add relative position */
+		position:relative;
+	}
 	
+	/* Style the overlay using absolute and adjusting top,left,right,bottom */
+
+	/* Add the overlay hover effect */
 		
+	.thumbnail > img {
+		width: auto;
+		height: 100%;
+	}
+	.thumbnail > .width-100 {
+		width: 100%;
+		height: auto;
+	}
+	.overlay{
+/*		50 is 50%*/
+		background:#00000070;
+		color:white;
+		position:absolute;
+		top:0px;
+		right:0px;
+		left:0px;
+		bottom:0px;
+		text-align: center;
+		padding-top:80px;
+		visibility:hidden;
 
-		.thumbnail {
-			background-color: #CCC;
-			margin: 10px;
-			width: 220px;
-			height: 220px;
-			float: left;
-			overflow: hidden;		
-			/* add relative position */
-			position:relative;
-		}
-		
-		/* Style the overlay using absolute and adjusting top,left,right,bottom */
+	}
 
-		/* Add the overlay hover effect */
-		
-		.thumbnail > img {
-			width: auto;
-			height: 100%;
-		}
-		.thumbnail > .width-100 {
-			width: 100%;
-			height: auto;
-		}
-		.overlay{
-/*			50 is 50%*/
-			background:#00000070;
-			color:white;
-			position:absolute;
-			top:0px;
-			right:0px;
-			left:0px;
-			bottom:0px;
-			text-align: center;
-			padding-top:80px;
-			visibility:hidden;
-
-		}
-
-		.thumbnail:hover .overlay{
-			visibility: visible;
-		}
-
+	.thumbnail:hover .overlay{
+		visibility: visible;
+	}
 
 		
-		/* Style the #navbar, make fixed, set top left and right to 0 */
-		/* Add z-index */
-/*		wrapper is the navbar*/
-		#navbar{
-			background-color:black;
-			/*position fixed keeps it at the top			*/
-			position:fixed;
-/*			makes it fixed by using top,left,right*/
-			top:0;
-			left:0;
-			right:0;
+/*	overwritting nav bar*/
+	#navbar{
+		background-color:rgba(0, 36, 64, 0);
+		/*	adding transition to ease in and not appear harsh	*/
+		transition: background-color 0.8s ease;
+		/*position fixed keeps it at the top			*/
+		position:fixed;
+/*	     makes it fixed by using top,left,right*/
+		top:0;
+		left:0;
+		right:0;
 
-/*			higher number than 0 to keep it at the top, to make the images behind sends priority*/
-			z-index:2;
-/*			border: 3px solid red;*/
-			margin:0 auto;
-			text-align: center; /*this one is used to center the nav li's display*/
-		}
+/*		higher number than 0 to keep it at the top, to make the images behind sends priority*/
+		z-index:4;
+/*		border: 3px solid red;*/
+		margin:0 auto;
+		text-align: center; /*this one is used to center the nav li's display*/
+	}
 
-		#header{
-			padding-top: 20px;
-			background-color: #99D0D3;
-			height:160px;
-			width:100%;
-			position:static;/* meaning it remains at the top of the page but doesn't scroll with the content.*/
-			z-index: 1;
-			text-align: center;
+/*	#header{
+		padding-top: 20px;
+		background-color: #99D0D3;
+		height:160px;
+		width:100%;
+		position:static;meaning it remains at the top of the page but doesn't scroll with the content.
+		z-index: 1;
+		text-align: center;
+	}*/
 
-		}
 
-		/* Style #nav ul, removing bullets and no margins or paddings */
+/* Style #nav ul, removing bullets and no margins or paddings */
 /*		all the uls inside of nav took care of all the nested uls*/
-		#nav ul{
-/*			by deafault have margins and border*/
-			list-style-type: none;
-			margin:0;
-			padding:0;
-		}
+	#nav ul{
+/*		by deafault have margins and border*/
+		list-style-type: none;
+		margin:0;
+		padding:0;
+/*		border:4px solid blue;*/
+	}
 		
-		/* Style #nav li, make relative, float left and set width and line height and center */
-		/* Calculate width 720px / 4 = 180px */
-		/* Add background color, same as #navbar */
-		#nav li{
-			width:170px;
-			line-height:50px;
-/*			border:1px solid red;*/
-/*			display inline-block allows it to later be centered by using textalign:center in navbar*/
-			display:inline-block;
-			text-align: center;
-			background-color: black;
-			position:relative;
-		}
 
-		/* Add #nav li:hover background color of #fc0 */
-		#nav li:hover{
-			background-color: #bddae0;
-			color:red;
-		}
+	#nav li{
+		background-color: rgba(0, 36, 64, 0);
+		font-family: 'Inter', sans-serif;
+		width:170px;
+		line-height:50px;
+		display:inline-block;
+		text-align: center;
+		position:relative;
+	}
+	
+	/* Add #nav li:hover background color of #fc0 */
+	#nav li:hover{
+		background-color: aliceblue;
+		color:red; /*MIGHT REMOVE THIS*/
+	}
 
-		/* Fix the #nav a tag making block instead of inline, remove underline and make white */
-		#nav a{
-			text-decoration: none;
-			color:white;
-			display:block;
-			text-align: center;
-/*			by default a tags are in line so it's better to use block to get better accesibility when hovering*/
-		}
-		#nav a:hover{
-			background-color: #bddae0;
-			color:red;
-		}
+/* Fix the #nav a tag making block instead of inline, remove underline and make white */
+	#nav a{
+		font-family: 'Inter', sans-serif;
+		text-decoration: none;
+		color:white;
+		display: block;
+		text-align: center;
+/*		by default a tags are in line so it's better to use block to get better accesibility when hovering*/
 
-		#nav .active{
-			background-color: #bddae0;
-			color:red;
-		}
+	}
+	#nav a:hover{
+		background-color:aliceblue;
+		color:black;
+		
+	}
 
-		/* Style #nav ul ul using visibility and absolute */
+	#nav .active{
+		background-color:rgba(0, 36, 64, 0.4);
+		color:red;
+	}
+	/* Style #nav ul ul using visibility and absolute */
 		/* Adjust the top based on line-height set in #nav li */
 /*		the second ul */
-		#nav ul ul{
-/*			going to be hidden but when hover will be, confused if only absolute, the parent is li*/
-			visibility: hidden;
-			position:absolute;
-		}
+	#nav ul ul{
+/*		going to be hidden but when hover will be, confused if only absolute, the parent is li*/
+		visibility: hidden;
+		position:absolute;
+		opacity: 0;
+		top: 100%;
+		left:0;
+		transition: opacity 0.3s ease;
+		z-index: 4;
+	}
 
-		/* Show #nav li:hover > ul */
+	/* Show #nav li:hover > ul */
 /*		when hover over where ul going to  visible*/
-		#nav li:hover > ul{
-			visibility: visible;
-		}
+	#nav li:hover > ul{
+		visibility: visible;
+		opacity: 1;
+	}
 		
-		/* Set left and top for #nav ul ul ul */
-		#nav ul ul ul{
-			left:170px;
-			top:0px;
+	#nav li {
+		position: relative;
+	}
+
+	#navbar:hover{
+		background-color:white;
+	}
+
+	#footer{
+		color:black;
+		background-size:cover;
+		background-color:#99cc99;
+		padding:5px;
+		text-align: center;
+	}
+
+	#footer p{
+		font-family:Lora, sans-serif;
+		font-size: 17px;
+	}
+
+
+
+/*	changing the icon's color*/
+	#navbar:hover #icon-wrapper{
+		background-color:#DDEFFC;
+		border-radius: 100%;
+	}
+
+	#navbar:hover .active{
+		background-color: #DDEFFC;
+		color:red !important;
+	}
+	
+
+	/*	new*/
+	/* Prevent Contact Me button from turning white on navbar hover */
+	#navbar:hover .contact a {
+		background-color: #009CDE !important;
+		color: white;
+	}
+
+	/* Make the active contact item red */
+	#navbar .contact.active a {
+		background-color: #33b8f1;
+		color: red;
+	}
+
+
+
+	/* Make ML, HTML/CSS, and Research Projects default to black */
+	.proj-cont .column > li > a {
+		color: black !important;
+	}
+	.proj-cont:hover .column > li > a {
+		height:100%;
+	}
+
+	/* Ensure active links override the hover color - this one changes the contact to the active color */
+	#navbar #nav li.active a {
+    	background-color: #33b8f1 !important;
+    	color: red !important; /* This should always be red when active */
+	}
+
+	/* Keep other nav links blue on navbar hover */
+	#navbar:hover #nav li:not(.contact) a {
+		color: #0095d0;
+	}
+/*
+	body{
+		background-color: #99D0D3;
+		background-image: url("img/galaxy.jpg");
+		background-repeat: no-repeat;
+		background-position:center;
+		background-size: cover;
+
+	}*/
+
+	.media-container{
+		position:relative;
+		width:100%;
+		height:70vh;
+		overflow:hidden;
+
+	}
+	video{
+		position:absolute;
+		top:50%;
+		left:50%;
+		min-width:100%;
+		min-height:100%;
+/*		transform:translate(-50%,-60%) rotate(-90deg);*/
+		transform:translate(-50%,-60%);
+		object-fit:cover;
+		z-index:1;
+		animation: scrollVidPosition 61s linear infinite;
+	}
+
+	/*	using this for the image to have animation-> sort of same as video*/
+	.media-container img{
+		position:absolute;
+		top:50%;
+		left:50%;
+		min-width:100%;
+		min-height:100%;
+/*		transform:translate(-50%,-60%) rotate(-90deg);*/
+		transform:translate(-50%,-50%);
+		object-fit:cover;
+		z-index:1;
+/*		animation: scrollVidPosition 61s linear infinite;*/
+	
+	}
+
+	.media_overlay{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background-color: rgba(0, 36, 64, 0.7); /* deep navy blue with strong opacity */
+		/*mix-blend-mode: multiply; /* Helps darken the underlying video further */
+		z-index: 2;
+/*		border: 2px solid black;*/
+	}
+/*this is what goes over the video overlay such as text so it is needed in all*/
+	.content{
+		position:relative;
+		z-index:3;
+		color:white;
+		text-align: center;
+		top:40%;
+	}
+
+/*action for the video*/
+	@keyframes scrollVidPosition{
+		0% {
+			object-position: center -200px;
+		}
+		9%{
+			object-position: center -100px;
 		}
 
-		#footer{
-			color:black;
-			background-size:cover;
-			background-color:#99cc99;
-			padding:5px;
-			text-align: center;
+		17%{
+			object-position: center -300px;
 		}
 
-		#footer p{
-			font-family:Lora, sans-serif;
-			font-size: 17px;
+
+
+		40%{
+			object-position: center 70px;
 		}
 
+
+		60%{
+			object-position: center 150px;
+		}
+
+		70% {
+			object-position: center 250px;
+		}
+		75%{
+			object-position: center 300px;
+		}
+		80% {
+			object-position: center 350px;
+		}
+		90%{
+			object-position: center 370px;
+		}
+		100%{
+			object-position: center 420px;
+		}
+	}
+
+/*could be also used in others like Machine Learning*/
+	.name-overlay{
+		font-size: 48px;
+  		font-family: 'Lora', serif;
+  		color: white;
+  		margin-bottom: 10px;
+  		text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  		animation: fadeIn 3s ease-in-out;
+
+	}
+
+/*this one is is used to also in nav*/
+	@keyframes fadeIn {
+		from { 
+			opacity: 0; transform: translateY(10px); 
+		}
+		to {
+		 	opacity: 1; transform: translateY(0); 
+		}
+}
+	.proj-cont{
+		height:auto;
+		width:627px;
+/*		border:3px solid green;*/
+		padding:0px;
+		background-color: white;
+		animation:height 0.8s ease;
+
+	}
+	.column{
+		display:inline-block;
+		width: 200px;
+		height:auto;
+		margin:0;
+/*		border:3px solid black;*/
+		animation:height 0.8s ease;
+
+	}
+
+	#nav ul .bigger{
+		display:block;
+		width:537px;
+		height:350px;
+		background-color: white;
+		margin:0 auto;
+/*		border: 5px solid green;*/
+	}
+	
+	#nav ul .bigger .sub li{
+		display:block;
+		background-color: white;
+	}
+	
+	.contact{
+		border-radius: 10px;
+		margin-left:25px;
+		background-color: #4BA1E0;
+/*		border:2px solid black;*/
+	}
+	.contact a {
+		display: block;
+/*		padding: 10px 20px;*/
+		background-color: #4BA1E0;
+		border-radius: 10px;
+		
+	}
+
+/*also used*/
+	.logo img{
+		height:56px;
+	}
+
+	#icon-wrapper{
+		width:60px;
+		height:60px;
+/*		border:2px solid limegreen;*/
+		display:block;
+		margin-right:120px;
+		border-radius: 100%;
+/*		margin:20px 0px 0px 0px;*/
+		transition: background-color 0.8s ease;
+
+	}
+
+	#icon-and-nav-wrapper{
+		width:1000px;
+/*		border:2px solid white;*/
+		display:flex;
+		margin:20px auto 0px auto;
+	}
+
+/*	new*/
+
+	/* Hide the submenu by default */
+	.proj-cont .sub {
+		display: none;
+		position: absolute;
+		top: 100%; /*puts it below the parent li */
+		left: 0;
+		background-color: white;
+		padding: 10px;
+		border: 1px solid #ccc;
+		z-index: 10;
+	}
+
+	/* Show submenu on hover */
+	.proj-cont li:hover > .sub {
+		display: block;
+	}
+
+	/* extra: submenu item styles */
+	.proj-cont .sub li {
+		padding: 5px 10px;
+		white-space: nowrap;
+	}
+
+	.proj-cont .sub li a {
+		color: #003366;
+	}
+
+	.proj-cont .sub li a:hover {
+		color: #009CDE;
+		background-color: aliceblue;
+	}
+
+
+	.proj-cont .sub {
+  		min-width: 220px; /* making it the min width */
+	}
+
+	.proj-cont .sub li a {
+		font-size: 15px; /* making it slightly smaller */
+/*  		display: block;*/
+  		white-space: normal; /* allow wrapping if needed */
+  		padding: 8px 12px;
+	}
+
+	.proj-cont .sub {
+  		padding: 10px;
+  		box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  		border-radius: 8px;
+	}
+
+
+/*jquery code*/
+	#navbar.scrolled {
+	  background-color: white !important;
+	}
+
+	/* Keep nav link colors consistent */
+	#navbar.scrolled #nav li:not(.contact) a {
+	  color: #0095d0;
+	}
+
+	/* Keep the active link visible */
+	#navbar.scrolled .active {
+	  background-color: #DDEFFC !important;
+	  color: red !important;
+	}
+
+	/* Fix contact button */
+	#navbar.scrolled .contact a {
+	  background-color: #009CDE !important;
+	  color: white !important;
+	}
+
+	/* Fix logo wrapper background */
+	#navbar.scrolled #icon-wrapper {
+	  background-color: #DDEFFC !important;
+	}
+
+/*	#navbar .active {
+  		background-color: #DDEFFC !important;
+  		color: red !important;
+	}*/
 

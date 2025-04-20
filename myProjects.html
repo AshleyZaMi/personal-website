@@ -13,16 +13,22 @@
 	<link rel="manifest" href="favicon_io/site.webmanifest">
 	 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon font -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style>
 	/* Add font-face for Black Rose */
 	/* https://www.dafont.com/black-rose.font */
 /*	adding fonts*/
 	html {
-  		scroll-padding-top: 70px; /* Adjust this value to match your navbar height */
+  		scroll-padding-top: 90px; /* Adjust this value to match your navbar height */
 	}
 	body{
 		margin: 0 auto;
+		background-color: ghostwhite;
+		background-image: none;
 	}
 	.project-container{
 		width:750px;
@@ -118,16 +124,60 @@
 	  	color:red;
 	  }
 
+
+/*	changing the height*/
+	.media-container{
+		height:80vh;
+		overflow: hidden;
+	}
+
+	.media-container img{
+		object-fit: cover;
+		width:100%;
+		height:100%;
+		display: block;
+	}
+	.text-wrapper{
+		padding-left:50px;
+		padding-right: 50px;
+		text-align: center;
+		margin:0 auto;
+		max-width: 800px;
+	}
+	.media-overlay{
+		background-color: rgba(0, 0, 0, 0.4); /* making background a bit darker to make the text standout */
+	}
+
+
 		
 	</style>
 
 </head>
 <body>
-	<div id="header">
-		<h1>Machine Learning Projects </h1>
-	</div>
+	<div class="media-container">
+		<img src="img/arduino_robot.jpg" alt="programming picture">
+		<div class="media_overlay"></div>
+		<div class="content">
+			<h1 class="name-overlay">Machine Learning Projects</h1>
+			<div class="text-wrapper">
+				<p>Before exploring machine learning, I helped build and program a robot using Arduino for a school competition. That hands-on experience in robotics inspired me to dive deeper into how machines learn and interact with their environments--which led to the projects you'll see below.</p>
+			</div>
 
+		</div>
+	</div>
+	<!-- <div id="header">
+		<h1>Machine Learning Projects </h1>
+	</div> -->
+
+
+	<!-- NEW NAVBAR -->
 	<div id="navbar">
+		<div id="icon-and-nav-wrapper">
+			<div id="icon-wrapper">
+				<a href="index.html" class="logo">
+					<img src="img/my_drawn_kitsune.png" alt="kitsune logo">
+				</a>
+			</div>
 
 		<div id="nav">
 <!-- it is nested -->
@@ -135,30 +185,45 @@
 				<li><a href="index.html">Home</a></li>
 				<li>
 					<!-- go to this page and find id called ipsum and go to that part of the page -->
-					<a class="active" href="">Projects</a>
-					<ul>
-						<li><a class="active" href="lecture.html#images">ML Projects</a>
-						<ul>
+					<a class="active" href="">Projects  <i class="fas fa-chevron-down"></i></a>
+				
+					<ul class="proj-cont">
+						<div class="column">
+						<li><a href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
+						<ul class="sub">
 								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
 								<li><a href="myProjects.html#project2">Avocados</a></li>
 								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
 								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
 								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
-							</ul>
+						</ul>
 						</li>
-						<li><a href="html-css.html">HTML/CSS Projects</a></li>
-						<li><a href="research_papers.html">Research Papers</a></li>
+						</div><!-- .column -->
+						<div class="column">
+							<li><a href="html-css.html">HTML/CSS Projects <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column -->
+
+						<div class="column">
+							<li><a href="research_papers.html">Research Papers <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column  -->
 							
 					</ul>
+				
 				</li>
 				<li><a href="resume/resume.html">Resume</a></li>
+				<!-- <div class="contact-wrapper"> -->
+					<li class="contact"><a href="contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
+				<!-- </div> -->
+
 			</ul>
 
 			<div class="clearfloat"></div>
 
-		</div> <!-- #nav -->
+		</div> <!-- #nav --> 
 
+	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
+
 
 
 <div class="project-container">
@@ -313,8 +378,6 @@
 
 <script>
 
-
-// 
 document.querySelectorAll('.run-button').forEach(button => {
   button.addEventListener('click', function() {
     // Get the associated project number
@@ -374,7 +437,25 @@ document.querySelectorAll('.run-button').forEach(button => {
     }
   });
 });
+
 </script>
+
+ <!-- jquery script to change nav bar to white-->
+<script>
+
+  $(window).on("scroll", function () {
+    var triggerPoint = $(".project-container").offset().top;
+    var scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= triggerPoint) {
+      $("#navbar").addClass("scrolled");
+    } else {
+      $("#navbar").removeClass("scrolled");
+    }
+  });
+ </script>
+
+
 
 </body>
 </html>

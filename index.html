@@ -8,14 +8,19 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="favicon_io/site.webmanifest">
 
-<style>
+	<!-- icon font -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<style>
 
 	body{
 		background-color: #99D0D3;
@@ -33,7 +38,7 @@
 		margin-bottom: 60px;
 		margin-left:auto;
 		margin-right:auto;
-		background-color: #C8C3C9;
+		background-color: white;
 		position:relative;
 	}
 
@@ -56,10 +61,6 @@
 		background-position: center;
 
 	}
-	#contact-content{
-		padding:35px;
-		text-align: center;
-	}
 
 	#content-container > #about-me-section{
 		border-radius:28% 0% 25% 0%;
@@ -75,14 +76,18 @@
 		position:relative;
 	
 	}
+
 	h1{
 		margin:0px auto;
 /*		padding:30px 10px;*/
 		padding-top:30px;
 		padding-bottom: 0px;
 		border-radius: 0px 0px 0px 0px;
-		font-family: xero, sans-serif;
+/*		font-family: xero, sans-serif;*/
 /*		font-size: 100px;*/
+		font-size: 48px;
+  		font-family: 'Lora', serif;
+
 	}
 	h2{
 		font-family:xero, sans-serif;
@@ -94,18 +99,10 @@
 
 	}
 	p{
-		font-family:Lora, sans-serif;
+		/*font-family:Lora, sans-serif;
+		font-size: 20px;*/
+		font-family: 'Inter', sans-serif;
 		font-size: 20px;
-	}
-
-	#contact-content a{
-		font-size: 25px;
-		color:red;
-		font-family: Lora, sans-serif;
-	}
-	#contact-content p{
-		font-size:25px;
-		font-family: Lora, sans-serif;
 	}
 
 	
@@ -132,22 +129,41 @@
 	}
 
 
-
-	
-		
 	</style>
+	
+	
+
+
 
 </head>
 <body>
-	<div id="header">
+	<div class="media-container">
+		<video autoplay muted loop>
+			<source src="video/sphero_maze_stable_best.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+		</video>
+		<div class="media_overlay"></div>
+		<div class="content">
+			<h1 class="name-overlay">Ashley Zapata Minero</h1>
+			<p>Welcome to my site!</p>
+
+		</div>
+	</div>
+<!-- 	<div id="header">
 		<h1>Ashley Zapata Minero</h1>
 
-	</div>
+	</div> -->
 	<div id="header-description">
 		<p>Aspiring Machine Learning Engineer | Data Science Enthusiast | Web Developer</p>
 	</div>
 
 	<div id="navbar">
+		<div id="icon-and-nav-wrapper">
+			<div id="icon-wrapper">
+				<a href="index.html" class="logo">
+					<img src="img/my_drawn_kitsune.png" alt="kitsune logo">
+				</a>
+			</div>
 
 		<div id="nav">
 <!-- it is nested -->
@@ -155,29 +171,43 @@
 				<li><a class="active" href="index.html">Home</a></li>
 				<li>
 					<!-- go to this page and find id called ipsum and go to that part of the page -->
-					<a href="">Projects</a>
-					<ul>
-						<li><a href="myProjects.html">ML Projects</a>
-						<ul>
+					<a href="">Projects  <i class="fas fa-chevron-down"></i></a>
+				
+					<ul class="proj-cont">
+						<div class="column">
+						<li><a href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
+						<ul class="sub">
 								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
 								<li><a href="myProjects.html#project2">Avocados</a></li>
 								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
 								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
 								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
-							</ul>
+						</ul>
 						</li>
-						<li><a href="html-css.html">HTML/CSS Projects</a></li>
-						<li><a href="research_papers.html">Research Papers</a></li>
+						</div><!-- .column -->
+						<div class="column">
+							<li><a href="html-css.html">HTML/CSS Projects <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column -->
+
+						<div class="column">
+							<li><a href="research_papers.html">Research Papers <i class="fas fa-arrow-right"></i></a></li>
+						</div><!-- .column  -->
 							
 					</ul>
+				
 				</li>
 				<li><a href="resume/resume.html">Resume</a></li>
+				<!-- <div class="contact-wrapper"> -->
+					<li class="contact"><a href="contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
+				<!-- </div> -->
+
 			</ul>
 
 			<div class="clearfloat"></div>
 
-		</div> <!-- #nav -->
+		</div> <!-- #nav --> 
 
+	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
 
 
@@ -198,19 +228,29 @@
 	</div><!-- #about-me -->
 
 
-	<div id="contact-section">
-		<div id="contact-content">
-			<h2>Contact me at: </h2>
-			<p>Email: <a href="@mailto:ashleyzapata234@gmail.com">ashleyzapata234@gmail.com</a></p>
-		</div><!--contact-content-->
-	</div><!-- contact-section -->	
-
 </div> <!-- #content-container -->
 
 <div id="footer">
 	<p>© 2025 Ashley Zapata Minero</p>
 
 </div> <!-- #footer-->
+
+<!-- jquery script to change nav bar to white-->
+
+<script>
+  $(window).on("scroll", function () {
+    var triggerPoint = $("#header-description").offset().top;
+    var scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= triggerPoint) {
+      $("#navbar").addClass("scrolled");
+    } else {
+      $("#navbar").removeClass("scrolled");
+    }
+  });
+</script>
+
+
 
 </body>
 </html>
