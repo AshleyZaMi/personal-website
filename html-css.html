@@ -23,14 +23,32 @@
 
 <style>
 	
-		iframe{
-			display:block;
-			height:880px;
+		iframe, section{
+  		max-width: 100%;
+  		overflow-x: hidden;
 		}
-		body{
-			background-color: white;
-			background-image: none;
+
+		iframe {
+  		display: block;
+  		width: 100%;
+  		max-width: 100%;
+  		height: 1000px; /* You can still keep a reasonable fixed height */
+  		border: none;
+  		overflow-y: auto;
 		}
+
+	/*	.iframe-container {
+		  width: 100%;
+		  max-width: 950px;
+		  overflow-x: hidden;
+		}*/
+		.iframe-container iframe{
+			width:100%;
+			height:1000px;
+			border:none;
+		}
+
+
 		#header{
 			padding-top: 15px;
 			height:180px;
@@ -57,6 +75,74 @@
 		height:100%;
 		display: block;
 	}
+/*HTML CSS STYLING*/
+strong{
+		background-color:forestgreen;
+		color:white;
+	}
+	img{
+		height:200px;
+		width:auto;
+	}
+	/*body{
+		background-image: url("html-css-content/beautiful_background_final(2).jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+	}*/
+	a{
+		color:red;
+	}
+	h1{
+		color:#485fed;
+		font-size: 40px;
+	}
+	h2{
+		color:#485fed;
+	}
+	h3{
+		color:#485fed;
+
+	}
+
+	#container{
+		width:100%;
+		margin:0px auto;
+		background-position: center;
+/*		background-color: #f9f9d1;*/
+/*		border:5px solid #ffb7c5;*/
+	}
+
+	.row1{
+		margin-bottom:20px;
+/*		border:2px solid black;*/
+		padding: 20px;
+	}
+	.row2{
+		margin-bottom:20px;
+/*		border:2px solid blue;*/
+		padding:20px;
+	}
+	.clearfloat{
+		clear:both;
+	}
+	.flex-wrapper{
+		display:flex;
+		flex-wrap:wrap;
+		gap:20px;
+		padding:20px;
+	}
+	.project-lab-column{
+		flex:1;
+		min-width:150px;
+		background-color: #f9f9d1;
+	}
+	.iframe-column{
+		flex:2;
+		min-width: 300px;
+		background-color: white;
+
+	}
+
 
 	
 	</style>
@@ -78,10 +164,9 @@
 		<h1>HTML & CSS Projects</h1>
 
 	</div> -->
-	
 
-<!-- NEW NAVBAR-->
-<div id="navbar">
+	<!-- NEW NAVBAR -->
+	<div id="navbar">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -116,7 +201,7 @@
 							<a href="research_papers.html">Research Papers <i class="fas fa-arrow-right"></i></a>
 						</li><!-- .column  -->
 							
-					</ul> <!-- .proj-cont -->
+					</ul>
 				
 				</li>
 				<li><a href="resume/resume.html">Resume</a></li>
@@ -124,7 +209,7 @@
 					<li class="contact"><a href="contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
 				<!-- </div> -->
 
-			</ul>
+			</ul><!-- .proj-cont -->
 
 			<div class="clearfloat"></div>
 
@@ -132,15 +217,82 @@
 
 	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
+	<!-- ------------------------------------- -->
 
-	<div class="comment">
-    <p>Below is a preview of my HTML/CSS projects + labs</p>
-  </div>
 
-    <!-- Iframe to show ../ITP 104/itp104-submissions-AshleyZapata/index.html -->
-    <iframe src="https://ashleyzami.github.io/HTML-CSS-Portfolio/" width="100%" height="auto"></iframe>
 
-    <div id="footer">
+  <!-- CONTENT -->
+  <!-- container may be like wrapper -->
+	<div id="container">
+
+		<div class="flex-wrapper">		
+
+		<!-- Left column: Projects and Labs -->
+		<div class="project-lab-column">
+
+			<!--reusing column 1 class-->
+			<div class="row1">
+				<h3>Projects</h3>
+				<ul>
+					<li><a href="html-css-content/project01/index.html" target="targetme">Project 01: Web Resume</a></li>
+					<li><a href="html-css-content/project02/index.html" target="targetme">Project 02: TV Show/Movie Article</a></li>
+					<li><a href="html-css-content/project03/index.html" target="targetme">Project 03: Two-column TV show/Movie Article</a></li>
+					<li><a href="html-css-content/project04/index.html" target="targetme">Project 04: Calendar</a></li>
+					<li><a href="html-css-content/project05/index.html" target="targetme">Project 05: TV Show/Movie Photo Collage</a></li>
+					<li><a href="html-css-content/project06/index.html" target="targetme">Project 06: Fonts/Drop Down Menu, Overlay Captions</a></li>
+					<li><a href="html-css-content/project07/index.html" target="targetme">Project 07: Shopify Replica</a></li>
+
+				</ul>
+
+			<!-- closing reusal of column 1 -->
+			</div>
+
+			<!-- reusing column 2 class -->
+			<div class="row2">
+				<h3>Labs</h3>
+				<ul>
+					<li><a href="html-css-content/lab02/index.html" target="targetme">Lab 02: Student Page</a></li>
+					<li><a href="html-css-content/lab03/index.html" target="targetme">Lab 03: Updated Resume</a></li>
+					<li><a href="html-css-content/lab04/index.html" target="targetme">Lab 04: Student Layout Page</a></li>
+					<li><a href="html-css-content/lab05/index.html" target="targetme">Lab 05: Form Page</a></li>
+					<li><a href="html-css-content/lab06/index.html" target="targetme">Lab 06: Simple Image Gallery</a></li>
+					<li><a href="html-css-content/lab07/index.html" target="targetme">Lab 07: Image Puzzle</a></li>
+					<li><a href="html-css-content/lab08/index.html" target="targetme">Lab 08: Responsive Student Page</a></li>
+					<li><a href="html-css-content/lab09/index.html" target="targetme">Lab 09: Page With Media</a></li>
+					<li><a href="html-css-content/lab10/index.html" target="targetme">Lab 10: Animation</a></li>
+					<li><a href="html-css-content/lab11/index.html" target="targetme">Lab 11: Using Lightbox</a></li>
+				</ul>
+
+			<!-- closing reusal of column 2 -->
+			</div>
+	
+		</div> <!-- closing .project-lab-column -->
+		
+
+
+	<!-- Right column: iframe -->
+    <div class="iframe-column">
+
+		<!-- putting things in this iframe, if you take a picture of earrings nexklack and belt, set up links and when click, will replace the image, default image would then be replaced with the earring, necklace, one way to create dynamism, instead of being text here you could do image -->
+		
+		
+		<!-- Add a generic iframe initially to no-content.html -->
+		<!-- set a name= -->
+
+		<div class="iframe-container">
+			<iframe src="no-content.html" name="targetme" onload="resizeIframe(this)"></iframe>
+		</div>
+
+	</div> <!-- closing .iframe-column -->
+	
+	
+		</div><!-- .flex-wrapper -->
+	
+	</div><!-- closing the container -->
+
+
+
+  <div id="footer">
 	<p>© 2025 Ashley Zapata Minero</p>
 
 </div> <!-- #footer-->
@@ -149,7 +301,7 @@
 <script>
 
   $(window).on("scroll", function () {
-    var triggerPoint = $(".comment").offset().top;
+    var triggerPoint = $(".project-lab-column").offset().top;
     var scrollPosition = $(window).scrollTop();
 
     if (scrollPosition >= triggerPoint) {
@@ -159,6 +311,14 @@
     }
   });
  </script>
+
+ <!-- In your main HTML page (outside iframe) -->
+<script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+</script>
+
 
 
 </body>

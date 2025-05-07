@@ -1,0 +1,229 @@
+/*This is the stylesheet where all the styling occurs-will be shared by both the main index.html and gallery.html */
+/*	have the same menu bar, main container width, and footer	*/
+		/*		adding fonts downloaded from the dafont.com*/
+		
+		@font-face{
+			font-family:black cherry;
+			src:url("fonts/BLKCHCRY.TTF");
+		}
+
+		@font-face{
+			font-family:oranien;
+			src:url("fonts/Oranienbaum.ttf");
+		}
+		
+
+		body{
+			margin:0;
+			background-color:maroon;
+/*			adding google font to body*/
+			font-family:lora, sans-serif;
+			font-size: 15px;
+		}
+		h1{
+			font-family: "black cherry", fantasy;
+			font-size:135px;
+
+		}
+		h2{
+			color: rgb(128,0,0);
+			font-family:"black cherry", fantasy;
+			font-size:30px;
+		}
+
+		
+		a{
+			color:#FDDE6C;
+			font-family:oranien, sans-serif;
+			font-size: 27px;
+		}
+
+
+		#header{
+			background-image:url("twilight_film.jpg");
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position: center;
+			height:800px;
+
+		}
+
+/*		will contain the NEW content for the sidebar and current content div created in assignment02*/
+		#mainContainer{
+			width:1100px;
+			margin: 0px auto;
+/*			setting the background-color the same as the small column color which is the sidebar*/
+			background-color:#484e79;
+/*			overflow: hidden;*/
+		}
+		
+
+		#content{
+			width:800px;
+			height: auto;
+			text-align: left;
+			background-color: whitesmoke;
+			margin-left:auto;
+			margin-right:auto;
+			padding-top: 15px;
+			padding-right:30px;
+			padding-bottom: 20px;
+			padding-left: 30px;
+			line-height: 1.5;
+/*			should float left*/
+			float:left;
+
+		}
+		
+
+		
+		#floatlefttxt{
+			color: whitesmoke;
+/*			font-size: 100px;*/
+			float: left;
+			padding-top: 150px;
+			padding-left:100px;
+
+		}
+		#footer{
+			color: whitesmoke;
+			font-size:20px;
+			padding-top: 15px;
+			text-align: center;
+			background-color:#2e7552;
+			background-size:cover;
+			background-position: center;
+			height: 50px;
+
+		}
+		#paleGoldColorText{
+			color:#FDDE6C;
+			text-align: center;
+		}
+		
+/*		landscape class adjust image to auto width, height 100%*/
+		/*.landscape{
+			width:auto;
+			height:100%;
+
+		}*/
+
+		.thumbnail-container{
+			float:left;
+		}
+
+		.clearfloat{
+			clear:both;
+		}
+
+		.floatright{
+			float: right;
+			padding-right:130px;
+
+		}
+		
+		.bluecolortext{
+			color:#4682B4;
+/*		adding google font into bluecolortext*/
+			font-family: "EB Garamond", sans-serif;
+			font-size: 22px;
+		}
+
+		#nav{
+			width:950px;
+			/*this centers the divs			*/
+			margin:0 auto;
+		}
+
+		#nav a{
+			width:230px;
+			height:60px;
+			display:inline-block;
+			text-align:center;
+	/*		this is how to remove the underline*/
+			text-decoration: none;
+			color:maroon;
+	/*		to get in the middle do the same line-height as height*/
+			line-height:60px;
+
+		}
+
+		/*to extend the navigation bar color*/
+		#nav-wrapper{
+			background-color: #c3cb6e;
+			/*	needs this to center the gallery nav		*/
+			text-align: center;
+		}
+
+	/*a tag inside the navigation*/
+		#nav a:hover{
+			background-color: #e1e2bb;
+			color:#484e79;
+		}
+		/*only in navigation| to show what page we are in*/
+		#nav .active{
+			background-color: #e1e2bb;
+			color:#484e79;
+		}
+
+/*	adding extra styling because I added a drop down with categories that takes you the place of that category*/
+
+		#nav ul{
+	/*	list-style-type removes the bullet points that comes with ul*/
+			list-style-type: none;
+			margin:0;
+			padding:0;
+			text-align:center;
+		}
+
+		#nav li{
+			width:auto;
+/*			border: 5px solid red;*/
+			line-height:50px;
+			display:inline-block; /*this allows the items to sit inline*/
+			text-align: center;
+			background-color: #c3cb6e;
+/*	this sets the li being relative to	its parent which is nav	*/
+			position:relative;
+		}
+		#nav li:hover{
+			background-color: #e1e2bb;
+			color:#484e79;
+		}
+
+		#nav a{
+			text-decoration: none;
+			display:block;
+		}
+
+/*	This hides the other navigation sections made in the previous one	*/
+		#nav ul ul{
+			visibility: hidden;
+			left:0; /*this keeps submenus aligned*/
+/*	absolute makes it be at the top of the container of nav		*/
+			position:absolute;
+		}
+
+		/* Show #nav li:hover > ul */
+/*		when hover over where ul going to  visible*/
+		#nav li:hover > ul{
+			visibility: visible;
+		}
+
+		#nav ul ul ul{
+			left:170px;
+			top:0px;
+		}
+
+
+		/* adding a font to the footer		*/
+		.footer-font{
+			font-family: oranien, sans-serif;
+		}
+
+		/* removing the underline from the watch on netflix		*/
+		a{
+			text-decoration: none;/*removing the underline*/
+		}
+
+

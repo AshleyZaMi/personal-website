@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ashley Zapata Minero | Movie Article</title>
+	<style>
+		body{
+			background-color:maroon;
+			margin:0;
+		}
+		h2{
+			color: rgb(128,0,0);
+		}
+		img{
+			width: 530px;
+			height:auto;
+		}
+		a{
+			color:#FDDE6C;
+			font-size: 25px;
+		}
+
+
+		#header{
+			background-image:url("twilight_film.jpg");
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position: center;
+			height:800px;
+
+		}
+
+/*		will contain the NEW content for the sidebar and current content div created in assignment02*/
+		#mainContainer{
+			width:1100px;
+			margin: 0px auto;
+/*			setting the background-color the same as the small column color which is the sidebar*/
+			background-color:#484e79;
+/*			overflow: hidden;*/
+		}
+		#sidebar{
+/*			should float left*/
+			background-color:#484e79;
+			float:left;
+			width:220px;
+			height:auto;
+			padding: 10px;
+			line-height: 2;
+
+		}
+
+		#content{
+			width:800px;
+			height: auto;
+			text-align: left;
+			background-color: whitesmoke;
+			margin-left:auto;
+			margin-right:auto;
+			padding-top: 15px;
+			padding-right:30px;
+			padding-bottom: 20px;
+			padding-left: 30px;
+			line-height: 1.5;
+/*			should float left*/
+			float:left;
+
+		}
+		
+
+		
+		#floatlefttxt{
+			color: whitesmoke;
+			font-size: 100px;
+			float: left;
+			padding-top: 150px;
+			padding-left:100px;
+
+		}
+		#footer{
+			color: whitesmoke;
+			font-size:20px;
+			padding-top: 15px;
+			text-align: center;
+			background-color:#2e7552;
+			background-size:cover;
+			background-position: center;
+			height: 50px;
+			width:100%;
+
+		}
+		#paleGoldColorText{
+			color:#FDDE6C;
+			text-align: center;
+		}
+		.thumbnail{
+			width:165px;
+			height:auto;
+			float:left;
+			padding:8.5px 27.5px;
+			overflow: hidden;
+		}
+/*		landscape class adjust image to auto width, height 100%*/
+		/*.landscape{
+			width:auto;
+			height:100%;
+
+		}*/
+/*		portrait class adjust image to width 100%, height auto*/
+		.portrait{
+			width:100%;
+			height:auto;
+
+		}
+		.sidebarTextColor{
+			color:white;
+			text-align: center;
+		}
+		.actorName{
+			font-size:19px;
+		}
+		.charName{
+			font-size:15px;
+		}
+
+		.clearfloat{
+			clear:both;
+		}
+		.floatright{
+			float: right;
+			padding-right:130px;
+			
+
+		}
+		.floatrightimg{
+			float:right;
+			padding-right:10px;
+			padding-top:40px;
+			padding-left:20px;
+		}
+		.bluecolortext{
+			color:#4682B4;
+		}
+		
+	/*DOING VIEWPORTS		*/
+	
+
+    /* Responsive layout for tablets */
+    @media (max-width: 991px) {
+    #mainContainer {
+        flex-direction: column;
+        width:100%;
+    }
+
+     #content{
+        width:73.7%;
+        padding:0;
+    }
+    img{
+		width: 400px;
+		height:auto;
+	}
+	
+/*     adding margins inside so it doesn't conflict with the scrolling| also h2 */
+    #content p, #content h2{
+       margin:25px;
+    }
+
+    #footer{
+      width:100%;
+     }
+
+      
+    .thumbnail-container{
+		float:none;
+		display:inline-block;
+		width:220px;
+		height:370px;
+		margin:10px;
+				
+	}
+
+	.thumbnail{
+		width:165px;
+		height:auto;
+		float:none;
+		padding:8.5px 27.5px;
+		overflow: hidden;
+	}
+
+   } /*@media closing*/
+
+   /* Responsive layout for mobile */
+   @media (max-width: 767px) {
+   	.castBlock {
+		  width: 45%
+		  display: flex;
+		  flex-direction: column;
+/*		  align-items: center;*/
+		}
+
+	   #mainContainer {
+	       width: 100%;
+	       display: flex;
+	       flex-direction: column;
+	     }
+
+	    h2{
+	    	width:100%;
+	    }
+
+     #sidebar {
+       width: 100%;
+       float: none;
+       padding: 10px;
+       box-sizing: border-box;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 15px;
+     }
+
+     .thumbnail {
+       width: 120px;
+       margin: 0 auto;
+       padding: 0;
+       text-align: center;
+     }
+
+     .thumbnail img {
+       width: 100%;
+       height: auto;
+       display: block;
+       margin: 0 auto;
+     }
+
+     /* Keep names and center them */
+     .sidebarTextColor {
+       width: 120px;
+       margin: 5px auto 10px;
+       text-align: center;
+       color: white;
+     }
+
+     .actorName {
+       font-size: 15px;
+     }
+
+     .charName {
+       font-size: 13px;
+     }
+
+     #content {
+       width: 100%;
+       float: none;
+       padding: 10px;
+       box-sizing: border-box;
+     }
+
+     .floatrightimg {
+       float: none;
+       display: block;
+       margin: 20px auto;
+       max-width: 100%;
+     }
+
+     #floatlefttxt{
+     	font-size:75px;
+     }
+     #footer {
+       font-size: 16px;
+       height: auto;
+       padding: 10px;
+     }
+   }
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1 id= floatlefttxt>Twilight</h1>
+
+	</div>
+
+	<div id="mainContainer">
+		<div id="sidebar">
+			<h2 id="paleGoldColorText">The Cast</h2>
+			<!-- cast member block -->
+			<div class="castBlock">
+				<!-- Adding thumbnail for images -->
+				<div class="thumbnail">
+					<img src="images/Kristen_Stewart.jpg" class="portrait" alt="Kristen Stewart">
+
+				</div>
+
+				<!-- Adding name of actor -->
+				<p class="sidebarTextColor"><span class="actorName">Kristen Stewart</span><br><em><span class="charName">Bella Swan</span></em></p>
+			</div><!-- .castBlock ended-->
+
+			<div class="clearfloat"></div>
+
+			<!-- cast member block -->
+			<div class="castBlock">
+				<div class="thumbnail">
+					<img src="images/Robert_Pattison.jpg" class="portrait" alt="Robert Pattison">
+				</div>
+				<!-- Adding name of actor -->
+				<p class="sidebarTextColor"><span class="actorName">Robert Pattison</span><br><em><span class="charName">Edward Cullen</span></em></p>
+			</div><!-- .castBlock ended-->
+
+			<div class="clearfloat"></div>
+			
+			<!-- cast member block -->
+			<div class="castBlock">
+				<div class="thumbnail">
+					<img src="images/Taylor_Lautner.jpg" class="portrait" alt="Taylor Lautner">
+				</div>
+				<!-- Adding name of the actor -->
+				<p class="sidebarTextColor"><span class="actorName">Taylor Lautner</span><br><em><span class="charName">Jacob Black</span></em></p>
+			</div><!-- castBlock ended-->
+
+			<div class="clearfloat"></div>
+
+			<!-- cast member block -->
+			<div class="castBlock">
+				<div class="thumbnail">
+					<img src="images/Ashley_Greene.jpg" class="portrait" alt="Ashley Greene">
+				</div>
+				<!-- Adding name of actor -->
+				<p class="sidebarTextColor"><span class="actorName">Ashley Greene</span><br><em><span class="charName">Alice Cullen</span></em></p>
+		</div><!-- .castBlock ended -->
+			<div class="clearfloat"></div>
+
+		<!-- cast member block -->
+			<div class="castBlock">
+				<div class="thumbnail">
+					<img src=images/Elizabeth_Reaser.jpg class="portrait" alt="Elizabeth Reaser">
+				</div>
+				<!-- Adding name of the actor -->
+				<p class="sidebarTextColor"><span class="actorName">Elizabeth Reaser</span><br><em><span class="charName">Esme Cullen</span></em></p>
+		</div><!-- .castBlock ended-->
+
+			<div class="clearfloat"></div>
+
+			<!-- cast member block -->
+			<div class="castBlock">
+				<div class="thumbnail">
+					<img src="images/Peter_Facinelli.jpg" class="portrait" alt="Peter Facinelli">
+				</div>
+				<!-- Adding name of the actor -->
+				<p class="sidebarTextColor"><span class="actorName">Peter Facinelli</span><br><em><span class="charName">Carlisle Cullen</span></em></p>
+		</div> <!-- .castBlock ended -->
+			<div class="clearfloat"></div>
+
+			
+		</div>
+
+		<div id="content">
+			<h2>Plot Summary</h2>
+			<img class="floatrightimg" src="Bella_and_Edward.jpg" alt="Bella and Edward laying on grass">
+			<p>Bella Swan has never quite fit in. Unlike the popular girls at her high school in Phoenix, Arizona, she’s always preferred to stay on the sidelines. When her mother remarries, Bella moves to the quiet, rainy town of Forks, Washington, to live with her father, expecting nothing out of the ordinary. But everything changes when she meets Edward Cullen—a mysterious, impossibly beautiful boy unlike anyone she’s ever known.</p>
+
+			<p>Edward is intelligent, charismatic, and seems to see straight into her soul. As their connection deepens, Bella discovers his secret: Edward is a vampire. He hasn’t aged since 1918, possesses superhuman strength and speed, and, unlike most of his kind, refuses to drink human blood. Despite the danger, they fall into a passionate and unconventional romance.</p>
+
+			<p>But their love comes at a cost. When a group of nomadic vampires arrives in town and discovers that Bella is human, Edward must fight to protect her from a deadly threat. In a modern retelling of forbidden love, Twilight weaves a tale of passion, danger, and the struggle between desire and self-control.</p>
+
+			<h2>Reviews</h2>
+			<p><strong><span class="bluecolortext">Great start to the Twilight series</span></strong><br>"I’ve never watched a vampire film before so this was quite new and exciting. It’s the first movie in the series and I think it was pretty good apart from the kissing which I’m not so keen on. My favourite character was Jessica because she was a good friend to Bella who had just started at a new school and a new life living with her father. Bella soon realises there is something fishy going on with some of her classmates. I’m excited to watch the next film in the series."<br><span class="floatright">-Frankie</span></p>
+
+			<p><strong><span class="bluecolortext">Twilight - A film to sink your teeth into!</span></strong><br>"This is a film about a teenager, Bella, who moves from her mother and step father's house to go to live with her father in the small gloomy town of 3,120 inhabitants, not all of them human! From her first encounter with Edward Cullen, she was drawn to him and the film follows their relationship. When Bella first meets Edward in the Biology Class, there is a white owl with outstretched wings on the window sill behind Edward. When the camera faces Edward, it looks as if he has angel wings. Perhaps this is a sign that he will become Bella's guardian angel? He does in fact save her life three times in this film. The film uses a great deal of close up shots of Bella and Edward. These focus a lot on their eyes. Edwards's eyes change colour depending on his emotions and the focus on their eyes highlights their connection. The film uses a lot of distance shots, especially of natural surroundings. This is in contrast to the supernatural inhabitants of Forks. Also, the director has used shots of cameras panning in and out of trees during the forest scenes, giving the effect that someone is always watching. Sound and music varies in this film. For example, when Bella and Edward lay on the forest floor after Bella discovered that he was a vampire, the music was calm and tranquil with a piano playing an eerie tune over the melody. There were times when you could just hear nature, like rain drops or bird song. That demonstrates that their full attention is on one another. I agree with the 12 rating as the content is not suitable for younger children. I would recommend this film to teenagers."<br><span class="floatright">-Anwen</span></p>
+
+			<h2>Team Edward or Team Jacob?</h2>
+			<img class="floatrightimg" src="EdwardvsJacob.jpg" alt="Edward vs Jacob">
+			<p>It was the best of times, it was the worst of times. It was 2008 and the country was divided over one simple, yet inflammatory question: <strong>Are you Team Edward or are you Team Jacob? </strong></p>
+
+			<p>Bella Swan (Kristen Stewart) was forced to confront a difficult romantic choice: the immortal, sparkling vampire Edward Cullen (Robert Pattinson) who was thirsty for her blood or Jacob Black (Taylor Lautner), a shapeshifter taking the form of a werewolf and family friend. The series' fans were quick and eager to sound off on who they thought Bella should end up with. If you had even so much as heard of "Twilight," you likely held a strong opinion on <em>Team Edward</em> or <em>Team Jacob</em>.</p>
+			
+			<p>Well, as it turns out, those loyalties haven't gone anywhere.</p>
+
+			<p>Recently, as a part of the Great American Personality Test, INSIDER teamed up with Morning Consult to see what people had to say about the age-old question. Out of 8,805 respondents across the US, 22% of people said they are <em>Team Edward</em> and 18% said they are <em>Team Jacob</em>. Of the respondents, 60% of those polled said they didn't know or had no opinion.</p>
+
+			<p>It's no surprise that some respondents weren't sure what to choose: 30% of those polled were Gen Z or Millennials (ages 18-21 or 22-37, respectively). Whereas Gen X and Boomers (ages 38-53 and 54-72, respectively) accounted for 64% of respondents. The majority audience for "Twilight," it's safe to say, skews younger, as the books were released in 2005-2008 and were marketed as young adult novels.  </p>
+
+			<p>But it's also not shocking that the margin between respondents who had an opinion was a slim 4%.</p>
+
+			<p>The debate may remain as contentious as ever, but one thing is certain: After all this time, <em>Team Edward</em> remains the right choice. Survey says. And so do the books, for that matter.</p>
+
+
+		<!-- content div ends here -->
+		</div>
+
+		<div class="clearfloat"></div>
+		
+	<!-- mainContainer ends here -->
+	</div>
+
+	<div id="footer">
+		<a href="https://www.netflix.com/mx-en/title/70099113" target="_blank">Watch on Netflix</a>
+
+	</div>
+
+
+</body>
+
+</html>

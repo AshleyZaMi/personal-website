@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Free concert giveaway Tickets</title>
+<style>
+body{
+	background-image:url("oneokrock.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin:0;
+
+}
+h1{
+	margin:0;
+	text-align: center;
+	color:#FA9C1C;
+	font-size:60px;
+	font-family: fantasy, "COPPERPLATE";
+}
+h3{
+	color:white;
+	text-align: center;
+	font-family: fantasy, "COPPERPLATE";
+}
+a{
+	color:lightgreen;
+}
+button{
+	padding:8px 15px;
+	border-radius:15px;
+}
+.white{
+	color:white;
+}
+#header{
+/*	margin:0px;*/
+	background-color: black;
+	width:auto;
+	height:150px;
+	padding-top:40px;
+/*	border: 2px solid red;*/
+	opacity: 0.85;
+
+}
+.section{
+	background-color: aliceblue;
+	opacity: 0.82;
+	width: auto;
+	height:auto;
+	margin:40px 370px;
+	padding:20px;
+}
+.form-row{
+	margin:30px 30px;
+}
+.main-label{
+	width:20%;
+	float:left;
+
+}
+#submit_styling{
+	background-color: green;
+	color:white;
+	opacity: 0.85;
+}
+#reset_styling{
+	background-color: pink;
+	color:black;
+	opacity:0.85;
+}
+#font_size{
+	font-size: 14px;
+
+}
+/*VIEWPORT*/
+/* Medium screens (tablets, <= 991px) */
+@media screen and (max-width: 991px) {
+  #header h1 {
+    font-size: 50px;
+  }
+  #header{
+  	height:100%;
+  }
+
+  .section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .form-row {
+    margin: 20px 10px;
+  }
+
+  .main-label {
+    width: 30%;
+    float: left;
+    font-size: 16px;
+  }
+
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  /* Adjusting checkboxes and radio buttons for mobile-friendly layout */
+  .form-row input[type="radio"], .form-row input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .form-row label {
+    font-size: 14px;
+  }
+}
+
+/* Small screens (phones, <= 767px) */
+@media screen and (max-width: 767px) {
+  #header h1 {
+    font-size: 40px;
+  }
+
+  .section {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .form-row {
+    margin: 15px 0;
+  }
+
+  .main-label {
+    width: 40%;
+    font-size: 14px;
+    float: none;
+    display: block;
+  }
+
+  input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  /* Stack radio buttons and checkboxes vertically */
+  .form-row input[type="radio"], .form-row input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* Adjust the font size of terms and conditions label */
+  .form-row label {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  #font_size {
+    font-size: 12px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Free concert giveaway tickets -->
+<div id="header">
+	<h1><span class="white">ONE OK ROCK</span> concert ticket(s) giveaway</h1>
+	<h3>Official Website at: <a href="https://www.oneokrock.com/en/" target="_blank">oneokrock.com</a></h3>
+</div>
+
+<div class="section">
+	<!-- creating an confirmation page -->
+<form action="confirmation.html">
+	<div class="form-row">
+		<!-- label makes it accessible -->
+		<!-- id is the same id for styling, but for and id have to match| it is saying this label goes with this field| this makes the target area bigger-->
+		<!-- adding a text field(single-line input) -->
+		<!-- adding class main-label to differentiate the primary labels -->
+		<label for="name" class="main-label">Name:</label>
+		<input id="name" type="text" placeholder="First name, Last name">
+	</div>
+
+	<!-- adding group of radio buttons with minimum 3 options| these don't include placeholder because name has to be the same -->
+	<div class="form-row">
+		<label class="main-label">Occupation?</label>
+		<input id="student" type="radio" name="occupation"><label for="student">Student</label>
+		<input id="worker" type="radio" name="occupation"><label for="worker">Worker</label>
+		<input id="other" type="radio" name="occupation"><label for="other">Other</label>
+	</div>
+
+	<div class="form-row">
+		<!-- One group with checkboxes with minimum three(3) options | name must be unique here-->
+		<label class="main-label">Concert times:<br><span id="font_size">(select 1 or more)</span></label>
+		<input id="Monday" type="checkbox" value="Monday" name="Monday, 11:00AM - 3:00PM"><label for="Monday">Monday, 11:00AM - 3:00PM</label>
+		<input id="Tuesday" type="checkbox" value="Tuesday" name="Tuesday, 6:00PM - 11:00PM"><label for="Tuesday">Tuesday, 6:00PM - 11:00PM</label>
+		<input id="Thursday" type="checkbox" value="Thursday" name="Thursday, 4:00PM - 9:00PM"><label for="Thursday">Thursday, 4:00PM - 9:00PM</label>
+	</div>
+
+	<div class="form-row">
+		<!-- one drop down with minimum of (3 options) -->
+		<label for="extraTickets" class="main-label">Additional tickets:</label>
+		<select id="extraTickets">
+			<option value="zero" >None</option>
+			<option value="one">1 ticket</option>
+			<option value="two">2 tickets</option>
+			<option value="three">3 tickets</option>
+			<option value="four">4 tickets</option>
+		</select>
+	</div>
+
+	<div class="form-row">
+		<!--  text area element(multi-line input)-->
+		<label for="SpecCircum" class="main-label">Specify tickets:</label>
+		<textarea id="SpecCircum" placeholder="Please specify the number of tickets you want for each day." required></textarea>
+	</div>
+
+	<div class="form-row">
+		<label for="email" class="main-label">Email:</label>
+		<input id="email" type="email" placeholder="oneokrock@gmail.com" required>
+	</div>
+
+	<div class="form-row">
+		<!-- Adding a terms and conditions -->
+		<input id="termsConds" type="checkbox" value="termsConds" name="termsConds" required> <label for="termsConds">I agree to the Terms & Conditions for receiving these free online tickets and acknowledge that I am solely responsible if they are lost.</label>
+	</div>
+
+	<div class="form-row">
+		<!-- Submit & Reset buttons -->
+		<button type="submit" id="submit_styling">Submit</button>
+		<button type="reset" id="reset_styling">Reset</button>
+	</div>
+
+
+</form>
+</div>
+
+
+
+</body>
+
+
+
+</html>
+

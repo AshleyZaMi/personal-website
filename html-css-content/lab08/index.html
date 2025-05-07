@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Student Page">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Ashley Zapata Minero | Projects Page</title>
+
+<style>
+
+
+	strong{
+		background-color:forestgreen;
+		color:white;
+	}
+	img{
+		height:200px;
+		width:auto;
+	}
+	body{
+		background-image: url("beautiful_background_final(2).jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+	}
+	a{
+		color:red;
+	}
+	h1{
+		color:#485fed;
+		font-size: 40px;
+	}
+	h2{
+		color:#485fed;
+	}
+	h3{
+		color:#485fed;
+
+	}
+
+	#container{
+		width:950px;
+		margin:0px auto;
+		background-position: center;
+		background-color:lightpink;
+		border:5px solid #ffb7c5;
+	}
+	/*row for the name and the email*/
+	#row1{
+		width:auto;
+		margin:0px auto;
+		/*for transparent use: rgba(0,0,0,.25)*/
+		background-color: white;
+		padding:20px 20px;
+		text-align:center;
+/*		border:2px solid black;*/
+	}
+	#row2{
+		/*if I wanted to add another border*/
+/*		margin:5px auto;*/
+		background-color:#ffeaee;
+/*		border:2px solid blue;*/
+		margin:0 auto;
+		/*padding-left: 30px;
+		padding-right: 30px;*/
+		
+	}
+	#row3{
+		height:auto;
+		background-color: #f9f9d1;
+		margin:0 auto;
+		/*padding-left: 30px;
+		padding-right: 30px;*/
+	}
+
+	.column1{
+		float:left;
+		width:300px;
+		height:auto;
+		margin-left:100px;
+		padding:20px 20px;
+/*		border:2px solid black;*/
+	}
+	.column2{
+		float:left;
+		width:300px;
+		height:auto;
+		margin-left:100px;
+		padding:20px 20px;
+
+/*		border:2px solid blue;*/
+	}
+	.clearfloat{
+		clear:both;
+	}
+
+
+/*	Tablets - Screen Sizes <=991px| anything 991px or less*/
+	@media (max-width:991px){
+		
+		#container,#row1,#row2,#row3{
+			width:auto;
+/*			margin:0px 0px;*/
+		}
+
+		#row1, #row2, #row3{
+			width:auto;
+			padding:20px;
+			margin:0 auto;
+			
+			
+/*			justify-content: center;*/
+		}
+
+/*	applying changes to the columns in rows	*/
+		#row2 .column1, #row2 .column2, #row3 .column1, #row3 .column2{
+			display:inline-block;
+			width:45%;
+			padding:0;
+			margin:0px 15px;
+		}
+
+/*overriding the column1 and column2*/
+		.column1,.column2{
+			width:45%;
+			
+	/*			overriding the original margin*/
+			margin:10%;
+			padding:20px;
+			margin-left: 10px;
+/*			border: 2px solid black;*/
+			float:left;
+
+		}
+/*overwriting the colors of rows*/
+		#row1{
+			background-color:#dee8eb;
+		}
+		#row2{
+		
+			background-color:white;
+		
+		}
+		#row3{
+			background-color:#f9f9d1;
+		
+		}
+
+
+
+
+	}
+
+/*	media is usually at the bottom and can change style*/
+/*	this is for mobile| Screen Sizes <= 767px*/
+	@media (max-width: 767px){
+		
+	/*Making sure no content in floated		*/
+		.column1{
+			float:none;
+		}
+		.column2{
+			float:none;
+		}
+		
+		#container,.column1, .column2{
+			width:auto;
+			margin:0;
+			padding:0;
+		}
+/*		overriding the done before*/
+		#row2 .column1, #row2 .column2, #row3 .column1, #row3 .column2{
+			display:block;
+			width:auto;
+		}
+
+		#row1, #row2, #row3{
+			width:auto;
+			margin:0;
+			padding:20px;
+		 }
+		
+
+	/*overwriting the colors of rows*/
+		#row1{
+			background-color:#e5f9e5;
+		}
+		#row2{
+		
+			background-color:white;
+		
+		}
+		#row3{
+			background-color:#ffeaee;
+		
+		}
+
+	}
+
+</style>
+
+</head>
+<body>
+	<!-- container may be like wrapper -->
+	<div id="container">
+
+		<!--creating row 1-->
+		<div id="row1">
+			<h1>Ashley Zapata Minero</h1>
+
+			<p> <a href="mailto:zapatami@usc.edu">zapatami@usc.edu</a></p>
+
+		<!-- closing row 1 -->
+		</div>
+
+		
+
+		<!-- creating row 2 | inside row 2 there are two other divs which are column 1 and column 2-->
+		<div id="row2">
+
+			<!-- creating column 1 -->
+			<div class="column1">
+				<p>Favorite color: <strong>Forest Green</strong> </p>
+
+				<p>Favorite website: <a href="https://bato.to/" target=_blank>bato.to</a> </p>
+
+				<h2>Favorite activity:</h2>
+
+				<img src="master-data-cartoon-typing-on-laptop.png" alt="Woman using her laptop doing Data Science">
+
+			<!-- closing column 1-->
+			</div>
+
+			<!-- creating column 2 -->
+			<div class="column2">
+				<h3>School Schedule</h3>
+				<ol>
+					<li>EALC 322: Advanced Japanese II</li>
+					<li>ITP 449: Applications of Machine Learning</li>
+					<li>DSCI 529: Security and Privacy</li>
+					<li>EALC 358: Myth, Folklore, and Fantasy in Japanese Literature and Film</li>
+					<li>ITP 104: Introduction to Web Development</li>
+				</ol>
+
+			<!-- closing column 2-->
+			</div>
+
+		<!-- using clearfloat to seperate the flow of the images and to organize the content better-->
+		<div class="clearfloat"></div>
+
+			<!--closing row 2-->
+		</div>
+
+		
+
+		<!-- creating row 3-->
+		<div id="row3">
+
+			<!--reusing column 1 class-->
+			<div class="column1">
+				<h3>Projects</h3>
+				<ul>
+					<li><a href="project01/index.html" target="_blank">Project 01: Web Resume</a></li>
+					<li><a href="project02/index.html" target="_blank">Project 02: TV Show/Movie Article</a></li>
+					<li><a href="project03/index.html" target="_blank">Project 03: Two-column TV show/Movie Article</a></li>
+					<li><a href="project04/index.html" target="_blank">Project 04: Calendar</a></li>
+					<li><a href="project05/index.html" target="_blank">Project 05: TV Show/Movie Photo Collage</a></li>
+
+				</ul>
+
+			<!-- closing reusal of column 1 -->
+			</div>
+
+			<!-- reusing column 2 class -->
+			<div class="column2">
+				<h3>Labs</h3>
+				<ul>
+					<li><a href="lab02/index.html" target="_blank">Lab 02: Student Page</a></li>
+					<li><a href="lab03/index.html" target="_blank">Lab 03: Updated Resume</a></li>
+					<li><a href="lab04/index.html" target="_blank">Lab 04: Student Layout Page</a></li>
+					<li><a href="lab05/index.html" target="_blank">Lab 05: Form Page</a></li>
+					<li><a href="lab06/index.html" target="_blank">Lab 06: Simple Image Gallery</a></li>
+					<li><a href="lab07/index.html" target="_blank">Lab 07: Image Puzzle</a></li>
+				</ul>
+
+			<!-- closing reusal of column 2 -->
+			</div>
+
+		<!-- using clearfloat to seperate the flow of the images and to organize the content better-->
+		<div class="clearfloat"></div>
+		
+		<!-- closing row 3-->	
+		</div>
+		
+
+	<!-- closing the container -->
+	</div>
+
+
+
+</body>
+
+</html>

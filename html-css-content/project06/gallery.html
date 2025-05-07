@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ashley Zapata Minero| Gallery</title>
+	<!-- referencing to the external CSS -->
+	<link href="styles.css" rel="stylesheet">
+
+	<!-- referencing to the google font of EB Garamond-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Indie+Flower&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			background-color:#484e79;
+			margin:0 auto;
+		}
+		h2{
+			color: rgb(128,0,0);
+		}
+		img {
+		  max-width: 100%;
+		  height: auto;
+		  display: block;
+		}
+	
+
+		#header{
+			background-image:url("gallery_photos/twilight_img.jpg");
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position: center;
+			height:650px;
+			width:100%;
+
+		}
+		.thumbnail-container{
+/*			float:left;*/
+			margin:0;
+			padding:0;
+/*			border: 3px solid purple;*/
+
+		}
+
+	
+	
+/*		landscape class adjust image to auto width, height 100%*/
+		/*.landscape{
+			height:100%;
+
+		}*/
+/*		portrait class adjust image to width 100%, height auto*/
+		/*.portrait{
+			width:100%;
+			height:auto;
+
+		}*/
+		#mainContainer{
+		/*	setting the background-color the same as the container one which is whitesmoke*/
+			background-color:#484e79;
+/*			border: 5px solid red;*/
+
+		}
+		/*.thumbnail-container{
+
+		}
+		*/
+
+		/*setting the height the same		*/
+		.thumbnail{
+/*			display:inline-block;/* Keeps images inline */
+			width:auto;
+			height:200px;
+/*			margin-right:10px; /* Add some spacing between images */
+/*			padding:5px 5px;*/
+			overflow: hidden;
+			position:relative;
+		}
+		
+		.floatrightimg{
+			float:right;
+			padding-right:10px;
+			padding-top:40px;
+			padding-left:20px;
+		}
+		/*overwritting content		*/
+		#content{
+			width:1100px;
+			height: auto;
+			padding-top: 0px;
+			padding-right:0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+			line-height: 1.5;
+
+
+
+		}
+
+		
+		.thumbnail-container img{
+			height:auto;/* Maintaining the aspect ratio */
+			display:block;
+
+		}
+		
+		
+		
+		.thumbnail-container{
+			display: inline-block; /* Keeps them inline but respects block-level properties */
+    		margin:5px 5px; /* Adds spacing between the images */
+    		vertical-align: top; /* Aligns the images at the top */
+		}
+		/*setting heights for each row image		*/
+		.row1 img{
+			height:250px;
+		}
+		.row2 img{
+			height:250px;
+		}
+		.row3 img{
+			height:250px;
+		}
+		.row4 img{
+			height:250px;
+		}
+
+
+		/*#class- doing a class for each image and have it do that just to set up the width */
+		.child1{
+			width:350px;
+			
+			
+		}
+		.child2{
+			width:400px;
+	
+			
+		}
+
+		.child3{
+			width:320px;
+	
+			
+		}
+
+		.child4{
+			width:250px;
+			
+			
+		}
+		.child5{
+			width:350px;
+		}
+
+		.child6{
+			width:470px;
+		}
+
+
+		.child7{
+			width:650px;
+		}
+
+		.child8{
+			width:430px;
+		}
+
+		.child9{
+			width:480px;
+		}
+
+		.child10{
+			width:600px;
+		}
+
+		/*Need to turn it into inline-block otherwise will follow the css and will not make it inline but rather like a list		*/
+		
+		#nav a{
+			display:inline-block;
+
+		}
+		/*	just applying this to the p tag	*/
+		.thumbnail .overlay p{
+			margin:0;
+			padding:0;
+			/*applying lora google font to img p tags		*/
+			font-family: lora, sans-serif;
+			font-size: 23px;
+		}
+		.overlay{
+			background:#00000070;
+			color:white;
+			position:absolute;
+			top:0px;
+			right:0px;
+			left:0px;
+			bottom:0px;
+			text-align:center;
+			padding-top:80px;
+			visibility:hidden;
+		}
+
+
+		.thumbnail:hover .overlay{
+			visibility: visible;
+		}
+
+	/*DOING VIEWPORTS		*/
+	
+
+ /* Responsive layout for tablets */
+  @media (max-width: 991px) {
+  #content{
+  	width:100%;
+  }
+  #mainContainer {
+    flex-direction: column;
+    width:100%;
+  }
+/*	changing the child's width*/
+	.child1 { width: 290px; }
+	.child2 { width: 330px;}
+	.child3 { width: 270px; }
+	.child4 { width: 210px;}
+	.child5 { width: 290px;}
+	.child6 { width: 390px;}
+	.child7 { width: 540px;}
+	.child8 { width: 360px;}
+	.child9 { width: 400px;}
+	.child10 { width: 500px;}
+
+/*setting heights for each row image		*/
+	
+/*setting the height for each image*/
+	.thumbnail img {    
+	  height: 100%;   
+	  display: block;
+	}
+
+
+
+
+
+/*     adding margins inside so it doesn't conflict with the scrolling| also h2 */
+ /* #content p, #content h2{
+     margin:25px;
+  }*/
+
+  #footer{
+    width:100%;
+   }
+
+
+   } /*@media closing*/
+
+  /* Responsive layout for mobile */
+  @media (max-width: 767px) {
+    .thumbnail img {
+      width: 100%;
+    }
+
+  }
+
+
+		
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1 id= floatlefttxt>Gallery</h1>
+
+	</div>
+
+	<!--Adding NAV DIV -->
+	<div id="nav-wrapper">
+		<div id="nav">
+			<a href="index.html">Home</a>
+			<a class="active" href="gallery.html">Gallery</a>
+		</div>
+
+	</div>
+
+	<div id="mainContainer">
+		
+
+		<div id="content">
+			<div id="row1">
+			
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child1 width-100" src="gallery_photos/photo1.jpg" alt="vampires">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Cullen Vampires</p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child2 width-100" src="gallery_photos/photo2.jpg" alt="Bella and Edward">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella hugging Edward</p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+					
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child3 width-100" src="gallery_photos/photo3.jpg" alt="Bella and Edward at prom">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella and Edward at prom </p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 1 ends here___________________________________________ -->
+
+
+			<div id="row2">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child4 width-100" src="gallery_photos/photo8.jpg" alt="Bella and Edward and alice talking">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p> Bella Edward and Alice in front of bus</p>
+						</div><!-- closing overlay -->
+					</div>
+				</div>
+				
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child5 width-100" src="gallery_photos/photo4.jpg" alt="Edward and vampires at school">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Edward and vampires at school</p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+
+			
+				
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child6 width-100" src="gallery_photos/photo5.jpg" alt="Bella and Edward in the woods">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella and Edward in the woods</p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 2 ends here___________________________________________ -->
+			<div id="row3">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child7 width-100" src="gallery_photos/photo6.jpg" alt="Bella hugging Edward in forest">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella hugging Edward in the forest</p>
+						</div><!-- closing overlay -->
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child8 width-100" src="gallery_photos/photo7.jpeg" alt="vampire war">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Vampire War</p>
+						</div><!-- closing overlay -->
+
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 3 ends here___________________________________________ -->
+
+			<div id="row4">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child9 width-100" src="gallery_photos/photo10.jpg" alt="Bella and Edward in chemistry class">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella and Edward in chemisty class</p>
+						</div><!-- closing overlay -->
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child10 width-100" src="gallery_photos/photo9.jpg" alt="Bella and Edward marry">
+						<!-- making an overlay -->
+						<div class="overlay">
+							<p>Bella and Edward marry</p>
+						</div><!-- closing overlay -->
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 4 ends here___________________________________________ -->
+
+		
+
+
+		<!-- content div ends here -->
+		</div>
+
+		<div class="clearfloat"></div>
+		
+	<!-- mainContainer ends here -->
+	</div>
+
+	<div id="footer">
+		<a href="https://www.netflix.com/mx-en/title/70099113" target="_blank">Watch on Netflix</a>
+
+	</div>
+
+
+</body>
+
+</html>

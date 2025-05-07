@@ -19,6 +19,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 	
@@ -43,6 +45,28 @@
 		height:100%;
 		display: block;
 	}
+	.paper-card {
+	  display: none;
+	}
+	/*.modal-pdf-frame {
+	  width: 100%;
+	  height: 800px;
+	  border: none; replaces frameborder="0" 
+	}*/
+	.modal-xl {
+	  max-width: 95%; /* override default width */
+	}
+
+	.modal-body {
+	  height: 90vh; /* take up most of viewport height */
+	  padding: 0;
+	}
+
+	.modal-pdf-frame {
+	  width: 100%;
+	  height: 100%;
+	  border: none;
+	}
 	</style>
 
 </head>
@@ -61,7 +85,7 @@
 	
 
 	<!-- NEW NAVBAR -->
-	<div id="navbar" class="scrolled">
+	<div id="navbar">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -112,10 +136,200 @@
 
 	</div> <!-- #icon-and-nav-wrapper -->
 	</div> <!-- #navbar -->
+   
 
-	<!-- <h1>Research Papers</h1> -->
-    <p></p>
-    <a href="Research Papers/Zapata Minero,Ashley Breaching borders through Language_ A hidden narrative on Japanese musicians through ONE OK ROCK .pdf" download>Download My Research Paper</a>
+
+<!-- PAPERS SECTION -->
+<div class="container my-5">
+  <h2 class="mb-4 text-center">My Papers</h2>
+
+  <!-- Filter buttons using a javascript filtering method using filterPapers-->
+  <div class="btn-group mb-4 d-flex justify-content-center" role="group">
+    <button class="btn btn-outline-primary" onclick="filterPapers('ml')">Machine Learning</button>
+    <button class="btn btn-outline-primary" onclick="filterPapers('stories')">Creative Stories</button>
+    <button class="btn btn-outline-primary" onclick="filterPapers('cultures')">East Asian Cultures</button>
+    <button class="btn btn-outline-primary" onclick="filterPapers('japanese')">Papers in Japanese</button>
+    <button class="btn btn-outline-primary" onclick="filterPapers('all')">All Papers</button>
+  </div>
+
+  <!-- Paper List -->
+  <div id="paper-list" class="row g-4">
+    <!-- Paper Example 1 -->
+    <div class="col-md-4 paper-card" data-category="ml">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">The Integration of Machine Learning and Artificial Intelligence In Healthcare Opportunities and Challenges</h5>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal1" data-pdf="research-papers/The Integration of Machine Learning and Artificial Intelligence In Healthcare Opportunities and Challenges.pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper Example 2 -->
+    <div class="col-md-4 paper-card" data-category="stories">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Fragmented Beings</h5>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal2" data-pdf="research-papers/Fragmented Beings.pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper Example 3 -->
+    <div class="col-md-4 paper-card" data-category="cultures">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Breaching borders through Language_ A hidden narrative on Japanese musicians through ONE OK ROCK</h5>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal3" data-pdf="research-papers/Breaching borders through Language_ A hidden narrative on Japanese musicians through ONE OK ROCK .pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper Example 4 -->
+    <div class="col-md-4 paper-card" data-category="japanese">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">上級日本語１：家事をする理想のロボット</h5>
+           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal4" data-pdf="research-papers/上級日本語１：家事をする理想のロボット.pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+     <!-- Paper Example 5 -->
+    <div class="col-md-4 paper-card" data-category="japanese">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">上級日本語１：「日本のスポーツ」について：相撲</h5>
+           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal5" data-pdf="research-papers/上級日本語１：「日本のスポーツ」について：相撲.pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper Example 6 -->
+    <div class="col-md-4 paper-card" data-category="cultures">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Research Paper: Korean Cuisine and its History</h5>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paperModal6" data-pdf="research-papers/Research Paper_ Korean Cuisine and its History.pdf">View</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div><!-- #paper-list ends-->
+</div>
+
+<!-- PAPERS SECTION END -->
+
+<!-- MODALS FOR THE PAPER SECTION -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="paperModal1" tabindex="-1" aria-labelledby="paperModal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal1Label">The Integration of Machine Learning and Artificial Intelligence In Healthcare Opportunities and Challenges</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This paper is about the incorporation of Machine Learning and Artificial Intelligence applications in the medical field. It deep dives into it's polices, ethical implications, types of information gathered, and offers solutions to already existing problems, and other new ideas to think about to integrate into the medical field.</p>
+        <iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="paperModal2" tabindex="-1" aria-labelledby="paperModal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal2Label">Fragmented Beings</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Fragmented Beings is a posthuman story told in script that uses concepts such as neurolink and dog cloning, while pondering what the introduction of all these technological advancement will lead to. Join Sarah and Sunny in their adventure as they seek to find the answer of what it really means to be human.</p>
+        <iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="paperModal3" tabindex="-1" aria-labelledby="paperModal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal3Label">Japanese Honorifics in Anime</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This paper explores the Japanese band ONE OK ROCK how it was able to transend borders and be the first band to successfully gain international recognition.</p>
+        <iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="paperModal4" tabindex="-1" aria-labelledby="paperModal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal4Label">家事をする理想のロボット</h5>
+        <!-- adding the pdf to data-pdf -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This paper is based on a reading about my ideal robot using the Japanese language</p>
+        <!-- using an iframe to display the content -->
+				<iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="paperModal5" tabindex="-1" aria-labelledby="paperModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal5Label">「日本のスポーツ」について：相撲</h5>
+        <!-- adding the pdf to data-pdf -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This paper explores the history of Sumo Wrestlers using the Japanese langauge</p>
+
+				<iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="paperModal6" tabindex="-1" aria-labelledby="paperModal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paperModal6Label">Research Paper: Korean Cuisine and its History</h5>
+        <!-- adding the pdf to data-pdf -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This paper explores the history between South and North Korea, and the development of South Korean Cuisine</p>
+
+				<iframe class="modal-pdf-frame" src="" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END OF MODAL PAPER SECTION -->
+		
+
 
 
     <!-- jquery script to change nav bar to white-->
@@ -132,6 +346,61 @@
     }
   });
 </script>
+
+<script>
+  function filterPapers(category) {
+    const cards = document.querySelectorAll('.paper-card');
+    cards.forEach(card => {
+      card.style.display = (card.dataset.category === category) ? 'block' : 'none';
+    });
+  }
+</script>
+<script>
+	function filterPapers(category) {
+    const cards = document.querySelectorAll('.paper-card');
+    if (category === 'all') {
+        // Show all papers
+        cards.forEach(card => card.style.display = 'block');
+    } else {
+        // Show only the papers that match the selected category
+        cards.forEach(card => {
+            if (card.dataset.category === category) {
+                card.style.display = 'block';  // Show the card
+            } else {
+                card.style.display = 'none';   // Hide the card
+            }
+        });
+    }
+}
+</script>
+<!-- this is for the iframes -->
+<script>
+  // Listen for all modal show events
+  const modals = document.querySelectorAll('.modal');
+  
+  modals.forEach(modal => {
+    modal.addEventListener('show.bs.modal', function (event) {
+      const button = event.relatedTarget;
+      const pdfUrl = button.getAttribute('data-pdf');
+      const iframe = modal.querySelector('.modal-pdf-frame');
+
+      if (iframe && pdfUrl) {
+        iframe.src = pdfUrl;
+      }
+    });
+
+    // Optional: Clear the iframe src when modal is hidden
+    modal.addEventListener('hidden.bs.modal', function () {
+      const iframe = modal.querySelector('.modal-pdf-frame');
+      if (iframe) {
+        iframe.src = '';
+      }
+    });
+  });
+</script>
+
+	<!-- Bootstrap JS Bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

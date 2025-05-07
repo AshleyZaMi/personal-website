@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Princess</title>
+	<style>
+		body{
+			margin:0 auto;
+			padding:0;
+			text-align: center;
+			background-image: url("images/strawberry_32.jpg");
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-position-y:-60px;
+		}
+		h1{
+			text-align: center;
+			font-family:strawberry, serif;
+			font-size:65px;
+			color:rgb(0,204,153);
+			background:rgba(255,255,255,0.8);
+/*			margin: 0 auto;*/
+			margin:30px 250px;
+			padding:20px 10px;
+			border-radius: 35px 35px 35px 35px;
+
+
+
+		}
+		@font-face{
+			font-family:strawberry;
+			src:url("fonts/Stroberi 2 @larizkyshop.ttf");
+		}
+
+		#background{
+			width:900px;
+			margin:30px auto;
+			padding:20px 0px;
+			border:6px solid rgb(255,255,255,0.9);
+			border-radius:45px;
+			background-color:rgb(0,204,153,0.45);
+			text-align: center;
+
+		}
+
+		
+		.all_thumbnails_holder{
+			margin:0 auto;
+			padding:0px 0px;
+			width:660px;
+			display: inline-block; 
+			text-align: center;
+/*			border: 9px solid black;*/
+		}
+
+		.indiv-thumbnail-holder{
+			display: inline-block;
+			margin:5px; /*creating space between the images*/
+			vertical-align:top;
+		}
+
+		.thumbnail img{
+			width:200px; /*for the image to have consistency in width*/
+			height:250px; /*for the images to have consistent heights*/
+			display:block;
+			
+		}
+
+		
+
+		/*	creating a puzzle effect: by moving two images	*/
+		.row1col1{
+			position: relative;
+			top:20px;
+			left:10px;
+			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
+		}
+		/*
+		.row1col2{
+			
+
+		}
+		*/
+		.row1col3{
+			position: relative;
+			top:-20px;
+			left:-5px;
+			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
+			
+		}
+		.row2col1{
+			position: relative;
+			top:10px;
+			left:10px;
+			box-shadow: 10px 10px 50px rgba(255,146,196,0.5);
+
+		}
+		/*
+		.row2col2{
+			
+
+		}
+		*/
+
+		.row2col3{
+			position: relative;
+			right:5px;
+			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
+		}
+		
+
+		.row3col1{
+			position: relative;
+			top:-10px;
+			left:20px;
+			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
+		}
+		/*
+		.row3col2{
+			
+		}*/
+		.row3col3{
+			position: relative;
+			top:-20px;
+			left:-10px;
+			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
+		}
+
+
+
+	</style>
+</head>
+
+
+<body>
+	<h1>Princess After Showering</h1>
+	<div id="background">
+		<div class="all_thumbnails_holder">
+			<!-- row 1-->
+			
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row1col1" src="PineTools.com_files/row-1-column-1.jpg" alt="row 1 column 1">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row1col2" src="PineTools.com_files/row-1-column-2.jpg" alt="row 1 column 2">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row1col3" src="PineTools.com_files/row-1-column-3.jpg" alt="row 1 column 3">
+				</div>
+			</div>
+		
+			<!-- _________________________________row1 finishes here____________________________ -->
+			<!-- row 2 -->
+			
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row2col1" src="PineTools.com_files/row-2-column-1.jpg" alt="row 2 column 1">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row2col2" src="PineTools.com_files/row-2-column-2.jpg" alt="row 2 column 2">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row2col3" src="PineTools.com_files/row-2-column-3.jpg" alt="row 2 column 3">
+				</div>
+			</div>
+			
+			<!-- _________________________________row2 finishes here____________________________ -->
+
+			<!-- row 3 -->
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row3col1" src="PineTools.com_files/row-3-column-1.jpg" alt="row 3 column 1">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row3col2" src="PineTools.com_files/row-3-column-2.jpg" alt="row 3 column 2">
+				</div>
+			</div>
+			<div class="indiv-thumbnail-holder">
+				<div class="thumbnail">
+					<img class="row3col3" src="PineTools.com_files/row-3-column-3.jpg" alt="row 3 column 3">
+				</div>
+			</div>
+			
+			<!-- _________________________________row3 finishes here____________________________ -->
+
+		</div>
+		<!-- __________________________all_thumbnails_holder finishes here________________________ -->
+	</div>
+	<!-- __________________________content-container finishes here________________________ -->
+</body>
+
+</html>

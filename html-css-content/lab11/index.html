@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<!-- photo gallery of my cute characters in a photoshoot -->
+
+<head>
+	<title>Cute Characters Photoshoot</title>
+	<!-- adding lightbox path -->
+	<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+
+	<style>
+		body{
+			background-image: url('../lab06/images/backdrop3.jpg');
+			background-repeat: no-repeat;
+			background-position-x:center;
+			background-position-y:-400px;
+			background-size: cover;
+		}
+
+		/*vertical images*/
+		.portrait{
+			width:100%;
+			height:100%;
+		}
+
+		#content{
+			width:1100px;
+			height:810px;
+			border:10px solid rgb(255,255,255);
+		/*	making the border radius roundish*/
+			border-radius:45px;
+			background-color:rgba(255,255,102,0.25);
+			margin:15px auto;
+
+		}
+		#content-title{
+			background-color: rgba(255,255,255,0.8);
+			text-align: center;
+			font-family: 'Papyrus', fantasy;
+			font-size: 21px;
+			color:rgb(34,139,34,0.7);
+			text-shadow: 6px 6px 6px rgb(34,139,34);
+			padding:5px 0px;
+			border-radius: 35px 35px 0px 0px;
+		}
+	
+		#gallery{
+			margin: 0 auto;
+/*			border:3px solid red;*/
+			width:852px;
+			height:645px;
+		}
+
+		.thumbnail-container{
+			float:left;
+		}
+
+		/* this is the images themselves*/
+		.thumbnail{
+
+			width:250px;
+			height:250px;
+			margin: 15px 15px 0px 15px;
+			overflow:hidden;
+			border-radius:45px;
+			border:2px solid rgba(255,255,255,0.8);
+		}
+		.clearfloat{
+			clear:both;
+		}
+		/*Only want to center p tag in the thumbnail-container*/
+		.thumbnail-container p{
+			text-align:center;
+			/*	to not display		*/
+			visibility:hidden;
+			margin:0px;
+			padding:4px;
+			border-radius: 45px;
+/*			font-family: 'COPPERPLATE', fantasy;*/
+			font-family: 'Papyrus', fantasy;
+			background-color: rgb(34,139,34,0.7);
+			color: white;
+
+
+		}
+
+		/*When we hover we want thumbnail-container p to show		*/
+		.thumbnail-container:hover p{
+			visibility: visible;
+		}
+
+/*VIEWPORTS */
+/* Medium screens (tablets, <= 991px) */
+@media screen and (max-width: 991px) {
+	body{	
+		background-position-y:-200px;
+
+	}
+  #content {
+    width: 90%;
+    height: 100%;
+    border-radius: 30px;
+    border: 8px solid white;
+  }
+
+  #content-title {
+    font-size: 18px;
+    padding: 4px 0;
+    border-radius: 30px 30px 0 0;
+  }
+
+  #gallery {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-container {
+    width: 25%;
+    margin: 2.5%;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .portrait {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+/* Small screens (phones, <= 767px) */
+@media screen and (max-width: 767px) {
+  #content {
+    width: 95%;
+    height: auto;
+    border-radius: 20px;
+    border: 6px solid white;
+  }
+
+  #content-title {
+    font-size: 16px;
+    padding: 3px 0;
+    border-radius: 20px 20px 0 0;
+  }
+
+  #gallery {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .thumbnail {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .portrait {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumbnail-container p {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+	</style>
+
+
+</head>
+
+<body>
+	<!-- creating a content section -->
+	<div id ="content">
+		<div id="content-title">
+			<h1>Cute Characters Photoshoot</h1>
+		</div>
+
+		<!-- creating a gallery section -->
+		<div id ="gallery">
+			<!-- thumbnail-container holds all the thumbnails -->
+			<div class="thumbnail-container">
+				<!-- thumbnail is capturing the image itself like putting the criteria for the images -->
+				<div class="thumbnail">
+					<a href="../lab06/images/bridge.JPG" data-lightbox="image" data-title="Two Quokka at the Bridge"><img class="portrait" src="../lab06/images/bridge.JPG" alt="bridge quokka"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Two Quokka at the Bridge</p>
+			</div>
+
+			<div class="thumbnail-container">
+				<div class="thumbnail">
+					<a href="../lab06/images/cherry_blossoms.JPG" data-lightbox="image" data-title="Eren and Jojo cherry blossom viewing"><img class="portrait" src="../lab06/images/cherry_blossoms.JPG" alt="cherry blossoms eren and jojo"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Eren and Jojo cherry <br>blossom viewing</p>
+			</div>
+
+			<div class="thumbnail-container">
+				<div class="thumbnail">
+					<a href="../lab06/images/fireworks.JPG" data-lightbox="image" data-title="Eren and Jojo watching fireworks"><img class="portrait" src="../lab06/images/fireworks.JPG" alt="eren and jojo watching fireworks"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Eren and Jojo watching <br>fireworks</p>
+			</div>
+			<!-- want to seperate the images here to make 3 x 3 -->
+			<div class="clearfloat"></div>
+
+			<div class="thumbnail-container">
+				<div class="thumbnail">
+					<a href="../lab06/images/grass2.JPG" data-lightbox="image" data-title="Two Quokka in the grass"><img class="portrait" src="../lab06/images/grass2.JPG" alt="two quokka in grass"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Two Quokka in the grass</p>
+			</div>
+
+			<div class="thumbnail-container">
+				<div class="thumbnail">
+					<a href="../lab06/images/cyberpunk.JPG" data-lightbox="image" data-title="Eren, Jojo, and Two Quokka in cyberpunk city"><img class="portrait" src="../lab06/images/cyberpunk.JPG" alt="eren jojo and quokka"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Eren, Jojo, and Two <br>Quokka in cyberpunk city</p>
+			</div>
+
+			<div class="thumbnail-container">
+				<div class="thumbnail">
+					<a href="../lab06/images/valley2.jpg" data-lightbox="image" data-title="Eren, Jojo, and Quokka in the valley"><img class="portrait" src="../lab06/images/valley2.jpg" alt="eren jojo and quokka in valley"></a>
+				</div>
+				<!-- p tag in the thumbnail-container -->
+				<p>Eren, Jojo, and Quokka in <br>the valley</p>
+			</div>
+
+			<div class="clearfloat"></div>
+
+		<!-- gallery end -->
+		</div>
+
+	<!-- content end -->
+	</div>
+ <!-- using Lightbox2,so need the dependency of jquery -->
+	<script src="lightbox/js/lightbox-plus-jquery.js"></script>
+
+</body>
+
+
+
+</html>

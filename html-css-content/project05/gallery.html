@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Ashley Zapata Minero| Gallery</title>
+	<link href="styles.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{
+			background-color:#484e79;
+			margin:0 auto;
+		}
+		h2{
+			color: rgb(128,0,0);
+		}
+		
+		a{
+			color:#FDDE6C;
+			font-size: 25px;
+		}
+		img {
+		  max-width: 100%;
+		  height: auto;
+		  display: block;
+		}
+
+		#header{
+			background-image:url("gallery_photos/twilight_img.jpg");
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-position: center;
+			height:650px;
+
+		}
+		.thumbnail-container{
+/*			float:left;*/
+			margin:0;
+			padding:0;
+/*			border: 3px solid purple;*/
+
+		}
+
+	
+	
+/*		landscape class adjust image to auto width, height 100%*/
+		/*.landscape{
+			height:100%;
+
+		}*/
+/*		portrait class adjust image to width 100%, height auto*/
+		/*.portrait{
+			width:100%;
+			height:auto;
+
+		}*/
+		#mainContainer{
+		/*	setting the background-color the same as the container one which is whitesmoke*/
+			background-color:#484e79;
+/*			border: 5px solid red;*/
+
+		}
+		/*.thumbnail-container{
+
+		}
+		*/
+
+		/*setting the height the same		*/
+		.thumbnail{
+/*			display:inline-block;/* Keeps images inline */
+			width:auto;
+			height:200px;
+/*			margin-right:10px; /* Add some spacing between images */
+/*			padding:5px 5px;*/
+			overflow: hidden;
+		}
+
+		
+		.floatrightimg{
+			float:right;
+			padding-right:10px;
+			padding-top:40px;
+			padding-left:20px;
+		}
+		/*overwritting content		*/
+		#content{
+			width:1100px;
+			height: auto;
+			padding-top: 0px;
+			padding-right:0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+			line-height: 1.5;
+
+
+
+		}
+
+		
+		.thumbnail-container img{
+			height:auto;/* Maintaining the aspect ratio */
+			display:block;
+
+		}
+		
+		
+		
+		.thumbnail-container{
+			display: inline-block; /* Keeps them inline but respects block-level properties */
+    		margin:5px 5px; /* Adds spacing between the images */
+    		vertical-align: top; /* Aligns the images at the top */
+		}
+		/*setting heights for each row image		*/
+		.row1 img{
+			height:250px;
+		}
+		.row2 img{
+			height:250px;
+		}
+		.row3 img{
+			height:250px;
+		}
+		.row4 img{
+			height:250px;
+		}
+
+
+		/*#class- doing a class for each image and have it do that just to set up the width */
+		.child1{
+			width:350px;
+			
+			
+		}
+		.child2{
+			width:400px;
+	
+			
+		}
+
+		.child3{
+			width:320px;
+	
+			
+		}
+
+		.child4{
+			width:250px;
+			
+			
+		}
+		.child5{
+			width:350px;
+		}
+
+		.child6{
+			width:470px;
+		}
+
+
+		.child7{
+			width:650px;
+		}
+
+		.child8{
+			width:430px;
+		}
+
+		.child9{
+			width:480px;
+		}
+
+		.child10{
+			width:600px;
+		}
+
+	/*DOING VIEWPORTS		*/
+	
+
+    /* Responsive layout for tablets */
+  @media (max-width: 991px) {
+  #mainContainer {
+    flex-direction: column;
+    width:100%;
+  }
+/*	changing the child's width*/
+	.child1 { width: 290px; }
+	.child2 { width: 330px;}
+	.child3 { width: 270px; }
+	.child4 { width: 210px;}
+	.child5 { width: 290px;}
+	.child6 { width: 390px;}
+	.child7 { width: 540px;}
+	.child8 { width: 360px;}
+	.child9 { width: 400px;}
+	.child10 { width: 500px;}
+
+/*setting heights for each row image		*/
+	
+/*setting the height for each image*/
+	.thumbnail img {    
+	  height: 100%;   
+	  display: block;
+	}
+
+
+
+
+
+/*     adding margins inside so it doesn't conflict with the scrolling| also h2 */
+ /* #content p, #content h2{
+     margin:25px;
+  }*/
+
+  #footer{
+    width:100%;
+   }
+
+
+   } /*@media closing*/
+
+  /* Responsive layout for mobile */
+  @media (max-width: 767px) {
+    .thumbnail img {
+      width: 100%;
+    }
+
+  }
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1 id="floatlefttxt">Gallery</h1>
+
+	</div>
+
+	<!--Adding NAV DIV -->
+	<div id="nav-wrapper">
+		<div id="nav">
+			<a class="active" href="gallery.html">Gallery</a>
+			<a href="index.html">Home</a>
+		</div>
+
+	</div>
+
+	<div id="mainContainer">
+		
+
+		<div id="content">
+			<div id="row1">
+			
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child1" src="gallery_photos/photo1.jpg" alt="vampires">
+
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child2" src="gallery_photos/photo2.jpg" alt="Bella and Edward">
+
+					</div>
+				</div>
+					
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child3" src="gallery_photos/photo3.jpg" alt="Bella and Edward at prom">
+
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 1 ends here___________________________________________ -->
+
+
+			<div id="row2">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child4" src="gallery_photos/photo8.jpg" alt="Bella and Edward and alice talking">
+
+					</div>
+				</div>
+				
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child5" src="gallery_photos/photo4.jpg" alt="Edward and vampires at school">
+					</div>
+				</div>
+
+			
+				
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child6" src="gallery_photos/photo5.jpg" alt="Bella and Edward in the woods">
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 2 ends here___________________________________________ -->
+			<div id="row3">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child7" src="gallery_photos/photo6.jpg" alt="Bella hugging Edward in forest">
+
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child8" src="gallery_photos/photo7.jpeg" alt="vampire war">
+
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 3 ends here___________________________________________ -->
+
+			<div id="row4">
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child9" src="gallery_photos/photo10.jpg" alt="Bella and Edward in chemistry class">
+					</div>
+				</div>
+
+				<div class="thumbnail-container">
+					<div class="thumbnail">
+						<img class="child10" src="gallery_photos/photo9.jpg" alt="Bella and Edward marry">
+					</div>
+				</div>
+			</div>
+		<!-- _____________________________________row 4 ends here___________________________________________ -->
+
+		
+
+
+		<!-- content div ends here -->
+		</div>
+
+		<div class="clearfloat"></div>
+		
+	<!-- mainContainer ends here -->
+	</div>
+
+	<div id="footer">
+		<a href="https://www.netflix.com/mx-en/title/70099113" target="_blank">Watch on Netflix</a>
+
+	</div>
+
+
+</body>
+
+</html>

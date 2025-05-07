@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar</title>
+	<style>
+		body{
+			background-image: url("img/zodiac_animals.jpeg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			margin:0px;
+
+		}
+		table{
+			/*	I want everything centered here	*/
+			text-align: center;
+            /* without border-collapse the table is set to be seperate, each of the data cells have its own border| by feault border-collapse has a value of seperate*/
+			border-collapse: collapse;
+		}
+		/*	styling th	*/
+		th{
+			border:1px solid #ccc;
+			padding:10px 0px;
+			background-color: #6f5c5c;
+			color: white;
+            /*	because I added the width here then the other rows would follow the same spacing layout of the width		*/
+			width: 235px;
+
+		}
+		td{
+			margin: 0;
+			border:1px solid #ccc;
+			padding:0px;
+			padding-bottom: 125px;
+			background-color: #FFF8AF;
+            /*	Doing top because by default it goes in the middle, so vertical-align doesn't try to adapt to new information but be its own| also doing this so that the numbers appear in the top right like in most calendars	*/
+			vertical-align:top;
+			text-align: right;
+			font: 25px;
+		}
+		/*p{
+			
+		}*/
+		#calendarContainer{
+			width:1100px;
+			border: 10px solid #8b0000;
+			background-position: center;
+			/*auto auto to center it
+			margin-left: auto;
+			margin-right:auto;*/
+			margin:50px auto;
+		}
+		.calendarHeader{
+			height: 400px;
+			text-align: center;
+			background-image: url("img/snake_2025.jpeg");
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			color: white;
+			font-size: 45px;
+			/*	if you do line height the same as the height should center on the page, otherwise could also use top padding to bring it down		*/
+			line-height: 300px;
+			padding-top:120px;
+			/*text-shadow- x y and blur			*/
+			text-shadow: 6px 6px black;
+
+		}
+		.notMonth{
+			background-color:#ffc833;
+		}
+		.birthday_content{
+			background-image:url("img/birthdayDog.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+/*			overwriting td's padding-bottom*/
+			padding-bottom:0px;
+		}
+		
+		/*.number{
+			margin:0;
+			padding-top: 0px;
+			border:3px solid blue;
+		}*/
+		.specialnumber{
+			margin:0;
+			padding-top: 0px;
+			color:red;
+			font-family: Arial, Helvetica, sans-serif;
+			font:25px;
+		}
+
+		p{
+/*			display: inline-block;*/
+			background:lightgreen;
+			text-align: center;
+			/*	adding padding to the text box		*/
+			padding:10px 0px;
+			opacity:0.8;
+			border-radius:15px;
+			margin-top:30px;
+			margin-left:5px;
+			margin-right:5px;
+			line-height:45px;
+			vertical-align: middle;
+
+		}
+		.NewYearEve_content{
+			background-image:url("img/NewYearsEve.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+/*			not a month so changed the color*/
+			background-color:#ffc833;
+/*			overwriting td's padding-bottom*/
+			padding-bottom:0px;
+		}
+		.NewYearDay_content{
+			background-image:url("img/NewYearDay.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+/*			overwriting td's padding-bottom*/
+			padding-bottom:0px;
+		}
+		.MLKDayInaug_content{
+			background-image:url("img/mlkday.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+/*			overwriting td's padding-bottom*/
+			padding-bottom:0px;
+		}
+		.lunarNewYear_content{
+			background-image:url("img/LunarNewYear.jpg");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+/*			overwriting td's padding-bottom*/
+			padding-bottom:0px;
+		}
+/* For tablets and smaller desktops (≤ 991px) */
+@media (max-width: 991px) {
+    #calendarContainer {
+        width: 90%;
+        margin: 30px auto;
+    }
+    th, td {
+        width: 14.28%; /* 100% / 7 days */
+        font-size: 18px;
+        padding-bottom: 80px;
+    }
+    .calendarHeader {
+        font-size: 36px;
+        line-height: 250px;
+        height: 300px;
+        padding-top: 80px;
+    }
+    p {
+        font-size: 14px;
+        padding: 8px 0px;
+    }
+    .specialnumber {
+        font-size: 20px;
+    }
+}
+
+/* For mobile devices (≤ 767px) */
+@media (max-width: 767px) {
+    #calendarContainer {
+        width: 98%;
+        margin: 20px auto;
+        border-width: 6px;
+    }
+    th, td {
+        font-size: 14px;
+        padding-bottom: 60px;
+    }
+    .calendarHeader {
+        font-size: 28px;
+        line-height: 200px;
+        height: 250px;
+        padding-top: 60px;
+    }
+    p {
+        font-size: 12px;
+        padding: 6px 0px;
+        line-height: 20px;
+    }
+    .specialnumber {
+        font-size: 16px;
+    }
+}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id= "calendarContainer">
+	<table>
+		<!-- single row/column implementation -->
+		<tr>
+			<td colspan=7 class="calendarHeader"><h1>January 2025</h1></td>
+		</tr>
+		<!-- Creating the header row| th - is by default centered| it's like the columns-->
+		<tr>
+			<th>Sun</th>
+			<th>Mon</th>
+			<th>Tue</th>
+			<th>Wed</th>
+			<th>Thu</th>
+			<th>Fri</th>
+			<th>Sat</th>
+		</tr>
+
+		<!-- table's row(first row) -->
+		<tr>
+			<td class="notMonth">29</td>
+			<td class="notMonth">30</td>
+			<td class ="NewYearEve_content">
+				<div class="specialnumber">31</div>
+				<p>New Year's Eve</p>
+			</td>
+			<td class="NewYearDay_content">
+				<div class="specialnumber">1</div>
+				<p>New Year's Day</p>
+			</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<!-- second row -->
+		<tr>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+		</tr>
+		<!-- third row -->
+		<tr>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+			<td>16</td>
+			<td>17</td>
+			<td>18</td>
+		</tr>
+		<!-- fourth row -->
+		<tr>
+			<td class="birthday_content">
+				<div class="specialnumber">19</div>
+				<p>Ashley's Birthday</p>
+			</td>
+			<td class="MLKDayInaug_content">
+				<div class="specialnumber">20</div>
+				<p>MLK Day & Inaug Day</p>
+			</td>
+			<td>21</td>
+			<td>22</td>
+			<td>23</td>
+			<td>24</td>
+			<td>25</td>
+		</tr>
+		<!-- fifth row -->
+		<tr>
+			<td>26</td>
+			<td>27</td>
+			<td>28</td>
+			<td class="lunarNewYear_content">
+				<div class="specialnumber">29</div>
+				<p>Lunar New Year</p>
+			</td>
+			<td>30</td>
+			<td>31</td>
+			<td class="notMonth">1</td>
+		</tr>
+
+	</table>
+</div>
+
+</body>
+
+</html>

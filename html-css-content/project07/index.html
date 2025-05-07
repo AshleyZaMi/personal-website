@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ashley Zapata Minero-Midterm Practical</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+<style>
+/*	global styling*/
+	body{
+		margin:0;
+		font-family: verdana, sans-serif;
+
+	}
+	h1{
+		font-size:29px;
+		margin:0;
+		color:#f7f0e8;
+	}
+	h2{
+		font-size: 13px;
+		text-transform: uppercase;
+		font-family: "Karla", system-ui;
+		font-style:normal;
+	}
+	h3{
+		font-size:35px;
+		margin:0;
+	}
+	h4{
+		font-size:21px;
+	}
+
+/*	compound css for h1,h3,h4*/
+	h1,h3,h4{
+		font-family: "DM Serif Display", system-ui;
+	}
+
+	h2,h3{
+		color:#004641;
+	}
+	p{
+		line-height: 1.7;
+	}
+/*	wrapper instance is used on header, section1 and section2*/
+	.wrapper{
+		width:900px;
+		margin:0 auto;
+/*		border:2px solid red;*/
+	}
+
+	.button-text{
+		background-color:#f7f0e8;
+		font-size: 13px;
+		font-weight: bold;
+		display:inline-block;
+		padding:10px;
+	}
+
+
+	#header .button-text:hover, #section2 .button-text:hover{
+		background-color:#ecdcd1;
+	}
+/*	global css styling has ended*/
+	
+/*alert id styling*/
+	#alert{
+		text-align:center;
+		background-color:#447786;
+		color:#f7f0e8;
+		padding-top:4px;
+		padding-bottom: 4px;
+
+	}
+/*styling nav img*/
+	
+	#nav img{
+		height:100px;
+		
+	}
+	#nav .wrapper{
+		text-align:center;
+
+	}
+	
+
+/*styling header*/
+
+	#header{
+		background-image: url("img/wholesale-fabric.jpg");
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: cover;
+		height:519px;
+
+	}
+
+	#header-content{
+		background-color: #0a4d46;
+		width:400px;
+		text-align: center;
+		position:relative;
+		top:212px;
+		left:-200px;
+		padding:15px;
+	}
+/*styling section1*/
+	#section1-content h2{
+		margin:0;
+	}
+
+	#section1-content{
+		margin:0 auto;
+		text-align: center;
+/*		border:2px solid green;*/
+		padding:20px 0px;
+		line-height: 1.6;
+	}
+
+	
+	/*.column{
+		border: 2px solid brown;
+	}*/
+
+
+	#section1-columns .column{
+		display:inline-block;
+		width:282px;
+		vertical-align: top;
+		margin:10px 5px;
+	}
+	#section1-columns .column p{
+		text-align: left;
+	}
+/*	thumbnails for the columns in section1-columns*/
+	.thumbnail{
+		width:282px;
+		height:159px;
+		overflow: hidden;
+	}
+
+	.thumbnail img{
+		width:100%;
+		height:auto;
+	}
+/*styling section2*/
+	#section2{
+		background-size: cover;
+		background-color:#e5d2c1;
+	}
+
+	#section2-content{
+		color:#0a4d46;
+		text-align: center;
+		padding:10px 0px;
+	}
+
+	/*compound css| overriding h2 font size making it to 31px	*/
+	#section2 h2{
+		font-size: 31px;
+	}
+	/*compound css| overriding h3 font size making it 53px	*/
+	#section2 h3{
+		font-size: 53px;
+	}
+/*section2 styling was finished*/
+	
+/*styling section3*/
+	#section3{
+		background-image: url("img/newsletter-background.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: left center;
+		height:419px;
+	}
+
+	#section3-content{
+		background-color: white;
+		width:500px;
+		float:right;
+		padding:20px;
+		margin-right:60px;
+		margin-top:100px;
+
+	}
+/*Extra credit part: for the form part*/
+	input{
+		height:52px;
+
+	}
+
+	#section3-content button{
+		background-color: black;
+		color:white;
+		text-align: center;
+		padding:20px 40px;
+		font-weight: normal;
+	}
+
+/*	creating a clearfloat class for clearing the float before the footer*/
+	
+	.clearfloat{
+		clear:both;
+	}
+
+/*styling footer*/
+	
+	#footer{
+		color:white;
+		background-size: cover;
+		background-color: #333333;
+		padding:10px;
+
+	}
+
+
+</style>
+</head>
+<body>
+<!-- ALERT -->
+<div id="alert"> 
+	<p>Free Shipping On Orders $99+ </p>
+</div>
+	
+<!-- NAV  -->
+<div id="nav" >
+	<!-- image (fwd-logo.png) -->
+	<div class="wrapper">
+		<a href="https://fabricwholesaledirect.com/" target="_blank"><img src="img/fwd-logo.png" alt="fabric wholesale direct logo"></a>
+		<!-- link https://fabricwholesaledirect.com/ -->
+	</div>
+</div>
+
+<!-- HEADER (wholesale-fabric.jpg) -->
+<div id="header">
+	<!-- HEADER CONTENT  -->
+	<div id="header-content" class="wrapper">
+		<h1>Shop directly with the manufacturer</h1>
+		<p class="button-text">SHOP NOW</p>
+			<!-- <p>SHOP NOW</p> -->
+	</div>
+</div>
+
+<!-- SECTION1 -->
+<div id="section1" class="wrapper">
+
+	<!-- SECTION1 CONTENT -->
+	<div id="section1-content" class="wrapper">
+		<h2>Stay up-to-date</h2>
+		<h3>Blog posts</h3>
+	</div><!-- section1-content ends here -->
+	
+	<!-- SECTION1 COLUMNS -->
+	<div id="section1-columns">
+		<div class="column">
+			<div class="thumbnail">
+				<!-- image (howto.jpg) -->
+				<img src="img/howto.jpg" alt="living room organization picture">
+			</div>
+			<h4>How To Make Curtains </h4>
+			<p>Read this blog to learn how to make curtains. Sewing curtains is very easy, only requires a few supplies, and is a great way to add style to any space! </p>
+		</div><!-- column finishes -->
+		<div class="column">
+			<div class="thumbnail">
+				<!-- image (fabric.jpg) -->
+				<img src="img/fabric.jpg" alt="fabric images">
+			</div>
+			<h4>Interfacing Fabric Guide</h4>
+			<p>Use this Interfacing Fabric Guide to help you select the best interfacing for your next sewing, quilting, or crafting project!</p>
+		</div> <!-- column finishes -->
+
+		<div class="column">
+			<div class="thumbnail">
+				<!-- image (dictionary.jpg) -->
+				<img src="img/dictionary.jpg" alt="different colors images">
+			</div>
+			<h4>Fabric Dictionary</h4>
+			<p>Broadcloth fabric is a smooth, breathable, and stiff textured material. Check out this blog to learn why you should sew with it on your next craft project! </p>
+		</div><!-- column finishes -->
+	</div> <!-- section1-columns ends here -->
+
+</div> <!-- section1 ends here -->
+
+<!-- SECTION2 -->
+<div id="section2">
+	<div id="section2-content" class="wrapper">
+		
+		<h2>About</h2>
+		<h3>Fabric Wholesale Direct</h3>
+
+		<p>Fabric Wholesale Direct is challenging the norm when it comes to finding high-quality bulk fabric at wholesale pricing. Across our online wholesale fabric store, you’ll discover an abundance of fabrics and trims by the yard with unrivaled prices. As a wholesale fabric supplier, we supply both novice and professional sewers in various textile fields — including craft, design, event planning, and retail — with suitable discount fabric online. No matter the job or project, we’re sure to have the perfect style and amount of upholstery and sewing material you need. Take a look at our entire online wholesale fabric supply for yourself. </p>
+
+		<p class="button-text">READ MORE</p>
+		<!-- <p>READ MORE</p> -->
+	</div>
+</div>
+
+<!-- SECTION3 (newsletter-background.jpg) -->
+<div id="section3">
+
+	<!-- SECTION3 CONTENT -->
+	<div id="section3-content">
+	<h2>Subscribe to our newsletter</h2>
+	<p>Promotions, new products and sales. Directly to your inbox.</p>
+
+	<!-- Form Fields: -->
+	<form>
+		<label for="email" class="main-label">Email Address: </label>
+		<input id="email" type="email" placeholder="Enter you email address">
+		<button type="submit" id="Subscribe">Subscribe</button>
+	
+	</form>
+	</div> <!-- section3-content ends here -->
+</div> <!-- section3 ends here -->
+
+<div class="clearfloat"></div>
+		
+
+<!-- FOOTER -->
+<div id="footer">
+	<p>© 2025 Fabric Wholesale Direct</p>
+</div>
+</body>
+</html>

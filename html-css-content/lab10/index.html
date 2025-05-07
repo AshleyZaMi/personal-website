@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Princess in Sakura</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+	body {
+	    background-image: url("img/pink_paws.jpg");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	    margin: 0 auto;
+	    text-align: center;
+	    padding: 0;
+	    height: 100%;
+	}
+	#header{
+		background-color: white;
+		margin:0 auto;
+		padding: 10px;
+		width:100%;
+	}
+	
+	#content {
+	    padding: 0;
+	    margin: 0 auto;
+	    text-align: center;
+	    height: 815px;
+	    width: 645px;
+	    overflow: hidden;
+	}
+
+	#background {
+	    position: relative;
+	    margin: 0 auto;
+	    display: block;
+	    width: auto;
+	    height: 100%;
+	    background-image: url("gif/sakura_video_2.gif");
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	    transform: scale(0.7); /* Scales everything inside */
+	    transform-origin: top left; /* Anchor scaling to top-left */
+	}
+
+	#wrapper {
+	    position: relative;
+	    margin: 0 auto;
+	    height: 1150px;
+	    width: 908px;
+	    overflow: hidden;
+	}
+	.dog_thought_wrapper{
+		position:absolute;
+		bottom:-250px;
+		left:500px;
+		height:500px;
+		display:inline-block;
+		animation:movechihuahua 5s infinite;
+
+	}
+
+	#dog_img {
+	    position: absolute;
+/*	    bottom:-250px*/
+	    bottom: -250px;
+	    height: 500px;
+	    width: auto;
+	    display: inline-block;
+	    animation: movechihuahua 5s infinite;
+	}
+
+	.thought_group {
+	    position: absolute;
+	    bottom: 20px; /*this is the postition relative to the chihuhua*/
+	    left: 20px; /*also position relative ot chihuhua*/
+	    animation: movethought 5s infinite; /* Same animation as the dog */
+	}
+
+	.dog_thought {
+	    background-color: #fff;
+	    border: 2px solid #ccc;
+	    border-radius: 45%;
+	    padding: 15px 20px;
+	    position: absolute;
+	    bottom: 0;
+	    display: inline-block;
+	}
+
+	.thought_bubble_small,
+	.thought_bubble_smaller {
+	    position: absolute;
+	    background-color: #fff;
+	    border: 2px solid #ccc;
+	    border-radius: 50%;
+	}
+
+	.thought_bubble_small {
+	    width: 20px;
+	    height: 20px;
+	    left: 20px;
+	    bottom: -30px;
+	}
+
+	.thought_bubble_smaller {
+	    width: 10px;
+	    height: 10px;
+	    left: 40px;
+	    bottom: -50px;
+	}
+
+	/*making the animation for chihuahua*/
+	@keyframes movechihuahua {
+	    0% {
+	        bottom: -250px;
+	        left: 500px;
+	        height: 500px;
+	    }
+	    20% {
+	        bottom: -150px;
+	        left: 450px;
+	        height: 500px;
+	    }
+	    40% {
+	        bottom: -50px;
+	        left: 450px;
+	        height: 500px;
+	    }
+	    60% {
+	        bottom: 0px;
+	        left: 450px;
+	        height: 450px;
+	    }
+	    70% {
+	        bottom: 50px;
+	        left: 450px;
+	        height: 350px;
+	    }
+	    80% {
+	        bottom: 100px;
+	        left: 350px;
+	        height: 350px;
+	    }
+	    90% {
+	        bottom: 150px;
+	        left: 350px;
+	        height: 300px;
+	    }
+	    100% {
+	        bottom: 200px;
+	        left: 250px;
+	        height: 250px;
+	    }
+	}
+	/*making animation to move the thought*/
+
+	@keyframes movethought {
+	    0% {
+	        bottom: 250px;
+	        left: 550px;
+	        transform: scale(1);
+	    }
+	    20% {
+	        bottom: 300px;
+	        left: 500px;
+	        transform: scale(1);
+	    }
+	    40% {
+	        bottom: 400px;
+	        left: 500px;
+	        transform: scale(0.8);
+	    }
+	    60% {
+	        bottom: 400px;
+	        left: 450px;
+	        transform: scale(0.8);
+	    }
+	    70% {
+	        bottom: 400px;
+	        left: 450px;
+	        transform: scale(0.7);
+	    }
+	    80% {
+	        bottom: 400px;
+	        left: 350px;
+	        transform: scale(0.6);
+	    }
+	    90% {
+	        bottom: 400px;
+	        left: 350px;
+	        transform: scale(0.5);
+	    }
+	    100% {
+	        bottom: 400px;
+	        left: 250px;
+	        transform: scale(0.4);
+	    }
+	}
+
+
+/*	Tablets - Screen Sizes <=991px| anything 991px or less*/
+	@media (max-width:991px){
+		
+	
+		body, #header{
+			width:auto;
+			margin:auto;
+
+		}
+	}
+
+/*	media is usually at the bottom and can change style*/
+/*	this is for mobile| Screen Sizes <= 767px*/
+	@media (max-width: 767px){
+		
+	/*Making sure no content in floated		*/
+
+		body, #header{
+			width:auto;
+			margin:auto;
+		 }
+	
+	}
+
+</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Princess in Sakura</h1>
+	</div>
+	<div id="content">
+		<div id="wrapper">
+			<div id="background">
+				 <!-- Wrapper for both dog and thought bubbles -->
+                <div class="dog-thought-wrapper">
+			
+					<img id="dog_img" src="gif/princhan_best_last.gif" alt="chihuahua walking">
+					<div class="thought_group">
+						<p class="dog_thought">Hmm...I smell snacks over there</p>
+						<p class="thought_bubble_small"></p>
+						<p class="thought_bubble_smaller"></p>
+					</div>
+				</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+</body>
+
+</html>
