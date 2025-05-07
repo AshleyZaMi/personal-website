@@ -90,6 +90,109 @@
 		clear:both;
 	}
 
+	/*	Tablets - Screen Sizes <=991px| anything 991px or less*/
+	@media (max-width:991px){
+		
+		#container,#row1,#row2,#row3{
+			width:auto;
+/*			margin:0px 0px;*/
+		}
+
+		#row1, #row2, #row3{
+			width:auto;
+			padding:20px;
+			margin:0 auto;
+			
+			
+/*			justify-content: center;*/
+		}
+
+/*	applying changes to the columns in rows	*/
+		#row2 .column1, #row2 .column2, #row3 .column1, #row3 .column2{
+			display:inline-block;
+			width:45%;
+			padding:0;
+			margin:0px 15px;
+		}
+
+/*overriding the column1 and column2*/
+		.column1,.column2{
+			width:45%;
+			
+	/*			overriding the original margin*/
+			margin:10%;
+			padding:20px;
+			margin-left: 10px;
+/*			border: 2px solid black;*/
+			float:left;
+
+		}
+/*overwriting the colors of rows*/
+		#row1{
+			background-color:#dee8eb;
+		}
+		#row2{
+		
+			background-color:white;
+		
+		}
+		#row3{
+			background-color:#f9f9d1;
+		
+		}
+
+
+
+
+	}
+
+/*	media is usually at the bottom and can change style*/
+/*	this is for mobile| Screen Sizes <= 767px*/
+	@media (max-width: 767px){
+		
+	/*Making sure no content in floated		*/
+		.column1{
+			float:none;
+		}
+		.column2{
+			float:none;
+		}
+		
+		#container,.column1, .column2{
+			width:auto;
+			margin:0;
+			padding:0;
+		}
+/*		overriding the done before*/
+		#row2 .column1, #row2 .column2, #row3 .column1, #row3 .column2{
+			display:block;
+			width:auto;
+		}
+
+		#row1, #row2, #row3{
+			width:auto;
+			margin:0;
+			padding:20px;
+		 }
+		
+
+	/*overwriting the colors of rows*/
+		#row1{
+			background-color:#e5f9e5;
+		}
+		#row2{
+		
+			background-color:white;
+		
+		}
+		#row3{
+			background-color:#ffeaee;
+		
+		}
+
+	}
+
+
 </style>
 
 </head>

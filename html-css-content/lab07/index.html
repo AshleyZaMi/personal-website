@@ -124,8 +124,35 @@
 			left:-10px;
 			box-shadow: 20px 20px 50px rgba(255,146,196,0.5);
 		}
+	/* Tablets and small desktops (<= 991px) */
+@media screen and (max-width: 991px) {
+    #background {
+        width: 95%;
+        padding: 10px;
+    }
 
 
+    h1 {
+        font-size: 50px;
+        margin: 20px;
+    }
+
+    .indiv-thumbnail-holder {
+        margin: 3px;
+    }
+}
+
+/* Mobile devices (<= 767px) */
+@media screen and (max-width: 767px) {
+    .all_thumbnails_holder {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    
+}
 
 	</style>
 </head>
