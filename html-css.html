@@ -19,6 +19,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<!-- jquery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 <style>
@@ -58,7 +61,7 @@
 			font-family: xero, sans-serif;
 			font-size:67px;
 		}
-		p{
+		#footer p{
 			text-align: center;
 		}
 	
@@ -143,6 +146,82 @@ strong{
 
 	}
 
+	/* 991px breakpoint - Tablet / Small desktop */
+@media (max-width: 991px) {
+  /* Example: Adjust project-lab-column and iframe-column flex sizes */
+  .flex-wrapper {
+    flex-direction: column;  /* Stack columns vertically */
+    gap: 15px;
+  }
+
+  .project-lab-column {
+    flex: none;
+    width: 100%;
+    min-width: auto;
+    background-color: #f0f0f0; /* subtle change for visibility */
+  }
+
+  .iframe-column {
+    flex: none;
+    width: 100%;
+    min-width: auto;
+    background-color: #fff;
+  }
+
+  /* Resize iframe height for smaller screens */
+  iframe, .iframe-container iframe {
+    height: 700px; /* lower than desktop */
+  }
+
+  /* Header and fonts */
+  #header {
+    height: 140px;
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+/* 767px breakpoint - Mobile phones */
+@media (max-width: 767px) {
+  /* Make navbar show only the mobile version (your Bootstrap d-md-none and d-md-block classes handle this) */
+  
+  /* Stack content vertically with some padding */
+  .flex-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .project-lab-column,
+  .iframe-column {
+    width: 100%;
+    min-width: auto;
+/*    padding: 0 10px;*/
+  }
+
+  iframe, .iframe-container iframe {
+    height: 500px; /* even smaller iframe height on phones */
+  }
+
+  /* Reduce image height */
+  img {
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  /* Optional: reduce navbar font sizes */
+  #navbar ul li a {
+    font-size: 14px;
+  }
+}
+
+
 
 	
 	</style>
@@ -165,8 +244,63 @@ strong{
 
 	</div> -->
 
-	<!-- NEW NAVBAR -->
-	<div id="navbar">
+
+<!-- Mobile Navbar (Offcanvas) with Custom Structure -->
+<nav class="navbar navbar-light bg-light d-md-none fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="img/my_drawn_kitsune.png" alt="kitsune logo" style="height: 57px;">
+    </a>
+
+    <!-- Toggler using Font Awesome -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+    <i class="fas fa-bars" style="color: #0095d0; font-size: 1.9rem;"></i>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start fade" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel">Ashley Zapata Minero</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projects <i class="fas fa-caret-down ms-1"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="myProjects.html"><i class="fas fa-angle-right"></i> ML Projects</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project1">&emsp; <i class="fas fa-angle-double-right"></i> Pretty Penguins</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project2Card">&emsp; <i class="fas fa-angle-double-right"></i> Avocados</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project3Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Regression</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project4Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Classification</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project5Card">&emsp; <i class="fas fa-angle-double-right"></i> Classification Revisited</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item active" href="html-css.html"><i class="fas fa-angle-right"></i> HTML/CSS Projects</a></li>
+              <li><a class="dropdown-item" href="research_papers.html"><i class="fas fa-angle-right"></i> Research Papers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="resume/resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Navbar closed -->
+  
+  <!-- hide the custom navbar on small screens and show it only from 768px (md) and up. -->
+<!-- NEW NAVBAR -->
+  <div id="navbar" class="d-none d-md-block">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -186,11 +320,11 @@ strong{
 						<li class="column">
 							<a href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
 						<ul class="sub">
-								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
-								<li><a href="myProjects.html#project2">Avocados</a></li>
-								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
-								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
-								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
+								<li><a href="myProjects.html#project1Card">Pretty Penguins</a></li>
+								<li><a href="myProjects.html#project2Card">Avocados</a></li>
+								<li><a href="myProjects.html#project3Card">Diabetes Regression</a></li>
+								<li><a href="myProjects.html#project4Card">Diabetes Classification</a></li>
+								<li><a href="myProjects.html#project5Card">Diabetes Classification Revisited</a></li>
 						</ul>
 						</li><!-- .column -->
 						<li class="column">
@@ -312,12 +446,50 @@ strong{
   });
  </script>
 
+ <script>
+  // Only run scroll effect on small screens
+  if (window.innerWidth < 768) {
+    $(window).on("scroll", function () {
+      var triggerPoint = $(".project-lab-column").offset().top;
+      var scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition >= triggerPoint) {
+        $(".navbar.d-md-none").addClass("scrolled");
+      } else {
+        $(".navbar.d-md-none").removeClass("scrolled");
+      }
+    });
+  }
+</script>
+
  <!-- In your main HTML page (outside iframe) -->
 <script>
   function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
   }
 </script>
+
+<!-- for the navbar toggler in offcanvas to turn it to red when .active -->
+<script>
+  const toggler = document.querySelector('.navbar-toggler');
+  const offcanvas = document.getElementById('offcanvasNav');
+  const togglerIcon = toggler.querySelector('i');
+
+  if (toggler && offcanvas && togglerIcon) {
+    offcanvas.addEventListener('show.bs.offcanvas', () => {
+      toggler.classList.add('active');
+      togglerIcon.style.color = 'red';
+    });
+
+    offcanvas.addEventListener('hide.bs.offcanvas', () => {
+      toggler.classList.remove('active');
+      togglerIcon.style.color = '#0095d0'; // reset to original
+    });
+  }
+</script>
+
+<!-- bootstrap js + popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 

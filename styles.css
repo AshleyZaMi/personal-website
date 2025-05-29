@@ -176,15 +176,6 @@
 		text-align: center; /*this one is used to center the nav li's display*/
 	}
 
-/*	#header{
-		padding-top: 20px;
-		background-color: #99D0D3;
-		height:160px;
-		width:100%;
-		position:static;meaning it remains at the top of the page but doesn't scroll with the content.
-		z-index: 1;
-		text-align: center;
-	}*/
 
 
 /* Style #nav ul, removing bullets and no margins or paddings */
@@ -515,7 +506,7 @@
 
 	#icon-and-nav-wrapper{
 		width:1000px;
-/*		border:2px solid white;*/
+/*		border:2px solid black;*/
 		display:flex;
 		margin:20px auto 0px auto;
 	}
@@ -605,3 +596,185 @@
   		color: red !important;
 	}*/
 
+/*show up the offcanvas nav*/
+	.navbar.d-md-none.scrolled {
+	  background-color: white !important;
+	}
+
+/*change the logo to the color*/
+
+	.navbar.d-md-none.scrolled .navbar-brand {
+		background-color:#DDEFFC;
+		border-radius: 70%;
+ 	}
+/*	offcanvas styling*/
+	/* Offcanvas container */
+#offcanvasNav {
+  background-color: rgba(0, 36, 64, 0);  /* transparent when closed */
+  transition: background-color 0.3s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  z-index: 1050;
+  padding-top: 1rem;
+}
+
+/* When offcanvas is open */
+#offcanvasNav.show {
+  background-color: white;
+}
+
+/* The navbar nav list inside offcanvas */
+#offcanvasNav .navbar-nav {
+  text-align: center;
+  padding-left: 0;
+}
+
+/* Nav links inside offcanvas */
+#offcanvasNav .nav-link {
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: block;
+}
+
+/* Nav links when offcanvas open */
+#offcanvasNav.show .nav-link {
+  color: #0095d0;
+}
+
+/* Nav link hover */
+#offcanvasNav .nav-link:hover,
+#offcanvasNav .nav-link:focus {
+  color: #00497A;
+  background-color: #ddeffc;
+  border-radius: 6px;
+}
+
+
+/* Dropdown toggle */
+#offcanvasNav .dropdown-toggle::after {
+  border-top-color: white; /* arrow color when closed */
+  transition: border-color 0.3s ease-out;
+}
+
+/* Dropdown toggle arrow when open */
+#offcanvasNav.show .dropdown-toggle::after {
+  border-top-color: #0095d0;
+}
+
+/* Dropdown menu inside offcanvas */
+#offcanvasNav .dropdown-menu {
+  background-color: #00497a;
+  border: none;
+  margin-top: 0.25rem;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Dropdown items */
+#offcanvasNav .dropdown-item {
+  color: white;
+  padding: 0.4rem 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dropdown item hover */
+#offcanvasNav .dropdown-item:hover,
+#offcanvasNav .dropdown-item:focus {
+  background-color: #0095d0;
+  color: white;
+}
+
+/* Active nav item */
+#offcanvasNav .nav-item.active > .nav-link {
+  background-color: #ddeffc;
+  color: #00497a !important;
+  border-radius: 6px;
+}
+
+/* Special styling for Contact Me nav link */
+#offcanvasNav .nav-item.contact > .nav-link {
+  background-color: #4BA1E0;
+  color: white;
+}
+
+#offcanvasNav.show .nav-item.contact > .nav-link {
+  background-color: #009CDE !important;
+  color: white !important;
+}
+
+/*for the navbar off offcanvas */
+/* Mobile navbar: transparent by default, white on hover */
+.navbar.d-md-none {
+  background-color: rgba(0, 36, 64, 0) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.d-md-none:hover {
+  background-color: white !important;
+
+}
+
+/* Toggler icon color filter method */
+.navbar-brand {
+  transition: filter 0.3s ease;
+}
+
+.navbar:hover .navbar-brand {
+	background-color:#DDEFFC;
+	border-radius: 70%;
+ }
+
+/*changing the hamburger for mobile to blue color*/
+.navbar-toggler {
+	  border-color: #000;
+	}
+
+@media (max-width: 991px) {
+	#icon-wrapper{
+		margin-right:15px;
+	}
+}
+
+/*this is to set active the one the user is in offcanvas*/
+.offcanvas .nav-link.active, .offcanvas .dropdown-item.active{
+	background-color: aliceblue !important;
+	color: red !important;
+}
+
+/*this is for the dropdown in offcanvas*/
+
+/* Force styling for active dropdown item inside mobile offcanvas */
+
+/* Remove default bootstrap dropdown caret for offcanvas*/
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+/* Rotate the FontAwesome caret when dropdown is open */
+.nav-item.dropdown.show > a.dropdown-toggle > i.fa-caret-down {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+
+
+/*css for the hamburger toggler when active in offcanvas*/
+.navbar-toggler.active i {
+  color: red !important;
+}
+
+
+
+
+/* hover style
+.offcanvas .nav-link:hover {
+	background-color: aliceblue;
+	color: black;
+}
+*/

@@ -41,7 +41,7 @@
 		margin:0 auto;
 		margin-bottom:50px;
 	}
-	button{
+	.modal button{
 		padding: 10px 20px;
 		background-color: #4CAF50;
 		color:white;
@@ -50,8 +50,20 @@
 		border-radius: 5px;
 		cursor: pointer;
 	}
-	button:hover{
+	.modal button:hover{
 		background-color:#45a049;
+	}
+
+
+
+/*making the exit button transparent here*/
+	.modal button.btn-close{
+		background-color: rgba(0, 36, 64, 0);
+	}
+
+/*making the exit button of the modal change to red* upon hovering*/
+	.modal button.btn-close:hover {
+		background-color: red;
 	}
 	.output {
     	margin-top: 20px;
@@ -169,6 +181,98 @@
    .modal-content {
   		height: 100%;
 	}
+
+/*viewport for 991px (tablet view)	*/
+@media (max-width: 991px) {
+  .modal-dialog {
+    margin: 1rem auto;
+    max-width: 95%;
+  }
+
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .thumbnail img {
+    width: 100%;
+/*    max-width: 400px;*/
+    height: auto;
+  }
+
+  .output-result-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .output {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .run-button {
+    display: block;
+    margin: 0.5rem auto;
+    font-size: 1rem;
+  }
+}
+/*viewport for mobile*/
+@media (max-width: 767px) {
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-header h5 {
+    font-size: 1.25rem;
+  }
+
+  .project p,
+  .project em,
+  .output {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .run-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .output-result-container {
+    padding: 1rem 0;
+  }
+
+  .project-images {
+    gap: 0.75rem;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+
+}
+
+/*removing horizontal overflow*/
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+
 	</style>
 
 </head>
@@ -191,8 +295,62 @@
 	</div> -->
 
 
+<!-- Mobile Navbar (Offcanvas) with Custom Structure -->
+<nav class="navbar navbar-light bg-light d-md-none fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="img/my_drawn_kitsune.png" alt="kitsune logo" style="height: 57px;">
+    </a>
+
+    <!-- Toggler using Font Awesome -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+  	<i class="fas fa-bars" style="color: #0095d0; font-size: 1.9rem;"></i>
+		</button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start fade" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel">Ashley Zapata Minero</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Projects <i class="fas fa-caret-down ms-1"></i></a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item active" href="myProjects.html"> <i class="fas fa-angle-right"></i> ML Projects</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project1Card">  &emsp; <i class="fas fa-angle-double-right"></i> Pretty Penguins </a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project2Card">&emsp; <i class="fas fa-angle-double-right"></i> Avocados</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project3Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Regression</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project4Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Classification</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project5Card">&emsp; <i class="fas fa-angle-double-right"></i> Classification Revisited</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="html-css.html"><i class="fas fa-angle-right"></i> HTML/CSS Projects</a></li>
+              <li><a class="dropdown-item" href="research_papers.html"><i class="fas fa-angle-right"></i> Research Papers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="resume/resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Navbar closed -->
+	
+
+
+	<!-- hide the custom navbar on small screens and show it only from 768px (md) and up. -->
 	<!-- NEW NAVBAR -->
-	<div id="navbar">
+	<div id="navbar" class="d-none d-md-block">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -212,11 +370,11 @@
 						<li class="column">
 							<a class="active" href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
 						<ul class="sub">
-								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
-								<li><a href="myProjects.html#project2">Avocados</a></li>
-								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
-								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
-								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
+								<li><a href="myProjects.html#project1Card">Pretty Penguins</a></li>
+								<li><a href="myProjects.html#project2Card">Avocados</a></li>
+								<li><a href="myProjects.html#project3Card">Diabetes Regression</a></li>
+								<li><a href="myProjects.html#project4Card">Diabetes Classification</a></li>
+								<li><a href="myProjects.html#project5Card">Diabetes Classification Revisited</a></li>
 						</ul>
 						</li><!-- .column -->
 						<li class="column">
@@ -248,7 +406,7 @@
 	<!-- mb-4 is margin from the row below it -->
 	<div class="row g-4 mb-4">
 		<!-- CARD 1 -->
-		<div class="col-md-4 d-flex">
+		<div class="col-md-4 d-flex" id="project1Card">
 			<div class="card h-100">
   			<a href="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" data-lightbox="project-img" data-title="Project 1 - Palmer Penguins attributes scatterplot matrix"><img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" class="landscape" alt="Palmer Penguins attributes scatterplot matrix"></a>
   				<div class="card-body">
@@ -259,7 +417,7 @@
 			</div><!-- .card -->
 		</div><!-- .col-12 col-sm-4 -->
 <!-- CARD 2 -->
-		<div class="col-md-4 d-flex">
+		<div class="col-md-4 d-flex" id="project2Card">
 			<div class="card h-100">
   			<a href="MLProjects/Project04-Avocados/avocado.png" data-lightbox="project-img" data-title="Project 2 - PAvocado Prices and volume Time Series"><img src="MLProjects/Project04-Avocados/avocado.png" class="landscape" alt="Avocado Prices and volume Time Series"></a>
   				<div class="card-body">
@@ -270,7 +428,7 @@
 			</div><!-- .card -->
 		</div><!-- .col-12 col-sm-4 -->
 <!-- CARD 3 -->
-		<div class="col-md-4 d-flex">
+		<div class="col-md-4 d-flex" id="project3Card">
 			<div class="card h-100">
   			<a href="MLProjects/Project05-Diabetes_Regression/linearRegression.png" data-lightbox="project-img" data-title="Project 3 - Diabetes Data: Progression vs BMI(Linear Regression)"><img src="MLProjects/Project05-Diabetes_Regression/linearRegression.png" class="landscape" alt="Diabetes Data: Progression vs BMI(Linear Regression)"></a>
   			<div class="card-body">
@@ -286,7 +444,7 @@
 	<!-- SECOND ROW -->
 	<div class="row g-4">
 		<!-- CARD 4 -->
-		<div class="col-md-4 d-flex">
+		<div class="col-md-4 d-flex" id="project4Card">
 			<div class="card h-100">
   			<a href="MLProjects/Project06-Diabetes_Classification/model-accuracy-img.jpg" data-lightbox="project-img" data-title="Project 4 - Diabetes Classification"><img src="MLProjects/Project06-Diabetes_Classification/model-accuracy-img.jpg" class="landscape" alt="Diabetes Classification"></a>
   			<div class="card-body">
@@ -299,7 +457,7 @@
 		</div><!-- .col-12 col-sm-4 -->
 
 			<!-- CARD 5 -->
-		<div class="col-md-4 d-flex">
+		<div class="col-md-4 d-flex" id="project5Card">
 			<div class="card h-100">
   			<a href="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" data-lightbox="project-img" data-title="Project 5 - Diabetes Decision Tree Classification Results"><img src="MLProjects/Project07-Diabetes_Classification_Revisited/decisiontrees.png" class="landscape" alt="Diabetes Decision Tree Classification Results"></a>
   			<div class="card-body">
@@ -659,6 +817,44 @@ document.querySelectorAll('.run-button').forEach(button => {
     }
   });
  </script>
+
+ <script>
+  // Only run scroll effect on small screens
+  if (window.innerWidth < 768) {
+    $(window).on("scroll", function () {
+      var triggerPoint = $(".card-container").offset().top;
+      var scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition >= triggerPoint) {
+        $(".navbar.d-md-none").addClass("scrolled");
+      } else {
+        $(".navbar.d-md-none").removeClass("scrolled");
+      }
+    });
+  }
+</script>
+
+<!-- for the navbar toggler in offcanvas to turn it to red when .active -->
+<script>
+  const toggler = document.querySelector('.navbar-toggler');
+  const offcanvas = document.getElementById('offcanvasNav');
+  const togglerIcon = toggler.querySelector('i');
+
+  if (toggler && offcanvas && togglerIcon) {
+    offcanvas.addEventListener('show.bs.offcanvas', () => {
+      toggler.classList.add('active');
+      togglerIcon.style.color = 'red';
+    });
+
+    offcanvas.addEventListener('hide.bs.offcanvas', () => {
+      toggler.classList.remove('active');
+      togglerIcon.style.color = '#0095d0'; // reset to original
+    });
+  }
+</script>
+
+
+
 	
 	<!-- CDN -->
 	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>

@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 <style>
@@ -79,9 +82,13 @@
 		line-height: 1.5;
 		text-align:center;
 		padding-top:20px;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
 		
 	}
+	.contact-info p{
+		padding-top:10px;
+	}
+
 	#content{
 		margin: 10px auto;
 		padding:20px 60px;
@@ -94,12 +101,12 @@
 		line-height:1.5;
 		
 	}
+
 	a{
 		color: crimson;
 	}
 	
 	
-
 	
 	.floatright{
 		float:right;
@@ -143,6 +150,104 @@
 		background-color: yellow;
 	}*/
 
+	/*
+   Viewport: max-width 991px
+   For tablets and small desktops
+ */
+@media (max-width: 991px) {
+/*	making the container smaller*/
+  #container {
+    width: 90%;
+  }
+/*padding for the content*/
+  #content {
+    padding: 10px 30px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .floatright {
+    display: block;
+    margin: 10px 15px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .dateright {
+    display: block;
+    padding: 0;
+    margin-top: 15px;
+    text-align: right;
+  }
+  .dual-enroll-special .dateright, .dual-enroll-special li{
+  	margin-top: 0px;
+  	line-height: 1.6;
+  	margin-bottom: 5px;
+  }
+
+  .contact-info p {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+
+}
+
+/*
+   Viewport: max-width 767px
+   For phones
+ */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  #content {
+    padding: 15px 20px;
+  }
+
+  .floatright img {
+    width: 40px;
+  }
+
+  .dateright {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .contact-info p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+/*
+  .navbar-brand img {
+    height: 45px;
+  }*/
+
+ /* .offcanvas-title {
+    font-size: 20px;
+  }*/
+}
+
 
 
 </style>
@@ -150,10 +255,65 @@
 </head>
 
 <body>
+
+
+<!-- Mobile Navbar (Offcanvas) with Custom Structure -->
+<nav class="navbar navbar-light bg-light d-md-none fixed-top scrolled">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/my_drawn_kitsune.png" alt="kitsune logo" style="height: 57px;">
+    </a>
+
+    <!-- Toggler using Font Awesome -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+  	<i class="fas fa-bars" style="color: #0095d0; font-size: 1.9rem;"></i>
+		</button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start fade" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel">Ashley Zapata Minero</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projects <i class="fas fa-caret-down ms-1"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="../myProjects.html"><i class="fas fa-angle-right"></i> ML Projects</a></li>
+              <li><a class="dropdown-item" href="../myProjects.html#project1Card">&emsp; <i class="fas fa-angle-double-right"></i> Pretty Penguins</a></li>
+              <li><a class="dropdown-item" href="../myProjects.html#project2Card">&emsp; <i class="fas fa-angle-double-right"></i> Avocados</a></li>
+              <li><a class="dropdown-item" href="../myProjects.html#project3Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Regression</a></li>
+              <li><a class="dropdown-item" href="../myProjects.html#project4Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Classification</a></li>
+              <li><a class="dropdown-item" href="../myProjects.html#project5Card">&emsp; <i class="fas fa-angle-double-right"></i> Classification Revisited</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../html-css.html"><i class="fas fa-angle-right"></i> HTML/CSS Projects</a></li>
+              <li><a class="dropdown-item" href="../research_papers.html"><i class="fas fa-angle-right"></i> Research Papers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link active" href="#">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact Me</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Navbar closed -->
 	
+	<!-- hide the custom navbar on small screens and show it only from 768px (md) and up. -->
 	
 <!-- NEW NAVBAR -->
-<div id="navbar" class="scrolled">
+<div id="navbar" class="d-none d-md-block scrolled">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="../index.html" class="logo">
@@ -173,11 +333,11 @@
 						<li class="column">
 							<a href="../myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
 						<ul class="sub">
-								<li><a href="../myProjects.html#project1">Pretty Penguins</a></li>
-								<li><a href="../myProjects.html#project2">Avocados</a></li>
-								<li><a href="../myProjects.html#project3">Diabetes Regression</a></li>
-								<li><a href="../myProjects.html#project4">Diabetes Classification</a></li>
-								<li><a href="../myProjects.html#project5">Diabetes Classification Revisited</a></li>
+								<li><a href="../myProjects.html#project1Card">Pretty Penguins</a></li>
+								<li><a href="../myProjects.html#project2Card">Avocados</a></li>
+								<li><a href="../myProjects.html#project3Card">Diabetes Regression</a></li>
+								<li><a href="../myProjects.html#project4Card">Diabetes Classification</a></li>
+								<li><a href="../myProjects.html#project5Card">Diabetes Classification Revisited</a></li>
 						</ul>
 						</li><!-- .column -->
 						<li class="column">
@@ -191,7 +351,7 @@
 					</ul>
 				
 				</li>
-				<li><a class="active" href="resume/resume.html">Resume</a></li>
+				<li><a class="active" href="#">Resume</a></li>
 				<!-- <div class="contact-wrapper"> -->
 					<li class="contact"><a href="../contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
 				<!-- </div> -->
@@ -260,7 +420,7 @@
 			
 		
 
-		<p><span class="dateright">August 2024 - <em>Current</em></span></p>
+		<p><span class="dateright" style="margin:0px" >August 2024 - <em>Current</em></span></p>
 			<p><strong>Machine Learning Projects</strong> | <em>Creator</em></p>
 			<ul>
 				<li>Created a dedicated section within the personal portfolio to highlight machine learning models, web applications, and data analysis tools.</li>
@@ -302,27 +462,27 @@
 				<li>Built strong interpersonal skills by engaging in semester-long discussions with students and professionals.</li>
 			</ul>
 
-	<p><span class="dateright">January 2024 – <em>Current</em></span></p>
+	<p><span class="dateright" style="margin:0px">January 2024 – <em>Current</em></span></p>
 			<p><strong>Japanese Student Association</strong> | <em>Member</em></p>
 			<ul>
 				<li>Participated in language and cultural events, including the Undoukai Sports Festival with 13 other universities.</li>
 				<li>Engaged in language cafes to enhance Japanese proficiency in a community setting.</li>
 			</ul>
 
-	<p><span class="dateright">January 2024 – <em>Current</em></span></p>
+	<p><span class="dateright" style="margin:0px">January 2024 – <em>Current</em></span></p>
 			<p><strong>Chanoyu Tea Club</strong> | <em>Member</em></p>
 			<ul>
 				<li>Practiced Japanese tea ceremony etiquette and deepened understanding of traditional customs.</li>
 			</ul>
 
-	<p><span class="dateright">August 2018-June 2022</span></p>
+	<p><span class="dateright" style="margin:0px">August 2018-June 2022</span></p>
 			<p><strong>M.E.S.A</strong> | <em>Secretary</em></p>
 			<ul>
 				<li>Led participation in Civil Structures and Coding Solutions competitions, applying engineering and programming skills.</li>
 				<li>Designed a bridge structure prototype with a team, exploring innovative designs for future infrastructure. </li>
 			</ul>
 
-		<p><span class="dateright">June 2021-August 2021</span></p>
+		<p><span class="dateright" style="margin:0px">June 2021-August 2021</span></p>
 			<p><strong>Project PAWS</strong> | <em>Co-Founder</em> </p>
 			<ul>
 				<li>Partnered with local animal rescues and raised $350 in donations to support shelters.</li>
@@ -338,6 +498,10 @@
 	<p>© 2025 Ashley Zapata Minero</p>
 
 </div> <!-- #footer-->
+
+ <!-- bootstrap js + popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
  <!-- jquery script to change nav bar to white-->
 <script>
 	$(window).scroll(function () {
@@ -347,6 +511,39 @@
 	  // Don't remove the class when scrolled to the top
 	});
  </script>
+
+ <script>
+ 	if (window.innerWidth < 768) {
+		$(window).scroll(function () {
+		  if ($(this).scrollTop() > 50) {
+		    $('.navbar.d-md-none').addClass('scrolled');
+		  }
+		  // Don't remove the class when scrolled to the top
+		});
+	}
+ </script>
+
+ <!-- for the navbar toggler in offcanvas to turn it to red when .active -->
+<script>
+  const toggler = document.querySelector('.navbar-toggler');
+  const offcanvas = document.getElementById('offcanvasNav');
+  const togglerIcon = toggler.querySelector('i');
+
+  if (toggler && offcanvas && togglerIcon) {
+    offcanvas.addEventListener('show.bs.offcanvas', () => {
+      toggler.classList.add('active');
+      togglerIcon.style.color = 'red';
+    });
+
+    offcanvas.addEventListener('hide.bs.offcanvas', () => {
+      toggler.classList.remove('active');
+      togglerIcon.style.color = '#0095d0'; // reset to original
+    });
+  }
+</script>
+
+
+
 </body>
 
 </html>

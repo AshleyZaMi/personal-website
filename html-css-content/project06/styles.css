@@ -130,9 +130,9 @@
 		}
 
 		#nav{
-			width:950px;
-			/*this centers the divs			*/
-			margin:0 auto;
+			display: flex;
+			justify-content: center;
+			gap: 10px; /* optional spacing between links */
 		}
 
 		#nav a{

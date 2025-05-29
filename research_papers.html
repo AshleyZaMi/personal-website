@@ -67,6 +67,65 @@
 	  height: 100%;
 	  border: none;
 	}
+
+  /* For tablets and below (<= 991px) */
+@media (max-width: 991px) {
+  /* Example: Hide the desktop navbar and show the mobile one */
+  /*#navbar {*/
+    /*display: none !important; /* /* Hide desktop nav */
+  /*}*/
+
+  /*nav.navbar.d-md-none {*/
+    /*display: block !important; */ /* Show mobile navbar */
+  /*}*/
+
+  /* Adjust iframe height for smaller screens */
+  iframe {
+    height: 600px;
+  }
+
+  /* Example: Adjust media-container height */
+  .media-container {
+    height: 50vh;
+  }
+  #icon-wrapper{
+    margin:0px 5px;
+  }
+}
+
+/* For phones and small devices (<= 767px) */
+@media (max-width: 767px) {
+  /* Maybe make font sizes smaller for better fit */
+  h1.name-overlay {
+    font-size: 2rem;
+  }
+
+  /* Further reduce iframe height */
+  iframe {
+    height: 400px;
+  }
+
+  /* Adjust navbar toggler size */
+  .navbar-toggler i.fas.fa-bars {
+    font-size: 1.5rem;
+  }
+
+  /* Stack or resize elements in the .content or buttons */
+  .btn-group {
+    flex-direction: column;
+  }
+
+  /* Smaller paddings or margins if needed */
+  .container.my-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+
+
+}
+
 	</style>
 
 </head>
@@ -84,8 +143,62 @@
 	</div>
 	
 
-	<!-- NEW NAVBAR -->
-	<div id="navbar">
+<!-- Mobile Navbar (Offcanvas) with Custom Structure -->
+<nav class="navbar navbar-light bg-light d-md-none fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="img/my_drawn_kitsune.png" alt="kitsune logo" style="height: 57px;">
+    </a>
+
+    <!-- Toggler using Font Awesome -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+    <i class="fas fa-bars" style="color: #0095d0; font-size: 1.9rem;"></i>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start fade" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel">Ashley Zapata Minero</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+          <!-- Projects Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Projects <i class="fas fa-caret-down ms-1"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="myProjects.html"><i class="fas fa-angle-right"></i> ML Projects</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project1Card">&emsp; <i class="fas fa-angle-double-right"></i> Pretty Penguins</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project2Card">&emsp; <i class="fas fa-angle-double-right"></i> Avocados</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project3Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Regression</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project4Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Classification</a></li>
+              <li><a class="dropdown-item" href="myProjects.html#project5Card">&emsp; <i class="fas fa-angle-double-right"></i> Classification Revisited</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="html-css.html"><i class="fas fa-angle-right"></i> HTML/CSS Projects</a></li>
+              <li><a class="dropdown-item active" href="research_papers.html"><i class="fas fa-angle-right"></i> Research Papers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="resume/resume.html">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Navbar closed -->
+  
+  <!-- hide the custom navbar on small screens and show it only from 768px (md) and up. -->
+<!-- NEW NAVBAR -->
+  <div id="navbar" class="d-none d-md-block">
 		<div id="icon-and-nav-wrapper">
 			<div id="icon-wrapper">
 				<a href="index.html" class="logo">
@@ -105,11 +218,11 @@
 						<li class="column">
 							<a href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
 						<ul class="sub">
-								<li><a href="myProjects.html#project1">Pretty Penguins</a></li>
-								<li><a href="myProjects.html#project2">Avocados</a></li>
-								<li><a href="myProjects.html#project3">Diabetes Regression</a></li>
-								<li><a href="myProjects.html#project4">Diabetes Classification</a></li>
-								<li><a href="myProjects.html#project5">Diabetes Classification Revisited</a></li>
+								<li><a href="myProjects.html#project1Card">Pretty Penguins</a></li>
+								<li><a href="myProjects.html#project2Card">Avocados</a></li>
+								<li><a href="myProjects.html#project3Card">Diabetes Regression</a></li>
+								<li><a href="myProjects.html#project4Card">Diabetes Classification</a></li>
+								<li><a href="myProjects.html#project5Card">Diabetes Classification Revisited</a></li>
 						</ul>
 						</li><!-- .column -->
 						<li class="column">
@@ -348,6 +461,22 @@
 </script>
 
 <script>
+  // Only run scroll effect on small screens
+  if (window.innerWidth < 768) {
+    $(window).on("scroll", function () {
+      var triggerPoint = $("h1").offset().top;
+      var scrollPosition = $(window).scrollTop();
+
+      if (scrollPosition >= triggerPoint) {
+        $(".navbar.d-md-none").addClass("scrolled");
+      } else {
+        $(".navbar.d-md-none").removeClass("scrolled");
+      }
+    });
+  }
+</script>
+
+<script>
   function filterPapers(category) {
     const cards = document.querySelectorAll('.paper-card');
     cards.forEach(card => {
@@ -397,6 +526,25 @@
       }
     });
   });
+</script>
+
+<!-- for the navbar toggler in offcanvas to turn it to red when .active -->
+<script>
+  const toggler = document.querySelector('.navbar-toggler');
+  const offcanvas = document.getElementById('offcanvasNav');
+  const togglerIcon = toggler.querySelector('i');
+
+  if (toggler && offcanvas && togglerIcon) {
+    offcanvas.addEventListener('show.bs.offcanvas', () => {
+      toggler.classList.add('active');
+      togglerIcon.style.color = 'red';
+    });
+
+    offcanvas.addEventListener('hide.bs.offcanvas', () => {
+      toggler.classList.remove('active');
+      togglerIcon.style.color = '#0095d0'; // reset to original
+    });
+  }
 </script>
 
 	<!-- Bootstrap JS Bundle -->
