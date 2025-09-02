@@ -707,7 +707,7 @@
 				
 				<div class="output-result-container" data-project="4">
 					<div data-project="4">
-			    		<p><span id="accuracy"></span></p>
+			    		<p><span id="result-4"></span></p>
 						
 					</div> <!-- .project-images -->
 				</div> <!-- .output-result-container -->
@@ -766,7 +766,7 @@
 					</div> <!-- .project-images -->
 
 					<div data-project="5">
-						<p><span id="result"></span></p>
+						<p><span id="result-5"></span></p>
 					</div>
 				</div> <!-- .output-result-container -->
 			</div><!-- #project5 -->
@@ -821,7 +821,7 @@
 					</div> <!-- .project-images -->
 
 					<div data-project="6">
-						<p><span id="result"></span></p>
+						<p><span id="result-6"></span></p>
 					</div>
 				</div> <!-- .output-result-container -->
 			</div><!-- #project6 -->
@@ -879,7 +879,7 @@
 					</div> <!-- .project-images -->
 
 					<div data-project="7">
-						<p><span id="result"></span></p>
+						<p><span id="result-7"></span></p>
 					</div>
 				</div> <!-- .output-result-container -->
 			</div><!-- #project7 -->
@@ -935,7 +935,7 @@
 					</div> <!-- .project-images -->
 
 					<div data-project="8">
-						<p><span id="result"></span></p>
+						<p><span id="result-8"></span></p>
 					</div>
 				</div> <!-- .output-result-container -->
 			</div><!-- #project8 -->
@@ -993,7 +993,7 @@
 					</div> <!-- .project-images -->
 
 					<div data-project="9">
-						<p><span id="result"></span></p>
+						<p><span id="result-9"></span></p>
 					</div>
 				</div> <!-- .output-result-container -->
 			</div><!-- #project9 -->
@@ -1031,7 +1031,7 @@ document.querySelectorAll('.run-button').forEach(button => {
       image.style.display = 'block';
     });
     
-    if (projectNumber !== "5"){
+    if (projectNumber !== "5" && projectNumber !== "6" && projectNumber !== "7" && projectNumber !== "8" && projectNumber !== "9"){
     	// Show the output result container
     	container.style.display = 'flex';  // Change to 'flex' or 'block' depending on your layout
 
@@ -1043,101 +1043,32 @@ document.querySelectorAll('.run-button').forEach(button => {
     // Optionally, hide the button after clicking
     button.style.display = 'none';
     
-    // Fetch and display accuracy for Project 4
-    if (projectNumber === "4") {
-      fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project06-Diabetes_Classification/accuracy.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          document.getElementById('accuracy').innerHTML = data;
-        })
-        .catch(error => console.error('Error fetching accuracy.txt:', error));
-    }
-    
-    // Fetch and display results for Project 5 (or any other project as needed)
-    if (projectNumber === "5") {
-    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project07-Diabetes_Classification_Revisited/results.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // Format the fetched text with line breaks
-          const formattedData = data.replace(/\n/g, '<br>');
-          document.getElementById('result').innerHTML = formattedData;
-        })
-        .catch(error => console.error('Error fetching results.txt:', error));
 
-    }
-    // Fetch and display results for Project 6 (or any other project as needed)
-    if (projectNumber === "6") {
-    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project08-Dendroguins/terminal.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // Format the fetched text with line breaks
-          const formattedData = data.replace(/\n/g, '<br>');
-          document.getElementById('result').innerHTML = formattedData;
-        })
-        .catch(error => console.error('Error fetching terminal.txt:', error));
+      // Project-specific fetch URLs which contain text
+      const projectFiles = {
+        "4": "Project06-Diabetes_Classification/accuracy.txt",
+        "5": "Project07-Diabetes_Classification_Revisited/results.txt",
+        "6": "Project08-Dendroguins/terminal.txt",
+        "7": "Project09-Titanic_Classification/terminal.txt",
+        "8": "Project10-Wine_Quality_Clustering/terminal.txt",
+        "9": "Project11-NASA_Kepler_Exoplanet_Candidate_Classification/terminal.txt"
+      };
 
-    }
-    if (projectNumber === "7") {
-    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project09-Titanic_Classification/terminal.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // Format the fetched text with line breaks
-          const formattedData = data.replace(/\n/g, '<br>');
-          document.getElementById('result').innerHTML = formattedData;
-        })
-        .catch(error => console.error('Error fetching terminal.txt:', error));
-    }
-     if (projectNumber === "8") {
-    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project10-Wine_Quality_Clustering/terminal.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // Format the fetched text with line breaks
-          const formattedData = data.replace(/\n/g, '<br>');
-          document.getElementById('result').innerHTML = formattedData;
-        })
-        .catch(error => console.error('Error fetching terminal.txt:', error));
-    }
-
-    if (projectNumber === "9") {
-    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/terminal.txt')
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.text();
-        })
-        .then(data => {
-          // Format the fetched text with line breaks
-          const formattedData = data.replace(/\n/g, '<br>');
-          document.getElementById('result').innerHTML = formattedData;
-        })
-        .catch(error => console.error('Error fetching terminal.txt:', error));
-    }
+      // If a fetchable file exists for this project
+      if (projectFiles[projectNumber]) {
+        fetch(`https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/${projectFiles[projectNumber]}`)
+          .then(response => {
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            return response.text();
+          })
+          .then(data => {
+            const formattedData = data.replace(/\n/g, '<br>');
+            const resultEl = document.getElementById(`result-${projectNumber}`);
+            if (resultEl) resultEl.innerHTML = formattedData;
+          })
+          .catch(error => console.error(`Error fetching ${projectFiles[projectNumber]}:`, error));
+      }
+ 
 
 
   });
