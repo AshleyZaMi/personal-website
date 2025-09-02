@@ -442,7 +442,7 @@
 	</div><!-- .row -->
 
 	<!-- SECOND ROW -->
-	<div class="row g-4">
+	<div class="row g-4 mb-4">
 		<!-- CARD 4 -->
 		<div class="col-md-4 d-flex" id="project4Card">
 			<div class="card h-100">
@@ -468,8 +468,61 @@
 			</div><!-- .card -->
 		</div><!-- .col-12 col-sm-4 -->
 
+		<!-- CARD 6 -->
+		<div class="col-md-4 d-flex" id="project6Card">
+			<div class="card h-100">
+  			<a href="MLProjects/Project08-Dendroguins/Penguins_Decision_Tree.png" data-lightbox="project-img" data-title="Project 6 - Dendroguins Results"><img src="MLProjects/Project08-Dendroguins/Penguins_Decision_Tree.png" class="landscape" alt="Dengroguins Results"></a>
+  			<div class="card-body">
+    				<h5 class="card-title">Project 6 - Dendroguins</h5>
+    				<p class="card-text">In this project I prepared the data, tuned a Decision Tree model using cross-validation, trained it with the best hyperparameters, and evaluated it with a confusion matrix, decision tree plot, and classification report.</p>
+    				<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project6Modal">View Project</a>
+  				</div><!-- .card-body -->
+			</div><!-- .card -->
+		</div><!-- .col-12 col-sm-4 -->
+
 
 	</div><!-- .row -->
+
+	<!-- THIRD ROW -->
+
+	<!-- CARD 7 -->
+	<div class="row g-4 mb-4">
+		<div class="col-md-4 d-flex" id="project7Card">
+			<div class="card h-100">
+  			<a href="MLProjects/Project09-Titanic_Classification/KNNs_accuracy_score_vs_num_neighbors.png" data-lightbox="project-img" data-title="Project 7 - Titanic Classification Results"><img src="MLProjects/Project09-Titanic_Classification/KNNs_accuracy_score_vs_num_neighbors.png" class="landscape" alt="Titanic Classification Results"></a>
+  			<div class="card-body">
+    				<h5 class="card-title">Project 7 - Titanic Classification</h5>
+    				<p class="card-text">In this project I wrangled the Titanic dataset, used cross-validation to tune KNN for the best k value, trained and evaluated the model, plotted accuracy vs. neighbors, and made a survival prediction for a sample passenger.</p>
+    				<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project7Modal">View Project</a>
+  				</div><!-- .card-body -->
+			</div><!-- .card -->
+		</div><!-- .col-12 col-sm-4 -->
+
+		<!-- CARD 8 -->
+		<div class="col-md-4 d-flex" id="project8Card">
+			<div class="card h-100">
+  			<a href="MLProjects/Project10-Wine_Quality_Clustering/Red_Wines-Inertia_vs_Num_of_Clusters.png" data-lightbox="project-img" data-title="Project 8 - Wine Quality Clustering"><img src="MLProjects/Project10-Wine_Quality_Clustering/Red_Wines-Inertia_vs_Num_of_Clusters.png" class="landscape" alt="Wine Quality Clustering Results"></a>
+  			<div class="card-body">
+    				<h5 class="card-title">Project 8 - Wine Quality Clustering</h5>
+    				<p class="card-text">In this project I cleaned and normalized the red wine dataset, applied K-Means clustering, found the optimal number of clusters using inertia and silhouette scores, and evaluated the clustering with a contingency table.</p>
+    				<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project8Modal">View Project</a>
+  				</div><!-- .card-body -->
+			</div><!-- .card -->
+		</div><!-- .col-12 col-sm-4 -->
+
+		<!-- CARD 9 -->
+		<div class="col-md-4 d-flex" id="project9Card">
+			<div class="card h-100">
+  			<a href="MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/NASA_kepler_exoplanet_candidate_classification.png" data-lightbox="project-img" data-title="Project 9 - NASA Kepler Exoplanet Candidate Classification Results"><img src="MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/NASA_kepler_exoplanet_candidate_classification.png" class="landscape" alt="NASA Kepler Exoplanet Candidate Classification Results"></a>
+  			<div class="card-body">
+    				<h5 class="card-title">Project 9 - NASA Kepler Exoplanet Candidate Classification</h5>
+    				<p class="card-text">In this project I wrangled the data, used RandomizedSearchCV and GridSearchCV to find the best model and hyperparameters for PCA and non-PCA data, evaluated the final model with a confusion matrix and classification report, and answered reflection questions.</p>
+    				<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#project9Modal">View Project</a>
+  				</div><!-- .card-body -->
+			</div><!-- .card -->
+		</div><!-- .col-12 col-sm-4 -->
+
+		</div><!-- .row -->
 
 </div> <!-- .card-container -->
 
@@ -593,7 +646,7 @@
 				<p>This project involves building a linear regression model to find the line of best fit. First, data is visually analyzed, and a correlation matrix is created to identify the highest correlated attribute. The least correlated attributes are dropped, and the highest correlation is used as a key feature for the model. The data is then cleaned, and the highest correlated attribute (x) and target data (y) are plotted. A linear regression model is trained using .fit(), with the input data reshaped into a 2D format to be compatible with sklearn. The model predicts the line of best fit, which is then plotted alongside the data with appropriate labels.</p>
 
 				<!-- Technical -->
-				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn</em></p>
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, numpy, LinearRegression</em></p>
 
 				<!-- reference to files -->
 				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project05-Diabetes%20Regression" target="_blank">Click to view Project 3 files</a></p>
@@ -641,7 +694,7 @@
 				<p>This project involves data wrangling steps such as gathering data, removing unusable data, creating a correlation matrix, and splitting the data into feature vectors and targets. It also includes partitioning the data into training and testing sets. For logistic regression, the model is set up, trained, and tested, with predictions made and accuracy evaluated. A set seed is used to ensure consistent training and testing data, preventing randomization in results each time. The final output is the accuracy score of the model.</p>
 
 				<!-- Technical -->
-				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn, joblib</em></p>
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, joblib, train_test_split, LogisticRegression, accuracy_score</em></p>
 
 				<!-- reference to files -->
 				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project06-Diabetes_Classification" target="_blank">Click to view Project 4 files</a></p>
@@ -692,7 +745,7 @@
 				<p>To evaluate the models, I generated predictions using .predict() on the test set and calculated their accuracy using accuracy_score from sklearn. This allowed me to compare the two criteria and determine which performed better.</p>
 
 				<!-- Technical -->
-				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, skikit-learn</em></p>
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, tree, accuracy_score, train_test_split</em></p>
 
 				<!-- reference to files -->
 				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project07-Diabetes_Classification_Revisited" target="_blank">Click to view Project 5 files</a></p>
@@ -727,6 +780,231 @@
   </div>
 
 
+
+<!-- Modal for Project 6 -->
+  <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project6ModalLabel">Project 6 - Dendroguins</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>About the Project</h6>
+          <!-- <img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix"> -->
+          <!-- You can add more content like description or results here -->
+				   			
+		<!-- Project 6 -->
+		<div class="project">
+			<div id="project6">
+				<p>In this project, I cleaned and prepared the data, then used cross-validation with a Decision Tree model to find the most efficient hyperparameters. After identifying them, I trained a new Decision Tree model with those parameters. I evaluated the results using a confusion matrix, a plotted decision tree, and a classification report, and I also responded to related questions.</p>
+
+				<!-- Technical -->
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, train_test_split, GridSearchCV, tree, ConfusionMatrixDisplay, confusion_matrix, classification_report, PCA</em></p>
+
+				<!-- reference to files -->
+				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project08-Dendroguins" target="_blank">Click to view Project 6 files</a></p>
+
+				<!-- Button to run Python code -->
+				<button class="run-button" data-project="6"> Run Python Code</button>
+
+				<!-- Output container for displaying results -->
+				<div class="output">Results will be shown here.</div>
+				
+
+				<div class="output-result-container" data-project="6">
+					<div class="project-images" data-project="6">
+						<div class="thumbnail">
+							<a href="MLProjects/Project08-Dendroguins/Penguins_Decision_Tree.png" data-lightbox="project6-img" data-title="Project 6 - Dendroguins Results"><img src="MLProjects/Project08-Dendroguins/Penguins_Decision_Tree.png" class="landscape" alt="Dengroguins Results"></a>
+						</div>
+
+					</div> <!-- .project-images -->
+
+					<div data-project="6">
+						<p><span id="result"></span></p>
+					</div>
+				</div> <!-- .output-result-container -->
+			</div><!-- #project6 -->
+		</div><!-- .project -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal for Project 7 -->
+  <div class="modal fade" id="project7Modal" tabindex="-1" aria-labelledby="project7ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project7ModalLabel">Project 7 - Titanic Classification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>About the Project</h6>
+          <!-- <img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix"> -->
+          <!-- You can add more content like description or results here -->
+				   			
+		<!-- Project 7 -->
+		<div class="project">
+			<div id="project7">
+				<p>In this project, I wrangled the data to include only relevant features (age, pclass, sex) and handled duplicates, nulls, and one-hot encoding.</p>
+
+				<p>I applied standard scaling to the training and test sets to avoid data leakage, then set up a KNN model. Using cross-validation across a range of k values, I determined the optimal number of neighbors for the model. </p>
+
+				<p>I trained and evaluated the final KNN model, plotted accuracy versus number of neighbors, and made predictions for new data, including a specific example of a 31-year-old female passenger in 2nd class.</p>
+
+				<!-- Technical -->
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, numpy, scikit-learn, KNeighborsClassifier, pipeline, train_test_split, StandardScaler, accuracy_score, classification_report, cross_val_score</em></p>
+
+				<!-- reference to files -->
+				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project09-Titanic_Classification" target="_blank">Click to view Project 7 files</a></p>
+
+				<!-- Button to run Python code -->
+				<button class="run-button" data-project="7"> Run Python Code</button>
+
+				<!-- Output container for displaying results -->
+				<div class="output">Results will be shown here.</div>
+				
+
+				<div class="output-result-container" data-project="7">
+					<div class="project-images" data-project="7">
+						<div class="thumbnail">
+							<a href="MLProjects/Project09-Titanic_Classification/KNNs_accuracy_score_vs_num_neighbors.png" data-lightbox="project7-img" data-title="Project 7 - Titanic Classification Results"><img src="MLProjects/Project09-Titanic_Classification/KNNs_accuracy_score_vs_num_neighbors.png" class="landscape" alt="Classification Results"></a>
+						</div>
+
+					</div> <!-- .project-images -->
+
+					<div data-project="7">
+						<p><span id="result"></span></p>
+					</div>
+				</div> <!-- .output-result-container -->
+			</div><!-- #project7 -->
+		</div><!-- .project -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal for Project 8 -->
+  <div class="modal fade" id="project8Modal" tabindex="-1" aria-labelledby="project8ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project8ModalLabel">Project 8 - Wine Quality Clustering</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>About the Project</h6>
+          <!-- <img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix"> -->
+          <!-- You can add more content like description or results here -->
+				   			
+		<!-- Project 8 -->
+		<div class="project">
+			<div id="project8">
+				<p>In this project, I prepared the red wine dataset by removing duplicates, nulls, and the wine index, and separated the quality column for later evaluation. I normalized the data and used K-Means clustering, finding the optimal number of clusters (k) using inertia and silhouette scores. </p>
+
+				<p>After training the model with the best k, I assigned cluster labels, evaluated clustering performance with a silhouette score, and compared clusters to actual wine quality using a contingency table. Questions related to the project were also answered.</p>
+
+				<!-- Technical -->
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, Normalizer, train_test_split, KMeans, silhouette_score</em></p>
+
+				<!-- reference to files -->
+				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project10-Wine_Quality_Clustering" target="_blank">Click to view Project 8 files</a></p>
+
+				<!-- Button to run Python code -->
+				<button class="run-button" data-project="8"> Run Python Code</button>
+
+				<!-- Output container for displaying results -->
+				<div class="output">Results will be shown here.</div>
+				
+
+				<div class="output-result-container" data-project="8">
+					<div class="project-images" data-project="8">
+						<div class="thumbnail">
+							<a href="MLProjects/Project10-Wine_Quality_Clustering/Red_Wines-Inertia_vs_Num_of_Clusters.png" data-lightbox="project8-img" data-title="Project 8 - Wine Quality Clustering"><img src="MLProjects/Project10-Wine_Quality_Clustering/Red_Wines-Inertia_vs_Num_of_Clusters.png" class="landscape" alt="Wine Quality Clustering Results"></a>
+						</div>
+
+					</div> <!-- .project-images -->
+
+					<div data-project="8">
+						<p><span id="result"></span></p>
+					</div>
+				</div> <!-- .output-result-container -->
+			</div><!-- #project8 -->
+		</div><!-- .project -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal for Project 9 -->
+  <div class="modal fade" id="project9Modal" tabindex="-1" aria-labelledby="project9ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project9ModalLabel">Project 9 - Kepler Exoplanet Candidate Classification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h6>About the Project</h6>
+          <!-- <img src="MLProjects/Project03-pretty_penguins/penguins_attributes_scplama.png" alt="Palmer Penguins attributes scatterplot matrix"> -->
+          <!-- You can add more content like description or results here -->
+				   			
+		<!-- Project 9 -->
+		<div class="project">
+			<div id="project9">
+				<p>In this project, I cleaned and prepared the data, then performed model selection using RandomizedSearchCV for both PCA and non-PCA datasets to identify the best-performing model.</p>
+
+				<p> I optimized its hyperparameters using GridSearchCV and reusable functions, trained the final model, and evaluated it with a confusion matrix and classification report.</p> 
+
+				<p>I also implemented permutation feature importance and answered a set of reflection questions, organizing all the functions into a class for code reusability and efficiency.</p>
+
+				<!-- Technical -->
+				<p><em><span class="color-red">Technical: </span>Matplotlib, pandas, scikit-learn, PCA, train_test_split, LogisticRegression, KNeighborsClassifier, DecisionTreeClassifier, SVC, RandomizedSearchCV, ConfusionMatrixDisplay, confusion_matrix, classification_report, permutation_importance, StandardScaler</em></p>
+
+				<!-- reference to files -->
+				<p><a href="https://github.com/AshleyZaMi/personal-website/tree/main/MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification" target="_blank">Click to view Project 9 files</a></p>
+
+				<!-- Button to run Python code -->
+				<button class="run-button" data-project="9"> Run Python Code</button>
+
+				<!-- Output container for displaying results -->
+				<div class="output">Results will be shown here.</div>
+				
+
+				<div class="output-result-container" data-project="9">
+					<div class="project-images" data-project="9">
+						<div class="thumbnail">
+							<a href="MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/NASA_kepler_exoplanet_candidate_classification.png" data-lightbox="project9-img" data-title="Project 9 - Kepler Exoplanet Candidate Classification Results"><img src="MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/NASA_kepler_exoplanet_candidate_classification.png" class="landscape" alt="Kepler Exoplanet Candidate Classification Results"></a>
+						</div>
+
+					</div> <!-- .project-images -->
+
+					<div data-project="9">
+						<p><span id="result"></span></p>
+					</div>
+				</div> <!-- .output-result-container -->
+			</div><!-- #project9 -->
+		</div><!-- .project -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div> <!-- .project-container -->
 
@@ -797,6 +1075,71 @@ document.querySelectorAll('.run-button').forEach(button => {
         .catch(error => console.error('Error fetching results.txt:', error));
 
     }
+    // Fetch and display results for Project 6 (or any other project as needed)
+    if (projectNumber === "6") {
+    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project08-Dendroguins/terminal.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Format the fetched text with line breaks
+          const formattedData = data.replace(/\n/g, '<br>');
+          document.getElementById('result').innerHTML = formattedData;
+        })
+        .catch(error => console.error('Error fetching terminal.txt:', error));
+
+    }
+    if (projectNumber === "7") {
+    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project09-Titanic_Classification/terminal.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Format the fetched text with line breaks
+          const formattedData = data.replace(/\n/g, '<br>');
+          document.getElementById('result').innerHTML = formattedData;
+        })
+        .catch(error => console.error('Error fetching terminal.txt:', error));
+    }
+     if (projectNumber === "8") {
+    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project10-Wine_Quality_Clustering/terminal.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Format the fetched text with line breaks
+          const formattedData = data.replace(/\n/g, '<br>');
+          document.getElementById('result').innerHTML = formattedData;
+        })
+        .catch(error => console.error('Error fetching terminal.txt:', error));
+    }
+
+    if (projectNumber === "9") {
+    	fetch('https://raw.githubusercontent.com/AshleyZaMi/personal-website/main/MLProjects/Project11-NASA_Kepler_Exoplanet_Candidate_Classification/terminal.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Format the fetched text with line breaks
+          const formattedData = data.replace(/\n/g, '<br>');
+          document.getElementById('result').innerHTML = formattedData;
+        })
+        .catch(error => console.error('Error fetching terminal.txt:', error));
+    }
+
+
   });
 });
 });

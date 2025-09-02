@@ -1,0 +1,3 @@
+best K value:  6
+final knn accuracy:  0.8301886792452831
+31-year-old female passenger in 2nd Class:  1.0

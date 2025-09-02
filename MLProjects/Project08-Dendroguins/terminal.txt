@@ -1,0 +1,15 @@
+classification report:
+               precision    recall  f1-score   support
+
+      Adelie       0.95      0.95      0.95        37
+   Chinstrap       0.88      0.88      0.88        17
+      Gentoo       1.00      1.00      1.00        30
+
+    accuracy                           0.95        84
+   macro avg       0.94      0.94      0.94        84
+weighted avg       0.95      0.95      0.95        84
+
+Q1| Opimized hyperparams:  {'criterion': 'entropy', 'max_depth': 4, 'min_samples_leaf': 3}
+Q2| Predicted instance of a label I am most confident about being predicted correctly is 'Gentoo'
+Q3| True instance of a label I am most confident about being predicted correctly is 'Adelie'
+Q4| Discrepancy of how each of the labels are being predicted might be due to factors such as the structure of a decision tree, which may affect where the tree is partitioned, since it tends to favor the classes that have highly distinct features distributions when making the split. Perhaps there may also be some overlaps in some species where they have the same attributes which may cause discrepancy in how lables are being predicted. Also perhaps some classes in the penguins.csv may have more samples than others, which can also cause discrepancy.

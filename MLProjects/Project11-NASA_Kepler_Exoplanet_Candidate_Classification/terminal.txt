@@ -1,0 +1,19 @@
+Classification Report:
+ 
+                precision    recall  f1-score   support
+
+     CANDIDATE       0.73      0.82      0.77      1359
+FALSE POSITIVE       0.80      0.70      0.75      1401
+
+      accuracy                           0.76      2760
+     macro avg       0.76      0.76      0.76      2760
+  weighted avg       0.76      0.76      0.76      2760
+
+1) No, PCA did not improve upon the results from when I did not use it. If I were to compare it to the results I got from both PCA and non-PCA RandomizedSearchCV, showed a clear difference in its performance. In PCA the best_score was around 0.7231, while non-PCA best_score was around 0.8908. Through this it can be seen that non-PCA was actually improved more than that of PCA.
+2) the key characteristic of PCA is its ability of helping reduce the curse of dimensionality while still maintaining variance, by combining features into principal components. So because it focuses on variance and not on target labels, it can perhaps dillute the data by removing important data for classification--perhaps some features held significant power or weight. Another thing is that PCA assummes linear relationships which may be difficult when working with complex datasets such as this one of NASA.
+3) Yes the model was able to classify the objects equally across labels. This can be seen in the classification report, where the F1-score for CANDIDATE is around 0.80, and for FALSE POSITIVE it is around 0.79, which are very close. Similarily, the scores for precision and recall seem to be balanced. We can tell this especially because f1-score is a metric that combines precision and recall into one number, so if the number is particularly high it suggest that there is a class balance. In this case since the F1-Score for CANDIDATE and FALSE POSITIVE are nearly equal it suggests that the model is performing consistently across the two classes. Therefore, there is no strong indicator of imbalance happening across labels.
+4) The attribute that significantly influences whether or not an object is an exoplanet is: 
+Top important feature: 
+feature  importance
+koi_teq    0.091406
+5) The most important attribute appears to be koi_prad, which represents planetary radius. This makes sense as a strong predictor because the size of the object is directly related to if it resembles known exoplanets. If the radius is too small, it might be noise or a starspot on the star's surface. If the radius is too large, it could be a binary star--two stars that orbit around a common center, or another type of celestial object such as stars(like the sun), planets, moons, asteroids, black holes etc. I think the model particularly finds the koi_prad feature really informative because known exoplanets tend to fall with certain size ranges, making koi_prad a reliable feature to use for the model. This feature in particular suggests that planetary size plays a key role in distinguishing real exoplanets from false positives in the kepler exoplanet dataset.
