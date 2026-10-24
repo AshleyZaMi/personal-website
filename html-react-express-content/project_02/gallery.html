@@ -1,0 +1,252 @@
+<!-- page for photo gallery -->
+ <!-- styling for individual pages needs to be internal css -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="shared.css">
+        <style>
+            #img-wrapper{
+                background-image:url("img/data_analysis.jpg");
+            }
+            .img-box-wrapper{
+                width:200px;
+                height:200px;
+                background-color:lightgrey;
+                border:1px solid red;
+            }
+
+            #content-container{
+                margin-left:auto;
+                margin-right:auto;
+                height:auto;
+                width:1250px;
+                border-left:3px solid rgb(234,248,168);
+                border-right:3px solid rgb(234,248,168);
+                background-color:rgb(148, 182, 168);
+            }
+
+            #imgs-container{
+                padding-top:50px;
+                padding-bottom:50px;
+                margin-left:10px;
+                margin-right:10px;
+            }
+
+            .tiny-square{
+                width:100px;
+                height:110px;
+                background-color:pink;
+                border:1px solid black;
+            }
+            .medium-square{
+                width:180px;
+                height:180px;
+                background-color:green;
+                border:1px solid black;
+            }
+            .large-square{
+                width:250px;
+                height:250px;
+                background-color:blue;
+                border:1px solid black;
+            }
+            .side-square{
+                width:170px;
+                height:200px;
+                background-color:black;
+                border:1px solid black;
+            }
+            #x-large-square{
+                width:350px;
+                height:250px;
+                background-color:red;
+                border:1px solid black;
+            }
+            .row{
+                /* border:1px solid purple; */
+                display:flex;
+                justify-content: center;
+            }
+
+            #row1{
+                align-items:flex-end;
+            }
+
+                /* previous and     next sibiling
+            .row .large-square + .side-square{
+                margin-top:25px;
+            } */
+
+            /* .row is an ancestor and we want to choose all .side-square elements */
+            .row .side-square{
+                /* border: 2px solid pink; */
+                margin-top:28px;
+            }
+            .spacing{
+                margin-left:5px;
+                margin-right:5px;
+                margin-bottom:5px;
+            }
+
+            /* Responsive styling */
+            @media screen and (max-width: 1300px) {
+                #content-container {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                #imgs-container {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .row {
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
+            }
+
+            /* Tablet and mobile screens */
+            @media screen and (max-width: 768px) {
+                #title-wrap {
+                    width: auto;
+                    max-width: 100%;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    box-sizing: border-box;
+                }
+
+                #gradient-styling {
+                    height: auto;
+                    min-height: 200px;
+                    padding-bottom: 60px;
+                    box-sizing: border-box;
+                }
+
+                #img-wrapper {
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                #navigation-bar {
+                    flex-wrap: wrap;
+                }
+
+                #navigation-bar a {
+                    flex: 1 1 120px;
+                    width: auto;
+                    box-sizing: border-box;
+                }
+
+                #imgs-container {
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+
+                .row {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .row .side-square {
+                    margin-top: 5px;
+                }
+
+                /* Prevent the gallery items from growing beyond the screen */
+                .tiny-square,
+                .medium-square,
+                .large-square,
+                .side-square,
+                #x-large-square,
+                .img-box-wrapper {
+                    max-width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+                        
+        </style>
+    </head>
+    <body>
+        <!-- for the header styling -->
+        <div id="img-wrapper">
+            <div id="gradient-styling">
+                <div id="title-wrap">
+                    <h1>Gallery</h1>
+                    <h2>Results in Diagram Forms</h2>
+                </div> <!-- #title-wrap closed-->
+            </div> <!-- #gradient-styling closed-->
+        </div><!-- #img-wrapper closed-->
+
+        <!-- navigation bar -->
+        <div id="navigation-bar">
+            <a href="assignment02.html">Home Page</a>
+            <a href="">Gallery Page</a>
+        </div>
+
+        <!-- content container -->
+        <div id="content-container">
+            <div id="imgs-container">
+                <div id="row1" class="row">
+                    <div class="tiny-square spacing">
+                    </div>
+
+                    <div class="medium-square spacing">
+                    </div>
+
+                    <div class="large-square spacing">
+                    </div>
+
+                    <div class="medium-square spacing">
+                    </div>
+
+                    <div class="tiny-square spacing">
+                    </div>
+                </div><!-- .row closed -->
+
+                <div class="row">
+                    <div class="side-square spacing">
+                    </div>
+
+                    <div class="large-square spacing" >
+                    </div>
+
+                    <div id="x-large-square" class="spacing">
+                    </div>
+
+                    <div class="large-square spacing">
+                    </div>
+
+                    <div class="side-square spacing">
+                    </div>
+                </div><!-- .row closed  -->
+
+                <div id="row3" class="row">
+                    <div class="tiny-square spacing">
+                    </div>
+
+                    <div class="medium-square spacing">
+                    </div>
+
+                    <div class="large-square spacing">
+                    </div>
+
+                    <div class="medium-square spacing">
+                    </div>
+
+                    <div class="tiny-square spacing">
+                    </div>
+                </div><!-- .row closed-->
+            </div><!-- #imgs-container -->
+        </div><!-- #content-contianer closed-->
+
+        <!-- footer -->
+        <div id="footer">
+            Ashley Zapata Minero © 2026
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+
+.pos-sentence-section-wrapper{
+    background-color:#E9EBFA;
+    position:relative;
+    top:140px;
+    left:25px;
+    z-index:2;
+    height:700px;
+    border-radius:25px;
+    width:830px;
+}
+
+/* third-page-site-name-styling for the siteName */
+.third-page-site-name-styling{
+    top:-770px;
+}

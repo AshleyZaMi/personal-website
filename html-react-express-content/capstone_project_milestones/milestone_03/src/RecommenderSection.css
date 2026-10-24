@@ -1,0 +1,26 @@
+#recommender-wrapper{
+    position:relative;
+    z-index:2;
+    background-color: #EFD3D7;
+    width:830px;
+    height:180px;
+    border-radius:30px;
+    top:105px;
+    left: 25px;
+}
+
+.button-extra-styling{
+    background-color:#E3EE9B;
+}
+/* using flex to easily align the button */
+#button-centered{
+    /* border: 5px solid red; */
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding-top:10px;
+}
+
+.recc-pink-field-styling{
+    width:85%;
+}

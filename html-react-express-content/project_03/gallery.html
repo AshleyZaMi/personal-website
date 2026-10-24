@@ -1,0 +1,520 @@
+<!-- page for photo gallery -->
+ <!-- styling for individual pages needs to be internal css -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="shared.css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+        <style>
+            #img-wrapper{
+                background-image:url("img/data_analysis.jpg");
+            }
+            .img-box-wrapper{
+                width:200px;
+                height:200px;
+                background-color:lightgrey;
+                border:1px solid red;
+            }
+
+            #content-container{
+                margin-left:auto;
+                margin-right:auto;
+                height:auto;
+                width:1250px;
+                border-left:3px solid rgb(234,248,168);
+                border-right:3px solid rgb(234,248,168);
+                background-color:rgb(148, 182, 168);
+            }
+
+            #imgs-container{
+                padding-top:50px;
+                padding-bottom:50px;
+                margin-left:10px;
+                margin-right:10px;
+            }
+
+            .tiny-square{
+                width:100px;
+                height:110px;
+                background-color:pink;
+                border:1px solid black;
+            }
+            .medium-square{
+                width:180px;
+                height:180px;
+                background-color:green;
+                border:1px solid black;
+            }
+            .large-square{
+                width:250px;
+                height:250px;
+                background-color:blue;
+                border:1px solid black;
+            }
+            .side-square{
+                width:170px;
+                height:200px;
+                background-color:black;
+                border:1px solid black;
+            }
+            #x-large-square{
+                width:350px;
+                height:250px;
+                background-color:red;
+                border:1px solid black;
+            }
+            .row{
+                /* border:1px solid purple; */
+                display:flex;
+                justify-content: center;
+            }
+
+            #row1{
+                align-items:flex-end;
+            }
+
+                /* previous and     next sibiling
+            .row .large-square + .side-square{
+                margin-top:25px;
+            } */
+
+            /* .row is an ancestor and we want to choose all .side-square elements */
+            .row .side-square{
+                /* border: 2px solid pink; */
+                margin-top:28px;
+            }
+            .spacing{
+                margin-left:5px;
+                margin-right:5px;
+                margin-bottom:5px;
+            }
+            
+            img{
+                display:flex;
+            }
+
+            /* CAPTION OVERLAY */
+
+           .medium-square, .large-square, .side-square, #x-large-square{
+                 /* if we had overflow hidden, it would hide the
+                 caption*/
+                /* overflow:hidden; */
+              
+                border:2px solid green;
+                /* should be position relative because it 
+                is the parent */
+                position:relative;
+                
+           }
+            
+           .caption-overlay{
+                /* border:5px solid red; */
+                /* should be positon absolute because is the child */
+                position:absolute;
+                /* adding a background */
+                background-color: rgba(0,0,0,0.6);
+                /* adding the caption text color */
+                color:#FFF;
+                /* setting the overlay on top by using edges,
+                doing the same for left, right, bottom */
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                /* now we want to realign the text */
+                text-align: center;
+                /* to vertically align will do padding top */
+                padding-top:75px;
+
+                /* now to make it interactive will make it visbibility:hidden
+                to hide it initially, will show it with hover function */
+                visibility:hidden;
+
+           }
+
+           /* selecting all the img children of
+           .img-and-cap-wrapper */
+           .medium-square > img, .large-square > img, .side-square > img, #x-large-square > img{
+            /* doing the following so we could see the image better because
+            right now it is huge. */
+                width:100%;
+                height:100%;
+                /* object-fit:cover; will avoid from stretching the image, 
+                incase we have an image that is portrait and in general will
+                try to fit it as best in the container without stretching it,
+                which is best practice */
+                object-fit:cover;
+
+                object-position:left;
+           }
+
+           /* only when I hover over the container will it show the caption overlay */
+           /* when I hover over the img-and-cap-wrapper, for the .caption-overlay
+           I want to change its visiblity to visbile */
+           .medium-square:hover .caption-overlay, .large-square:hover .caption-overlay, .side-square:hover .caption-overlay, #x-large-square:hover .caption-overlay{
+                visibility:visible;
+           }
+
+           /* this is to make the navbar be in front of the images */
+           #navigation-bar li{
+            z-index:2;
+           }
+           
+           
+/* Responsive gallery */
+@media screen and (max-width: 1250px) {
+    #content-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #imgs-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row .side-square {
+        margin-top: 5px;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 900px) {
+    #gradient-styling {
+        height: auto;
+        min-height: 0;
+        padding: 25px 10px;
+        box-sizing: border-box;
+    }
+
+    #title-wrap {
+        width: auto;
+        max-width: 100%;
+        margin: 0 10px;
+        box-sizing: border-box;
+    }
+
+    #navigation-bar {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #top-menu {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #top-menu > li {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #top-menu a {
+        overflow-wrap: anywhere;
+    }
+
+    .large-square {
+        width: 220px;
+        height: 220px;
+    }
+
+    #x-large-square {
+        width: 280px;
+        height: 220px;
+    }
+
+    .medium-square {
+        width: 160px;
+        height: 160px;
+    }
+
+    .side-square {
+        width: 150px;
+        height: 180px;
+    }
+
+    .caption-overlay {
+        padding: 15px 8px;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .caption-overlay p {
+        margin-top: 15px;
+    }
+}
+
+    /* Mobile screens */
+    @media screen and (max-width: 600px) {
+        #content-container {
+            width: 100%;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        #imgs-container {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .row {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tiny-square {
+            width: 70px;
+            height: 75px;
+        }
+
+        .medium-square {
+            width: 135px;
+            height: 135px;
+        }
+
+        .large-square {
+            width: 180px;
+            height: 180px;
+        }
+
+        .side-square {
+            width: 135px;
+            height: 155px;
+            margin-top: 5px;
+        }
+
+        #x-large-square {
+            width: 220px;
+            height: 170px;
+        }
+
+        .spacing {
+            margin: 4px;
+        }
+
+        /* Keep images inside their gallery boxes */
+        .medium-square > img,
+        .large-square > img,
+        .side-square > img,
+        #x-large-square > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Make captions fit smaller boxes */
+        .caption-overlay {
+            padding: 10px 5px;
+            font-size: 0.85rem;
+            overflow-wrap: anywhere;
+            box-sizing: border-box;
+        }
+
+        .caption-overlay p {
+            margin: 10px 0 0;
+        }
+
+        /* Show captions on touchscreens without relying on hover */
+        .medium-square .caption-overlay,
+        .large-square .caption-overlay,
+        .side-square .caption-overlay,
+        #x-large-square .caption-overlay {
+            padding-top: 10px;
+        }
+
+        /* Keep the heading from overflowing */
+        #title-wrap {
+            width: auto;
+            max-width: 100%;
+            margin: 0 8px;
+            box-sizing: border-box;
+        }
+
+        #title-wrap h1 {
+            font-size: 1.8em;
+        }
+
+        #title-wrap h2 {
+            font-size: 1.15em;
+        }
+    }
+
+    /* Devices that support touch but not hover */
+    @media (hover: none) {
+        .medium-square .caption-overlay,
+        .large-square .caption-overlay,
+        .side-square .caption-overlay,
+        #x-large-square .caption-overlay {
+            visibility: visible;
+        }
+    }
+
+           
+
+
+
+        </style>
+    </head>
+    <body>
+        <!-- for the header styling -->
+        <div id="img-wrapper">
+            <div id="gradient-styling">
+                <div id="title-wrap">
+                    <h1>Gallery</h1>
+                    <h2>Results in Plot Forms</h2>
+                </div> <!-- #title-wrap closed-->
+            </div> <!-- #gradient-styling closed-->
+        </div><!-- #img-wrapper closed-->
+
+         <!-- navigation bar -->
+          <!-- navigation-bar is the parent -->
+        <div id="navigation-bar">
+            <!-- top menu will be our flexbox(parent) for our li -->
+            <ul id="top-menu">
+            <!-- anchor tags are the children -->
+                <li>
+                    <a href="assignment03.html">Home Page</a>
+                    <!-- creating a submenu -->
+                    <!-- submenu will be the the children having position:relative -->
+                    <ul class="sub-menu">
+                        <!-- going to need the section names for each on my page. To do that
+                        I should create id's for each section(I already crated them) -->
+                        <li><a href="assignment03.html#section1">Why This Interests Me</a></li>
+                        <li><a href="assignment03.html#section2">Problem Statement</a></li>
+                        <li><a href="assignment03.html#section3">Approach Overview</a></li>
+                        <li><a href="assignment03.html#section4">Results & Observations</a></li>
+                        <li><a href="assignment03.html#section5">Challenges & What I Learned</a></li>
+                        <li><a href="assignment03.html#section6">Takeaways/Reflection</a></li>
+                        <li><a href="assignment03.html#section7">Links & Credits</a></li>
+                    </ul><!-- .sub-menu ends-->
+                </li>
+                <li><a href="gallery.html">Gallery Page</a></li>
+            </ul><!-- #top-menu -->
+        </div>
+
+        <!-- content container -->
+        <div id="content-container">
+            <div id="imgs-container">
+                <div id="row1" class="row">
+                    <div class="tiny-square spacing">
+
+                    </div>
+
+                    <div class="medium-square spacing">
+                        <img src="img/project_imgs/fast_mode_model.png" alt="fast model">
+                        
+                        <div class="caption-overlay">
+                            <p>Fast Mode Model</p>
+                        </div>
+                    </div>
+
+                    <div class="large-square spacing">
+                        <img src="img/project_imgs/full_mode_model.png" alt="full mode">
+                        <div class="caption-overlay">
+                            <p>Full Mode Model</p>
+                        </div>
+                    </div>
+
+                    <div class="medium-square spacing">
+                        <img src="img/project_imgs/episode_tuning_model.png" alt="episode tuning">
+                        <div class="caption-overlay">
+                            <p>Episode Tuning Model</p>
+                        </div>
+                    </div>
+
+                    <div class="tiny-square spacing">
+                    </div>
+                </div><!-- .row closed -->
+
+                <div class="row">
+                    <div class="side-square spacing">
+                        <img src="img/project_imgs/magnifying-glass.png" alt="magnifying glass">
+                        
+                    </div>
+
+                    <div class="large-square spacing" >
+                         <img src="img/project_imgs/hyperparam_tuning_combination_1.png" alt="hyperparam tuning 1">
+                        <div class="caption-overlay">
+                            <p>Hyperparam Combination Tuning 1</p>
+                        </div>
+                    </div>
+
+                    <div id="x-large-square" class="spacing">
+                        <img src="img/project_imgs/hyperparam_tuning_combination_2.png" alt="hyperparam tuning 2">
+                        <div class="caption-overlay">
+                            <p>Hyperparam Combination Tuning 2</p>
+                        </div>
+                    </div>
+
+                    <div class="large-square spacing">
+                        <img src="img/project_imgs/hyperparam_tuning_combination_3.png" alt="hyperparam tuning 3">
+                        <div class="caption-overlay">
+                            <p>Hyperparam Combination Tuning 3</p>
+                        </div>
+                    </div>
+
+                    <div class="side-square spacing">
+                        <img src="img/project_imgs/batch_size_tuning_model.png" alt="batch size tuning">
+                        <div class="caption-overlay">
+                            <p>Batch Size Tuning Model</p>
+                        </div>
+                    </div>
+                </div><!-- .row closed  -->
+
+                <div id="row3" class="row">
+                    <div class="tiny-square spacing">
+                    </div>
+
+                    <div class="medium-square spacing">
+                        <img src="img/project_imgs/gamma_tuning_model.png" alt="gamma tuning">
+                        <div class="caption-overlay">
+                            <p>Gamma Tuning Model</p>
+                        </div>
+                    </div>
+
+                    <div class="large-square spacing">
+                        <img src="img/project_imgs/learning_rate_tuning_model.png" alt="learning rate tuning model"> 
+                        <div class="caption-overlay">
+                            <p>Learning Rate Tuning Model</p>
+                        </div>
+                    </div>
+
+                    <div class="medium-square spacing">
+                        <img src="img/project_imgs/replay_buffer_size_tuning_model.png" alt="replay buffer tuning model"> 
+                        <div class="caption-overlay">
+                            <p>Replay Buffer Tuning Model</p>
+                        </div>
+                    </div>
+
+                    <div class="tiny-square spacing">
+                    </div>
+                </div><!-- .row closed-->
+            </div><!-- #imgs-container -->
+        </div><!-- #content-contianer closed-->
+
+        <!-- footer -->
+        <div id="footer">
+            Ashley Zapata Minero © 2026
+        </div>
+    </body>
+</html>

@@ -1,0 +1,243 @@
+/* shared external css */
+            /* creating the font families*/
+            @font-face{
+                font-family: "Coder Font";
+                src: url("fonts/Semi-Coder-Regular.otf");
+
+            }
+
+            @font-face{
+                font-family:"Mono Font";
+                src: url("fonts/NovaMono-Regular.ttf");
+            }
+
+            @font-face{
+                font-family:"Hack Font";
+                src: url("fonts/Hack-Regular.ttf");
+            }
+
+            @font-face{
+                font-family:"Space Mono";
+                src:url("fonts/Space-Mono-Regular.ttf");
+            }
+             @font-face{
+                font-family:"Sunshine";
+                src:url("fonts/A little sunshine.ttf");
+            }
+
+            @font-face{
+                font-family:"Architect Write";
+                src:url("fonts/ArchitectsDaughter-Regular.ttf");
+            }
+
+
+            /* using a custom font from 1001freefonts.com */
+            h1, h2, h3, h4{
+                font-family:"Hack Font", Arial, sans-serif;
+            }
+
+            /* using a google font called Patrick Hand */
+            body{
+                /* adding the font to the body */
+                font-family: "Patrick Hand", Arial, sans-serif;
+                font-size:1.2em;
+                background-color: rgb(40,124,76);
+                margin:0 auto;
+                padding:0;
+                text-align: left;
+                
+            }
+
+            #content-container{
+                background-color:rgb(136,189,81);
+                width:800px;
+                border-left:3px solid rgb(234,248,168);
+                border-right:3px solid rgb(234,248,168);
+                /* margin:0px auto; - I am removing this because I used justify-content:center in #content-container's parent container*/ 
+                /* padding:10px; */
+               
+            }
+            ul{
+                list-style-type:none;
+            }
+            a{
+                text-decoration:none;
+            }
+            #img-wrapper{
+                margin:0px 0px;
+                background-image:url("img/taxi_gif.gif");
+                background-size:cover;
+                /* height:300px; */
+                width:100%;
+                background-position-y:-80px;
+            }
+
+            #footer{
+                background-color: rgb(181,240,250);
+                margin:0px auto;
+                text-align:center;
+                padding: 20px 20px;
+                border-top:1px solid rgb(234,248,168);
+                
+            }
+            #gradient-styling{
+                width: 100%;
+                background-color:rgba(234,248,168,0.4);
+                /* text-align:center;
+                margin: 0 auto;
+                padding-top:23px;
+                line-height:8; */
+                height:250px;
+                padding-top:50px;
+            }
+            #title-wrap{
+                height:auto;
+                width:600px;
+                margin-left:30px;
+                line-height:2;
+                background-color:rgb(224,252,253); 
+                padding-top:10px;
+                border: 5px solid rgb(234,248,168);
+                text-align: center;
+                position:relative;
+            }
+
+            
+            #navigation-bar{
+                /* regular borders added for styling of nav */
+                border-top:5px solid rgb(181,240,250);
+                border-bottom: 1px solid rgb(245, 245, 181);
+                display:flex;
+                justify-content:center;
+                /* background-color:rgb(224,252,253);  */
+                background-color:rgb(181,240,250);
+                /* background-color: rgb(245, 245, 181); */
+                
+            }
+
+
+            #navigation-bar a{
+                /* this is a placeholder so it doesn't jump */
+                border-bottom:0px solid rgb(181,240,250);
+                /* border:1px solid red; */
+                width:200px;
+                text-align:center;
+                padding:10px;
+                color:black;
+                font-size:1.2em;
+            }
+
+            
+            /* for navigation bar's list items will take off the margin and padding
+            for the whole container of ul */
+            #navigation-bar ul{
+                /* border: 2px solid red; */
+                margin:0px;
+                padding:0px;
+            }
+            /*adding the same background to the navigation-bar's li tags  */
+            #navigation-bar li{
+                /* want background color to be the same color
+                as the navigation bar's */
+                background-color:rgb(181,240,250);
+                /* Here just adding the li border-bottom that was
+                added in CSS #navigation-bar li:hover  */
+                border-bottom: 5px solid rgb(181,240,250);
+            }
+           
+
+             /* this will be a flexbox */
+            #top-menu{
+                display:flex;
+                
+                /* align-items:flex-start will get rid of the stretchiness/ie.
+                the overflow into the other column */
+                align-items: flex-start;
+                /* to center it justify-content: center; */
+                justify-content:center;
+            }
+
+            /* when you hover over the navigation bar want it to be highlighted 
+            as well as the previous features i added of the red underline*/
+            /* because I added border-bottom to the li-so I need to respecitvely
+            add that as well to li so no jump happens */
+            #navigation-bar li:hover{
+                color:#900;
+                border-bottom: 5px solid #900;
+                background-color: rgb(253, 255, 254);
+            }
+
+            /* #top-menu li{
+                border: 2px solid red;
+            } */
+
+            /* styling the anchor tags inside navigation-bar 
+            aka the options*/
+            #navigation-bar a{
+                /* have to make it a block because by default it
+                is in-line. If we make it a block we will be able to
+                add a width; */
+                display:block;
+                width:280px;
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+
+            /* will scroll to the section rather than going fast */
+            html{
+                scroll-behavior: smooth;
+            }
+            
+            /* hiding the ul's list items intialy
+            so that just when the user hovers they will 
+            become visible */
+            #top-menu ul{
+                display:none;
+                /* have to add this in order for the navigation-bar
+                to not be affected, and not be stretched across, must 
+                have position: absolute*/
+                position:absolute;
+            }
+
+            /* doing this so that when we hover over li that's
+            part of the navigation-bar elemtn and the child 
+            selecting the ul elment to be shown as a block */
+            #navigation-bar li:hover > ul{
+                display:block;
+            }
+
+            
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 850px) {
+    #content-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #title-wrap {
+        width: auto;
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+
+    #img-wrapper {
+        background-position: center;
+        background-size: cover;
+    }
+
+    #navigation-bar {
+        flex-wrap: wrap;
+    }
+
+    #navigation-bar a {
+        flex: 1 1 120px;
+        width: auto;
+        box-sizing: border-box;
+    }
+}
+
+
+        

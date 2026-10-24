@@ -1,0 +1,7 @@
+body{
+  margin:0px auto;
+  background-image:url('./img/grid_paper_tablet.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding-top:10px;
+}

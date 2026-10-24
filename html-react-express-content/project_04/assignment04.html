@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>My Cart</title>
+
+<style>
+    
+    body{
+        margin-top:0px;
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:0px;
+        background-image: url("imgs/Background5.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position-y:100px;
+        background-color:#F2CA96;
+        font-family: "raleway", Arial, sans-serif;
+    }
+
+    #header{
+        border-top: 3px solid rgb(61, 86, 59);
+        border-bottom: 3px solid rgb(61, 86, 59);
+        padding: 40px;
+        background-color: #ADEBB3;
+        text-align:center;
+        font-size:1.5em;
+    }
+    .img-text-container img{
+        height:100%;
+        width:100%;
+        /* border:2px solid red; */
+        /* to cover the container */
+        object-fit:cover;
+       
+    }
+    /* container for all the image */
+    .img-container{
+        height:250px;
+        width:200px;
+    }
+    /* these will be the children */
+    .img-text-container{
+        background-color: rgba(255,255,255,0.3);
+        /* setting width and height for the container */
+        width:200px;
+        height:315px;
+        /* border:2px solid purple; */
+        text-align:center;
+        /* adding a cursor */
+        cursor: pointer;
+       
+    }
+    /* this is the wrapper of all images and texts so will be the
+    parent of .img-text-container */
+    #all-img-text-wrapper{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+        /* border: 2px solid black; */
+       
+    }
+    /* want to make this position:relative so we can structure the inside nicely with children */
+    #all-content-wrapper{
+        /* border:2px solid green; */
+       
+        min-height:100vh;
+        width:auto;
+        margin-top:60px;
+        padding-bottom:45px;
+    }
+    /* making this child absolute to be within the parent scope */
+    #subtotal-line{
+        background-color: rgba(0,0,0,0.7);
+        color:white;
+        padding:10px;
+        margin-top:20px;
+        width:300px;
+
+    }
+    #footer{
+        background-color: rgb(61, 86, 59);
+        color:white;
+        padding:15px;
+        text-align:center;
+    }
+  
+</style>
+</head>
+<body>
+    <div id="header">
+        My Shopping Cart 
+    </div>
+    <!-- content container of all content -->
+    <div id="all-content-wrapper">
+        <div id="all-img-text-wrapper">
+            <!-- image and text container -->
+            <div id="img-item1" class="img-text-container">
+                <!-- img container -->
+                <div class="img-container">
+                    <img src="imgs/shookedPrincess.JPG" alt="chihuahua with a shooked faced">
+                </div> <!-- .img-container closed -->
+            
+                <p>World's Funniest Chihuahua Photos
+                     ~ $<span class="price-tag">34</span>
+                </p>
+                
+                
+            </div><!-- .img-text-container closed-->
+
+            <div id="img-item2" class="img-text-container">
+                <div class="img-container">                
+                    <img src="imgs/kirbies.JPG" alt="kirbies lined up">
+                </div>  <!-- .img-container closed -->
+                <p>Origami Kirbies
+                    ~ $<span class="price-tag">81</span>
+                </p>
+            </div><!-- .img-text-container closed-->
+
+            <div id="img-item3" class="img-text-container">
+                <div class="img-container">
+                    <img src="imgs/img8.png" alt="2000's hairstyle guide">
+                </div> <!-- .img-container closed -->
+                <p>Wavy Pigtail Hairstyling Guide
+                    ~ $<span class="price-tag">120</span>
+                </p>
+            
+            </div><!-- .img-text-container closed-->
+
+            <div id="img-item4" class="img-text-container">
+                <div class="img-container">
+                    <img src="imgs/img1.png" alt="Braided Updo Guide">
+                </div> <!-- .img-container closed -->
+                <p>Braided Updo Hairstyling Guide
+                    ~ $<span class="price-tag">100</span>
+                </p>
+            
+            </div><!-- .img-text-container closed-->
+         </div><!-- .all-img-text-wrappper closed -->
+
+         <!-- make a subtotal div -->
+        <div id="subtotal-line">
+            <!-- intially setting it to 0 -->
+            <p>Shopping Cart Subtotal: $<span id="total-message">0</span>
+            </p>
+        </div>
+
+    </div><!-- #content-wrapper closed -->
+
+    <div id="footer">
+        Ashley Zapata Minero © 2026
+    </div>
+
+    <!-- Javascript part -->
+    <script>
+        // lets get each of the items and access them and then give them each a value
+        // console.log(document.querySelector("#img-item1"))
+        const element1 = document.querySelector("#img-item1")
+        const element2 = document.querySelector("#img-item2")
+        const element3 = document.querySelector("#img-item3")
+        const element4 = document.querySelector("#img-item4")
+        const priceElement = document.querySelector(".price-tag")
+        const price1 = 34
+        const price2 = 81
+        const price3 = 120
+        const price4 = 100
+        // This is for the array one
+        //getting the current item price
+        const priceTags = document.querySelectorAll(".price-tag")
+        
+        const spanTagElement = document.querySelector("#total-message")
+        
+
+        // console.log(spanTagElement)
+        //THIS IS FOR ONE ELEMENT(Element one)
+        //if element1 is clicked as in chihuahua img then will do the following
+        // element1.onclick = function(){
+        //     console.log("Clicked on Chihuahua image and text element")
+        //     // // updating inner html based on price given
+        //     // spanTagElement.innerHTML = price1
+        //     const innerSpan = spanTagElement.innerHTML
+        //     console.log(innerSpan) //this is 0
+
+        //     //right now that is a string converting it into a Number/int type
+        //     const innerSpanNumber = parseInt(innerSpan)
+        //     console.log("Changed to an int")
+        //     console.log(innerSpanNumber)
+
+        //     //accumulating the new total
+        //     const newTotalNumber = innerSpanNumber + price1
+        //     console.log("new total...")
+        //     console.log(newTotalNumber)
+
+        //     // making the change permanenet by changing it into a unit it 
+        //     //recognizes of Strings
+        //     // spanTagString = `$${newTotalNumber}`
+        //     // spanTagElement.innerHTML = spanTagString
+        //     spanTagElement.innerHTML = newTotalNumber
+        // }
+
+        //Selecting all of the boxes
+        const allImgTextContainers = document.querySelectorAll(".img-text-container")
+        console.log("allImgTextContainers...")
+        console.log(allImgTextContainers)
+     
+for(let i=0; i< allImgTextContainers.length;i++){
+                allImgTextContainers[i].onclick = function(){
+                    //console.log("Clicked on"+ i +"and text element")
+                    // // updating inner html based on price given
+                    // spanTagElement.innerHTML = price1
+                    const innerSpan = spanTagElement.innerHTML
+                    console.log(innerSpan) //this is 0
+
+                    //right now that is a string converting it into a Number/int type
+                    const innerSpanNumber = parseInt(innerSpan)
+                    console.log("Changed to an int")
+                    console.log(innerSpanNumber)
+
+                    
+                    // pricetags is an array
+                    console.log("priceTags[i]...")
+                    console.log(priceTags[i])
+
+                    const priceString = priceTags[i].innerHTML
+                    // change to an int
+                    const priceNumber = parseInt(priceString)
+
+                    //accumulating the new total
+                    const newTotalNumber = innerSpanNumber + priceNumber
+                    console.log("new total...")
+                    console.log(newTotalNumber)
+
+                    // making the change permanenet by changing it into a unit it 
+                    //recognizes of Strings
+                    // spanTagString = `$${newTotalNumber}`
+                    // spanTagElement.innerHTML = spanTagString
+                    spanTagElement.innerHTML = newTotalNumber
+                }
+            }
+        
+    </script>
+</body>
+</html>

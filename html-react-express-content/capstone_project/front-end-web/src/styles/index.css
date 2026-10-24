@@ -1,0 +1,32 @@
+body{
+  margin:0px auto;
+  background-image:url('./img/grid_paper_tablet.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding-top:10px;
+}
+
+/* this is for the symbols I am using such as (x) and (+) */
+.material-symbols-outlined{
+  cursor:pointer;
+  font-size:28px;
+}
+/* this is used by both login and register forms for styling their forms */
+.bootstrap-form-wrapper{
+    position:relative;
+    z-index:2;
+    top:200px;
+    left:80px;
+    background-color: rgba(239, 211, 215, 0.9);
+    width:800px;
+    padding:70px;
+    height:420px;
+    border-radius:45px;
+}
+.bootstrap-form-wrapper .row{
+    margin-bottom:40px;
+}
+
+.login-page-site-name-styling{
+    top:-395px;
+}

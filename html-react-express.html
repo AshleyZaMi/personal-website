@@ -1,0 +1,657 @@
+<!-- making a projects page -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Ashley Zapata Minero</title>
+    <link href="styles.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+	<link rel="manifest" href="favicon_io/site.webmanifest">
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icon font -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	<!-- adding lightbox path -->
+	<link href="lightbox/css/lightbox.css" rel="stylesheet">
+
+
+    <style>
+        /* body {
+            padding: 0px;
+            margin: auto;
+            height: fit-content;
+
+        } */
+
+        .image-wrapper {
+            /* the margin here of 0px auto is same as margin-left:auto, margin-right:auto */
+            /* margin: 0px auto; */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            height: object-fit;
+        }
+
+        #column1 {
+            /* padding-left:90px; */
+            /* text-align: left; */
+            /* border:5px solid red; */
+            width: fit-content;
+            display: inline-flex;
+            line-height: 2;
+
+        }
+
+         p {
+            font-size: 19px;
+        } 
+
+        .dec1 {
+            font-size: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .content {
+            /* margin: 0px auto; */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2px 2px;
+            width: 45%;
+            height: auto;
+            background-color: rgba(75, 161, 224, 0.6);
+            /* #fffae4;*/
+            /* adding animation to content */
+        }
+        
+    
+        #backgroundDeco1 {
+            background-image: url("html-react-express-content/img/frontend-to-backend-2.png");
+            width: auto;
+            background-size: cover;
+        }
+
+        /* #secondVersion {
+            width: 80%;
+            /*makes the container bigger than content*/
+            /* seperates from the first content of backgroundDeco1 */
+            /* margin-top: 20px; */
+        /* } */ 
+
+        #transparency-wrap {
+            background-color: rgba(0, 0, 0, 0.4); /* making background a bit darker to make the text standout */;
+            height: 89.5%;
+            width: auto;
+
+
+        }
+
+        h1 {
+            text-shadow: 1px 0px 2px #4d2600;
+            font-size: 2em;
+        }
+
+        #bulletpoints img {
+            width: 25px;
+            height: 25px;
+            margin-top: 34px;
+            /*want margin in order to move away each image*/
+            /* border:1px solid black; */
+        }
+
+        /* #bulletpoints {
+            display: inline-flex;
+            flex-direction: column-reverse;
+            border: 5px solid black;
+            width: 25px;
+            margin-left: 20px;
+        } 
+        */
+
+        /* clearfloat class that every developer uses */
+        .clearfloat {
+            clear: both;
+        }
+
+        #secondVersion p {
+            text-align: center;
+        }
+
+        #column1 ul {
+            padding-left: 6px;
+        }
+
+        h2 {
+            font-size: 1.7em;
+        }
+
+        /* styling so this page lines up with the rest of the other pages */
+        /*	changing the height*/
+        .media-container{
+            height:80vh;
+            overflow: hidden;
+        }
+        
+
+        .media-container img{
+            object-fit: cover;
+            width:100%;
+            height:100%;
+            display: block;
+	    }
+
+        /* will make li the parent, the img and p(and a) tags will be the children*/
+        .bulletpoint-and-item{
+            display:flex;
+            gap:10px;
+            font-size: 1.4em;
+        }
+
+        /* container for the img */
+        .bulletpoint-container{
+            width: 30px;
+            height: auto;
+        }
+        .bulletpoint-and-item p{
+            margin:5px;
+            padding: 0px;
+             /* border:1px solid green; */
+        }
+
+        .bulletpoint-container img{
+            width:30px;
+            /* border:1px solid red; */
+        }
+
+        /* .bullet-point-and-item img{
+            width: 25px;
+        } */
+        .content-and-iframe-container{
+            display:flex;
+            gap:2px;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+
+        /* content wrapper is parent of section class*/
+        #content-wrapper{
+            display:flex;
+            background-color: rgba(255,255,255,0.6);
+            height: auto;
+            width: 440px;
+            padding: 20px 0px 20px 0px;
+            margin:10px;
+            justify-content: center;
+        }
+
+        .section{
+            background-color: rgba(75, 161, 224, 0.6);
+            padding:0px;
+            width:400px;
+        }
+
+        #name-container-animation{
+            animation: fadeIn 3.5s ease-in-out;
+        }
+
+        /* iframe{
+            max-width:60%;
+            overflow:hidden;
+            display:block;
+
+        } */
+
+        .iframe-wrapper{
+            /* make sure content never overflows */
+            width:60%;
+            background-color: azure;
+            /* border:6px solid green; */
+            height:auto;
+            margin:10px;
+        }
+
+        /* frame-control to control the frame within iframe-wrapper */
+        .frame-control{
+            max-width:100%;
+            /* border:1px solid purple; */
+            overflow-x: hidden;
+            overflow-y: hidden;
+            max-height:fit-content;
+            height:100%;
+          
+        }
+
+        iframe{
+            width:100%;
+            height:100%;
+            /* object-fit: cover; */
+            /* border:1px solid red; */
+        }
+    /* responsive web */
+        /* 991px breakpoint - Tablet / Small desktop */
+        @media (max-width: 991px) {
+            /* Example: Adjust project-lab-column and iframe-column flex sizes */
+            .content-and-iframe-container {
+                flex-direction: column;  /* Stack columns vertically */
+                gap: 2px;
+            }
+
+            #content-wrapper, .section{
+                width: 98%;
+            }
+
+            .section{
+                width:96%;
+                display:flex;
+                justify-content: center;
+                /* border:1px solid brown; */
+                flex-direction: column;
+                /* align-items: center; */
+            }
+
+
+            /* changed column1 to parent */
+            #column1{
+                width:100%;
+               
+            }
+
+            /* will make the bulletpoint and item to be layed out side by side */
+            #column1 ul{
+                display:flex;
+                /* border:1px solid blue; */
+                flex-basis: fit-content;
+                align-self:flex-start;
+                flex-wrap: wrap;
+                justify-content:center;
+            }
+
+            /* making sure only three items per row */
+            #column1 ul li{
+                flex: 0 0 40%;
+            }
+            
+                       
+
+            .iframe-wrapper {
+                flex: none;
+                width: 98%;
+                min-width: auto; 
+                background-color: #fff;
+            }  
+
+            /* Resize iframe height for smaller screens */
+           .frame-control {
+                height: 700px; /* lower than desktop */
+            }
+
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .content{
+                width:60%;
+                height:auto;
+            }
+        }
+
+        /* 767px breakpoint - Mobile phones */
+        @media (max-width: 767px) {
+            /* Make navbar show only the mobile version (your Bootstrap d-md-none and d-md-block classes handle this) */
+
+            /* Stack content vertically with some padding */
+            .content-wrapper {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .section,
+            .frame-control {
+                width: 100%;
+                /* min-width: auto; */
+                /*    padding: 0 10px;*/
+            }
+
+             #content-wrapper, .section{
+                width: 98%;
+            }
+            
+            .iframe-wrapper {
+                flex: none;
+                width: 98%;
+                min-width: auto; 
+                background-color: #fff;
+            }  
+
+            .frame-control {
+                height: 500px; /* even smaller iframe height on phones */
+            }
+
+            /* Reduce image height */
+            /* img {
+                height: 30%;
+                width:30%;
+            } */
+
+            h1 {
+                font-size: 36px;
+            }
+
+            /* Optional: reduce navbar font sizes */
+            #navbar ul li a {
+            font-size: 14px;
+            }
+
+             .content{
+                width:75%;
+                height:auto;
+            }
+        }
+
+</style>
+</head>
+
+<body>
+    <!-- Mobile Navbar (Offcanvas) with Custom Structure -->
+    <nav class="navbar navbar-light bg-light d-md-none fixed-top">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+        <img src="img/my_drawn_kitsune.png" alt="kitsune logo" style="height: 57px;">
+        </a>
+
+        <!-- Toggler using Font Awesome -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+        <i class="fas fa-bars" style="color: #0095d0; font-size: 1.9rem;"></i>
+            </button>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start fade" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavLabel">Ashley Zapata Minero</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+            <!-- Projects Dropdown -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Projects <i class="fas fa-caret-down ms-1"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                <li><a class="dropdown-item" href="myProjects.html"> <i class="fas fa-angle-right"></i> ML Projects</a></li>
+                <li><a class="dropdown-item" href="myProjects.html#project1Card">  &emsp; <i class="fas fa-angle-double-right"></i> Pretty Penguins </a></li>
+                <li><a class="dropdown-item" href="myProjects.html#project2Card">&emsp; <i class="fas fa-angle-double-right"></i> Avocados</a></li>
+                <li><a class="dropdown-item" href="myProjects.html#project3Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Regression</a></li>
+                <li><a class="dropdown-item" href="myProjects.html#project4Card">&emsp; <i class="fas fa-angle-double-right"></i> Diabetes Classification</a></li>
+                <li><a class="dropdown-item" href="myProjects.html#project5Card">&emsp; <i class="fas fa-angle-double-right"></i> Classification Revisited</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="html-css.html"><i class="fas fa-angle-right"></i> HTML/CSS Projects</a></li>
+                <li><a class="dropdown-item active" href="html-react-express.html"> <i class="fas fa-angle-right"></i> Front/Back-End Projects</a></li>
+                <li><a class="dropdown-item" href="research_papers.html"><i class="fas fa-angle-right"></i> Research Papers</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="resume/resume.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+
+            </ul>
+        </div>
+        </div>
+    </div>
+    </nav>
+    <!-- Mobile Navbar closed -->
+	
+
+
+	<!-- hide the custom navbar on small screens and show it only from 768px (md) and up. -->
+	<!-- NEW NAVBAR -->
+	<div id="navbar" class="d-none d-md-block">
+		<div id="icon-and-nav-wrapper">
+			<div id="icon-wrapper">
+				<a href="index.html" class="logo">
+					<img src="img/my_drawn_kitsune.png" alt="kitsune logo">
+				</a>
+			</div>
+
+		<div id="nav">
+<!-- it is nested -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<!-- go to this page and find id called ipsum and go to that part of the page -->
+					<a class="active" href="">Projects  <i class="fas fa-chevron-down"></i></a>
+				
+					<ul class="proj-cont">
+                        <div class="column-wrapper">
+                            <li class="column">
+                                <a href="myProjects.html">ML Projects <i class="fas fa-arrow-right"></i></a>
+                            <ul class="sub">
+                                    <li><a href="myProjects.html#project1Card">Pretty Penguins</a></li>
+                                    <li><a href="myProjects.html#project2Card">Avocados</a></li>
+                                    <li><a href="myProjects.html#project3Card">Diabetes Regression</a></li>
+                                    <li><a href="myProjects.html#project4Card">Diabetes Classification</a></li>
+                                    <li><a href="myProjects.html#project5Card">Diabetes Classification Revisited</a></li>
+                            </ul>
+                            </li><!-- .column -->
+                            <li class="column">
+                                <a href="html-css.html">HTML/CSS Projects <i class="fas fa-arrow-right"></i></a>
+                            </li><!-- .column -->
+
+                            <li class="column">
+                                <a class="active" href="html-react-express.html">Front/Back-End Projects <i class="fas fa-arrow-right"></i></a>
+                            </li>
+
+                            <li class="column">
+                                <a href="research_papers.html">Research Papers <i class="fas fa-arrow-right"></i></a>
+                            </li><!-- .column  -->
+						</div>	<!-- .column-wrapper -->
+					</ul>
+				
+				</li>
+				<li><a href="resume/resume.html">Resume</a></li>
+				<!-- <div class="contact-wrapper"> -->
+					<li class="contact"><a href="contact.html">CONTACT ME  <i class="fas fa-arrow-right"></i></a></li>
+				<!-- </div> -->
+
+			</ul><!-- .proj-cont -->
+
+			<div class="clearfloat"></div>
+
+		</div> <!-- #nav --> 
+
+	</div> <!-- #icon-and-nav-wrapper -->
+	</div> <!-- #navbar -->
+
+    <div class="media-container">
+        <!-- adding a wrapper for the top portion -->
+        <div class="media_overlay"></div>
+            <!-- <div id="transparency-wrap" class="backgroundDeco1"> -->
+                <img src="html-react-express-content/img/frontend-to-backend-2.png">
+            <!-- </div> -->
+        
+            <div class="content" id="name-container-animation">
+                <!-- name-overlay contains animation-->
+                <h1 class="name-overlay">Front-End & Back-End Projects</h1>
+                <div class="text-wrapper">
+                    <span class="styling" id="element"></span>
+                    <!-- <p>In these projects I used a combination of CSS, HTML, REACT, EJS, EXPRESS</p> -->
+                </div>
+            </div> <!-- this closes the content class-->
+    </div> <!-- this closes media-container-->
+
+    <!-- content and iframe container  -->
+     <div class="content-and-iframe-container">
+    <!-- wrapping content after media-container -->
+        <div id="content-wrapper">
+            <div class="section">
+                <p><em>Projects Link</em></p>
+
+            <!-- creating a column -->
+            <div id="column1" class="dec1">
+                <ul>
+                    <!-- bulletpoint-and-item is the parent of div, img, and p and a -->
+                    <li class="bulletpoint-and-item">
+                        <!-- sakura bulletpoint container -->
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 1: <a href="html-react-express-content/project_01/assignment01.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 2: <a href="html-react-express-content/project_02/assignment02.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 3: <a href="html-react-express-content/project_03/assignment03.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 4: <a href="html-react-express-content/project_04/assignment04.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 5: <a href="html-react-express-content/project_05/dist/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 6: <a href="html-react-express-content/project_06/dist/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Project 7: <a href="html-react-express-content/project_07/dist/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Milestone 1: <a href="html-react-express-content/capstone_project_milestones/milestone_01/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Milestone 2: <a href="html-react-express-content/capstone_project_milestones/milestone_02/dist/index.html target="targetme"">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Milestone 3: <a href="html-react-express-content/capstone_project_milestones/milestone_03/dist/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Milestone 4: <a href="html-react-express-content/capstone_project_milestones/milestone_04/dist/index.html" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Capstone Project: <a href="https://final-project3-rscm.onrender.com/#/login" target="targetme">Link</a></p>
+                    </li>
+                    <li class="bulletpoint-and-item">
+                        <div class="bulletpoint-container">
+                            <img src="html-react-express-content/img/sakura_image.png" alt="bullet point image">
+                        </div>
+                        <p>Capstone Project summary <a href="html-react-express-content/TAC 303-Full Stack Web Final Project Summary.pdf" target="targetme">Link</a></p>
+                    </li>
+                </ul>
+            </div><!-- closes column1 divider-->
+
+            </div><!-- closes content divider-->
+        </div>
+
+        <!-- Right column: iframe -->
+        <div class="iframe-wrapper">
+            <div class="frame-control">
+                <iframe src="no-content.html" name="targetme" onload="resizeIframe(this)"></iframe>
+            </div>
+        </div> <!-- closes iframe-wrapper class-->
+    </div> <!--this closes content-and-iframe-container class -->
+
+    <div id="footer">
+	    <p>© 2026 Ashley Zapata Minero</p>
+    </div> <!-- #footer-->
+
+<!--  JQuery -->
+    
+<!-- jquery script to change nav bar to white-->
+
+<script>
+  $(window).on("scroll", function () {
+    var triggerPoint = $("h1").offset().top;
+    var scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition >= triggerPoint) {
+      $("#navbar").addClass("scrolled");
+    } else {
+      $("#navbar").removeClass("scrolled");
+    }
+  });
+
+  
+    </script>	
+	<!--  CDN -->
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // setting up typing animation
+        // Setup and start animation!
+    
+        var typed = new Typed('#element', {
+        strings: ['In these projects I used a combination of CSS, HTML, REACT, EJS, EXPRESS.','Which you\'ll see down below.'],
+        typeSpeed: 50,
+        });
+    </script>
+
+     <!-- In your main HTML page (outside iframe) -->
+        <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap JS for modal functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- using Lightbox2,so need the dependency of jquery -->
+	<script src="lightbox/js/lightbox-plus-jquery.js"></script>
+
+
+
+
+</body>
+
+</html>

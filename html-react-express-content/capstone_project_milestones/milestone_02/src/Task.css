@@ -1,0 +1,10 @@
+
+.task-container{
+    position:relative;
+    top:45px; 
+    margin:0 auto;
+    padding-left:10px;
+    background-color:#D9D9D9;
+    height: auto;
+    width:80%;
+}

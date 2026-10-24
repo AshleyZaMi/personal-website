@@ -1,0 +1,39 @@
+#task-manager-wrapper{
+    position:relative;
+    z-index:2;
+    top:105px;
+    left: 25px;
+    border-radius: 40px;
+    background-color:#8E9AAF;
+    width:350px;
+    /* way to make height dynamic to objects inside? */
+    height:800px;
+    font-family: "Righteous", sans-serif;
+    /* padding-bottom:100px; */
+}
+
+/* updating the section name defined in compoenent SectionName */
+.section-name-update{
+    margin-left:50px;
+    color:#F5E5EF;
+}
+
+#tasks-holder{
+    /* moving it below the task manager title portion */
+    position:relative;
+    top:70px; 
+    /* border: 3px solid red; */
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    /* font-size:1.2em; */
+}
+
+#new-task-creator-holder{
+    position:relative;
+    top:45px;
+    /* border: 3px solid blue; */
+}
+
+
+

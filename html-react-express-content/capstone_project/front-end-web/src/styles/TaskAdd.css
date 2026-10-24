@@ -1,0 +1,26 @@
+
+.task-row label, .task-row input{
+    font-family:"Righteous", sans-serif;
+    /* font-size:1.5em; */
+    font-weight:normal;
+    margin-top: 10px;
+}
+
+.task-container{
+    top:0px;
+}
+
+.task-row label{
+    margin-right:2px;
+}
+
+.task-row{
+    display:flex;
+}
+
+#add-button{
+    margin-top:5px;
+    display:flex;
+    justify-content:flex-end;
+    margin-right:11px;
+}

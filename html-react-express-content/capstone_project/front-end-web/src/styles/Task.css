@@ -1,0 +1,31 @@
+
+.task-container{
+    position:relative;
+    top:45px; 
+    z-index:2;
+    margin:0 auto;
+    padding-left:10px;
+    background-color:#D9D9D9;
+    height: auto;
+    width:80%;
+    font-size:13px;
+    /* this is so that the text doesn't stay just in one line but wraps */
+    /* overflow-wrap:anywhere; */
+    overflow:hidden;
+}
+/* container holding bothh (edit) and (x) buttons */
+#buttons-container{
+    display:flex;
+    justify-content:flex-end;
+}
+/* here to move the update button to the left side */
+#update-button{
+    margin-top:5px;
+    margin-right:11px;
+}
+
+/* here to move the delete button to the left side */
+#remove-button{
+    margin-top:5px;
+    margin-right:11px;
+}

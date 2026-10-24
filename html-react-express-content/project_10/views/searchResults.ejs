@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DVD Search Results</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/">Home</a></li>
+		<li class="breadcrumb-item"><a href="/searchForm">Search</a></li>
+		<li class="breadcrumb-item active">Results</li>
+	</ol>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 mt-4">DVD Search Results</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-12 mt-4">
+				<!-- this is the view that is used for /searchForm view -->
+				<a href="/searchForm" role="button" class="btn btn-primary">Back to Form</a>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+		<div class="row">
+			<div class="col-12">
+
+				Showing <%= resultsObj.length %> result(s).
+
+			</div> <!-- .col -->
+			<div class="col-12">
+				<table class="table table-hover table-responsive mt-4">
+					<!-- these are the column names -->
+					<thead>
+						<tr>
+							<th>DVD Title</th>
+							<th>Genre</th>
+							<th>Rating</th>
+							<th>Award</th>
+							<th>Release Date</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<!-- we don't want to hard code so we'll do it dynamically -->
+						<!-- <tr>
+							<td>1998 Olympic Skating Exhibition Highlights</td>
+							<td>Special Interest</td>
+							<td>NR</td>
+							<td></td>
+							<td></td>
+						</tr> -->
+
+						<% resultsObj.forEach((row) => {%>
+							<tr>
+								<td><%= row.title %></td>
+								<td><%= row.genre %></td>
+								<td><%= row.rating %></td>
+								<td><%= row.award %></td>
+								<td><%= row.release_date %></td>
+							</tr>
+						<%})%>
+
+					</tbody>
+				</table>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+		<div class="row mt-4 mb-4">
+			<div class="col-12">
+				<a href="/searchForm" role="button" class="btn btn-primary">Back to Form</a>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+</body>
+</html>

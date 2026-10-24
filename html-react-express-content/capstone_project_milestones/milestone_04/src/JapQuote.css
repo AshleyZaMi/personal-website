@@ -1,0 +1,14 @@
+#jap-quote{
+    margin-top:40px;
+}
+
+#jap-quote, #eng-translation{
+    position:relative;
+    margin-left:26px;
+    font-size: 1.2em;
+}
+
+
+#eng-translation{
+    margin-top:-10px;
+}

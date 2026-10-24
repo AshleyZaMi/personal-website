@@ -1,0 +1,36 @@
+
+.navigation-bar{
+    display:flex;
+    /* border:2px solid black; */
+    border-bottom:1.6px solid #222222;
+    background-color:#BCC6CC;    
+}
+.top-menu{
+    display:flex;
+    /* border:2px solid green; */
+    align-items:flex-start;
+    justify-content:space-between;
+    width:auto;
+    margin:0px;
+    margin-top:12px;
+    margin-bottom:5px;
+    gap:20px;
+    margin-left:50px;
+}
+li{
+    /* border:2px solid red; */
+    padding:10px;
+    font-size:1.3em;
+}
+
+/* removes the bullet points */
+ul{
+    list-style-type:none;
+    /* removed the padding that comes with ul default set values */
+    padding:0px;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}

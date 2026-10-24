@@ -1,0 +1,17 @@
+{
+    "editor.wordBasedSuggestions": "off",
+    "C_Cpp.autocomplete": "disabled",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.autoClosingOvertype": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.codeActionWidget.includeNearbyQuickFixes": false,
+    "editor.editContext": false,
+    "editor.experimental.asyncTokenization": false,
+    "css.completion.completePropertyWithSemicolon": false,
+    "less.completion.completePropertyWithSemicolon": false,
+    "scss.completion.completePropertyWithSemicolon": false,
+    "javascript.suggest.completeJSDocs": true,
+    "typescript.suggest.completeJSDocs": false,
+    "javascript.suggest.enabled": false
+}

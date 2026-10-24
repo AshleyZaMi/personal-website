@@ -1,0 +1,51 @@
+#pomo-wrapper{
+    position:relative;
+    z-index:2;
+    top:-540px;
+    left:450px;
+    background-color:#EFD3D7;
+    width:350px;
+    height:300px;
+    border-radius:30px;
+}
+
+.pomo-section-name-update{
+    font-size:1.6em;
+}
+
+.pomo-pink-field-update{
+    margin-left:60px;
+}
+
+#task-dropdown{
+    margin-left:30px;
+    margin-right:20px;
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+label{
+    font-size: 1.2em;
+}
+
+select{
+    height:40px;
+    font-size:0.95em;
+}
+
+#button-manager{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.start-button{
+    background-color:#AAD5A7;
+}
+
+.stop-button{
+    background-color:#D48695;
+}

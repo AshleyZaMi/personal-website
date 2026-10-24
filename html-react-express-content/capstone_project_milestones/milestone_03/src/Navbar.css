@@ -1,0 +1,42 @@
+/* parent of all children */
+#navbar-wrapper{
+    /* making it fixed so can put a z-index on it, so navbar is above
+    the background overlay, because z-index is higher */
+    position:absolute;
+    z-index:2;
+    top:0;
+    width:100%;
+    border-bottom: 3px solid black;
+    display: flex;
+    background-color:#DEE2FF;
+    height:70px;
+    gap:25%;
+    font-family: "Nanum Gothic Coding", monospace;
+}
+
+#logo{
+    /* border: 2px solid purple; */
+    margin-left:6%;
+    margin-right: 60px;
+    margin-top:17px;
+    font-size: 2.1em;
+    text-shadow: 2px 2px 5px #ffffff;
+}
+#logo a{
+    text-decoration:none;
+}
+#logo:hover {
+    text-shadow: 2px 2px 5px #47e1fd;
+}
+/* parent 2*/
+#tabs-section{
+    display:flex;
+    gap:25%;
+}
+/* children of parent 2*/
+.section{
+    width:170px;
+    height:45px;
+    margin-top:10px;
+}
+

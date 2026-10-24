@@ -1,0 +1,15 @@
+.pos-pink-text-styling{
+    width:90%;
+}
+
+.pos-button-styling{
+    background-color: #AAD5A7;
+}
+
+#pos-button-wrapper{
+    margin-top:20px;
+    display:flex;
+    /* making the post button be on the right */
+    justify-content:flex-end;
+    margin-right:50px;
+}

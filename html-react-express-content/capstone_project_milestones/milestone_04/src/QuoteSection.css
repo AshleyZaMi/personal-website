@@ -1,0 +1,16 @@
+
+#quote-section{
+    position:relative;
+    z-index:2;
+    /* to be positioned to the left of task manager */
+    top:-680px;
+    left:450px;
+    width:350px;
+    height:150px;
+    background-color:#E9EBFA;
+    border-radius:30px;
+}
+
+.quote-section-name-update{
+    font-size:1.2em;
+}

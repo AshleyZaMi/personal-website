@@ -441,21 +441,42 @@
 		}
 }
 	.proj-cont{
-		height:auto;
-		width:627px;
-/*		border:3px solid green;*/
+		/* adding new code for better item positioning this is the parent */
+		display:inline-block;
+		width:350%;
+		/* border:3px solid green; */
 		padding:0px;
 		background-color: white;
 		animation:height 0.8s ease;
-
+		padding:0px;
 	}
+
+	/* .proj-cont li{
+		display:block;
+		margin:2px 10px;
+		
+	} */
+
+	.column-wrapper{
+		display:flex;
+		gap:5px;
+		/* border:3px solid green; */
+		background-color: white;
+		animation:height 0.8s ease;
+		flex-basis: fit-content;
+		align-self: flex-start;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
 	.column{
-		display:inline-block;
-		width: 200px;
+		/* display:block; */
+		/* width: 80%; */
 		height:auto;
 		margin:0;
-/*		border:3px solid black;*/
+		/* border:3px solid black; */
 		animation:height 0.8s ease;
+		flex: 0 0 44.4444%;
 
 	}
 
@@ -465,7 +486,7 @@
 		height:350px;
 		background-color: white;
 		margin:0 auto;
-/*		border: 5px solid green;*/
+		/* border: 5px solid purple; */
 	}
 	
 	#nav ul .bigger .sub li{
@@ -769,6 +790,19 @@
   color: red !important;
 }
 
+/* commin to myProjects.html and html-react-express.html */
+.styling{
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+	}
+
+.text-wrapper{
+		padding-left:50px;
+		padding-right: 50px;
+		text-align: center;
+		margin:0 auto;
+		max-width: 900px;
+	}
 
 
 

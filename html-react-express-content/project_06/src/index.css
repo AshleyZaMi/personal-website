@@ -1,0 +1,15 @@
+body{
+  margin:0px auto;
+  padding:0px;
+  background-color:#BCC6CC;
+  font-family:"Lexend", sans-serif;
+}
+
+p, a{
+  font-family:"Dosis", sans-serif;
+}
+html{
+  scroll-behavior:smooth;
+}
+
+

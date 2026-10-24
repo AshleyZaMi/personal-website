@@ -1,0 +1,16 @@
+.footer{
+    position:relative;
+    bottom:0;
+    z-index:2;
+    background-color:#DEE2FF;
+    height:60px;
+    width:100%;
+}
+
+.footer p{
+    position:relative;
+    top:20px;
+    left:50px;
+    font-size:1.2em;
+    font-family: "Nanum Gothic Coding", monospace;
+}

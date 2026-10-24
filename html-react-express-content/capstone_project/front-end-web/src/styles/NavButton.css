@@ -1,0 +1,26 @@
+#l-shaped-border{
+    position:relative;
+    left:94px;
+    width:70px;
+    height:45px;
+    /* background-color:blue; */
+    border-bottom: 3px solid black;
+    border-right:3px solid black;
+}
+#nav-button{
+    /* this is the parent */
+    position:absolute;
+    background-color: #E5F8FC;
+    width:170px;
+    height:45px;
+    font-size: 2.1em;
+    border:none;
+    font-family: "Nanum Gothic Coding", monospace;
+
+}
+
+#button-name{
+    position:relative;
+    top:6px;
+    right:78px;
+}

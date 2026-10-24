@@ -1,0 +1,17 @@
+
+#past-posts-wrapper{
+    background-color:#8E9AAF;
+    position:relative;
+    z-index:2;
+    /* top:300px; */
+    width:1000px;
+    border-radius:25px;
+    top:180px;
+    left:25px;
+    height:510px;
+}
+
+.past-posts-section-name-styling{
+    color:#F5E5EF;
+}
+

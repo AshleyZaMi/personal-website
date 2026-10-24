@@ -1,0 +1,19 @@
+/* this should be the parent */
+.featured-products-container{
+    margin-top:10px;
+    /* border:3px solid blue; */
+    padding:25px 70px 55px 70px;
+    background-color:#9ABDDC;
+    box-shadow:0px -3px 8px #222222;
+}
+.products-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap:20px;
+}
+.section-header{
+    font-size:1.7em;
+    /* border:2px solid pink; */
+    margin-bottom:40px;
+}

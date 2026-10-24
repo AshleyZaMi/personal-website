@@ -1,0 +1,125 @@
+/* shared external css */
+body{
+    background-color: rgb(40,124,76);
+    margin:0 auto;
+    padding:0;
+    text-align: left;
+    
+}
+
+#content-container{
+    background-color:rgb(136,189,81);
+    width:800px;
+    border-left:3px solid rgb(234,248,168);
+    border-right:3px solid rgb(234,248,168);
+    /* margin:0px auto; - I am removing this because I used justify-content:center in #content-container's parent container*/ 
+    /* padding:10px; */
+    
+}
+ul{
+    list-style-type:none;
+}
+a{
+    text-decoration:none;
+}
+#img-wrapper{
+    margin:0px 0px;
+    background-image:url("img/taxi_gif.gif");
+    background-size:cover;
+    height:300px;
+    width:100%;
+    background-position-y:-80px;
+}
+
+#footer{
+    background-color: rgb(181,240,250);
+    margin:0px auto;
+    text-align:center;
+    padding: 20px 20px;
+    border-top:1px solid rgb(234,248,168);
+    
+}
+#gradient-styling{
+    width: 100%;
+    background-color:rgba(234,248,168,0.4);
+    /* text-align:center;
+    margin: 0 auto;
+    padding-top:23px;
+    line-height:8; */
+    height:250px;
+    padding-top:50px;
+}
+#title-wrap{
+    height:auto;
+    width:400px;
+    margin-left:30px;
+    line-height:2;
+    background-color:rgb(224,252,253); 
+    padding-top:10px;
+    border: 5px solid rgb(234,248,168);
+    text-align: center;
+    position:relative;
+}
+
+
+#navigation-bar{
+    /* regular borders added for styling of nav */
+    border-top:5px solid rgb(181,240,250);
+    border-bottom: 1px solid rgb(245, 245, 181);
+    display:flex;
+    justify-content:center;
+    /* background-color:rgb(224,252,253);  */
+    background-color:rgb(181,240,250);
+    /* background-color: rgb(245, 245, 181); */
+    
+}
+
+#navigation-bar a{
+    /* this is a placeholder so it doesn't jump */
+    border-bottom:5px solid rgb(181,240,250);
+    /* border:1px solid red; */
+    width:200px;
+    text-align:center;
+    padding:10px;
+    color:black;
+    font-size:1.2em;
+}
+
+#navigation-bar a:hover{
+    color:#900;
+    border-bottom: 5px solid #900;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 850px) {
+    #content-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #title-wrap {
+        width: auto;
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+
+    #img-wrapper {
+        background-position: center;
+        background-size: cover;
+    }
+
+    #navigation-bar {
+        flex-wrap: wrap;
+    }
+
+    #navigation-bar a {
+        flex: 1 1 120px;
+        width: auto;
+        box-sizing: border-box;
+    }
+}
+
+
+        

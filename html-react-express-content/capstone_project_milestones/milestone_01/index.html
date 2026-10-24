@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Milestone 01-Final Project Proposal</title>
+    <!-- adding bootrap stylesheet, is an external css, code they wrote to give us their styling that's in the href-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- linking the style sheet for this particular font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fredoka:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Default CSS: Extra-small devices (phones, up to 575px) */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {}
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {}
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {}
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+
+        body {
+            font-size: 1.2em;
+            background-color: #517891;
+        }
+
+        .header {
+            line-height: 5;
+            font-family: "Fredoka";
+            font-size: 30px;
+            color: white;
+
+        }
+
+        .bolded {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding-bottom: 20px;
+        }
+
+        .my-row {
+            margin-top: 15px;
+        }
+
+        .my-inner-border {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+        }
+
+        .my-background {
+            background-color: black;
+            margin-bottom:25px;
+        }
+
+        .my-square {
+            height: 100%;
+            width: 150px;
+        }
+
+        .my-moon-veil {
+            background-color: #8E9AAF;
+        }
+
+        .my-small-text {
+            font-size: 0.8em;
+            margin-top: 25px;
+        }
+
+        .my-light-grey {
+            background-color: #CBC0D3;
+        }
+
+        .my-soft-blush {
+            background-color: #EFD3D7;
+        }
+
+        .my-simply-lavendar {
+            background-color: #DEE2FF;
+        }
+
+        .my-small-text2 {
+            font-size: 0.8em;
+            margin-top: -5px;
+        }
+
+        .my-pastel-pink {
+            background-color: #F5E5EF;
+        }
+
+        .my-lightest-blue{
+            background-color:#E5F8FC;
+        }
+
+        .my-platinum{
+            background-color:#D9D9D9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="col-12 text-center header">
+        Final Project Proposal
+    </div>
+    <!-- my container for Topic -->
+    <div class="container text-dark border my-background">
+        <!-- column -->
+        <div class="row my-row border my-inner-border bg-light">
+            <div class="row">
+                <span class="bolded">Topic:</span>
+                <p>Language Task Manager</p>
+
+
+            </div>
+            <div class="row">
+                <span class="bolded">Description:</span>
+                <p>In this project, I would like to propose creating a task management system. I want to incorporate a
+                    checklist for users
+                    who are currently learning a language. I also wish to incorporate a bloging system, where I will use
+                    a database to suggest
+                    correct topics gotten from an API or dataset that will be randomized so user can always have a topic
+                    to expand on. I want to
+                    also incorporate word segmentation, as I think it will be helpful to people like me who want to see
+                    sentences decomposed to
+                    better understand how the language works behind the scenes. One of the motivating factors is while
+                    Japanese is a really fun
+                    language to learn, it is also really challenging as an English speaker, so having a space that
+                    motivates you to continue going
+                    forward despite the difficulty will prove useful to learners like me and to myself as well.
+                </p>
+            </div>
+        </div>
+        <!-- col for Audience -->
+
+        <div class="row my-row border my-inner-border bg-light">
+            <span class="bolded">Audience:</span>
+            <p>Japanese Language Learners</p>
+        </div>
+
+
+        <!-- row for Database -->
+
+        <div class="row text-dark border my-inner-border bg-light">
+            <span class="bolded">Database:</span>
+
+            <div class="col-6">
+                <p class="text-decoration-underline">Data stored</p>
+                <ul>
+                    <li>Japanese Quotes of the Day</li>
+                    <li>Suggested Japanese Topics</li>
+                    <li>Suggested Sentence Topic</li>
+                    <li>User tasks (try to connect to pomodermo API if I can)</li>
+                    <li>Blogs written by user</li>
+                    <!-- should i have a sentence bank? that stores sentences users want to keep for reference? -->
+                    <li>Word bank in word segmentation part to allow users to add data to the database(manually)</li>
+                </ul>
+            </div>
+
+
+            <div class="col-6">
+                <p class="text-decoration-underline">Data Source</p>
+                <ul>
+                    <li><a href="https://kotowaza-dictionary.jp/" 
+                        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        target="_blank">Japanese quotes get some from this dictionary page</a></li>
+                    
+                    <li><a href="https://huggingface.co/datasets/shunk031/livedoor-news-corpus" 
+                        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        target="_blank">Blog topics dataset</a></li>
+                    <li><a href="https://github.com/TianyiShi2001/nhk-easy?utm_source=chatgpt.com" 
+                        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        target="_blank">Sentence topic dataset</a></li>
+                    <li><a href="https://pomotracker.app/api_reference" 
+                        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        target="_blank">Pomotracker Api Reference</a></li>
+                    <li><a href="https://github.com/viodid/PomoTracker" 
+                        class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                        target="_blank">Pomotracker github</a></li>
+                  
+                    <!-- should i have a sentence bank? that stores sentences users want to keep for reference? -->
+                    <li>dynamic sentence bank to store users saved words</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- row for Design & Style section -->
+        <div class="row text-dark border my-inner-border bg-light">
+            <span class="bolded">Design & Style:</span>
+            <!-- col 1 for design & color scheme-->
+            <div class="col-6">
+                <p class="text-decoration-underline">Design & Color Scheme:</p>
+                <p> My Design will contain a widget like impression. It will incorporate a mix of Japanese and
+                    English text. Furthermore it will contain a cotton candy theme/wonderland theme for the color
+                    scheme.
+                </p>
+            </div>
+
+            <!-- col 2 for color palete-->
+            <div class="col-6">
+                <p class="text-decoration-underline">Color Palete</p>
+
+                <!-- first row to contain the color -->
+                <div class="row">
+                    <!-- color 1 -->
+                    <div class="col-2 border my-moon-veil my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#8E9AAF</p>
+                        <p class="my-small-text2 text-align">Moon Veil</p>
+                    </div>
+                    <!-- color 2 -->
+                    <div class="col-2 border my-light-grey my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#CBC0D3</p>
+                        <p class="my-small-text2 text-align">Light Grey</p>
+                    </div>
+                    <!-- color 3 -->
+                    <div class="col-2 border my-soft-blush my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#EFD3D7</p>
+                        <p class="my-small-text2 text-align">Soft Blush</p>
+                    </div>
+                    <!-- color 4 -->
+                    <div class="col-2 border my-simply-lavendar my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#DEE2FF</p>
+                        <p class="my-small-text2 text-align">Simply Lavendar</p>
+                    </div>
+
+                    <!-- color 5 -->
+                    <div class="col-2 border my-pastel-pink my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#F5E5EF</p>
+                        <p class="my-small-text2 text-align">Pastel Pink</p>
+                    </div>
+
+                     <!-- color 6 -->
+                    <div class="col-2 border my-lightest-blue my-square border border-black me-3 my-1">
+                        <p class="my-small-text text-align">#E5F8FC</p>
+                        <p class="my-small-text2 text-align">Lightest Blue</p>
+                    </div>
+
+                    <!-- color 7 -->
+                     <div class="col-2 border my-platinum my-square border border-black my-1">
+                        <p class="my-small-text text-align">#D9D9D9</p>
+                        <p class="my-small-text2 text-align">Platinum</p>
+                    </div>
+                     
+
+                </div>
+
+            </div>
+
+            <!-- row for websites that inspired my design -->
+            <div class="row-auto">
+                <p>3 Websites that inspired my design:</p>
+                <ul>
+                    <li>Link 1: <a href="https://www.notion.com/"
+                            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            target="_blank">Notion</a>
+
+                    </li>
+                    <li>Link 2: <a href="https://apps.apple.com/us/app/goal-tracker-griply/id1556692747"
+                            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            target="_blank">Griply</a>
+
+                    </li>
+                    <li>Link 3: <a href="https://ticktick.com/"
+                            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                            target="_blank">TickTick</a>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- row for scope -->
+        <div class="row text-dark border my-inner-border bg-light">
+            <span class="bolded">Scope:</span>
+            <!-- col for the pages amount information -->
+            <div class="col-6">
+                <p>How many pages am I planning to have?</p>
+                <p>3 pages</p>
+                <p class="text-decoration-underline">What are the pages?</p>
+                <ul>
+                    <li>Page 1 - Home Page
+                        <p>(The Task Section, The quote of the day section, The pomodormo section.)</p>
+                    </li>
+                    <li>Page 2 - Blog Page
+                        <p>(Suggested blog topic section, Create a new post section, Past blogs Section)</p>
+                    </li>
+                    <li>Page 3 - Word Segmentation Page
+                        <p>(Sentence recommender section, Enter a sentence with POS generation section)</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- col for the  -->
+            <div class="col-6">
+                <p>(if single page) How many sections am I planning to have?</p>
+                <p>3 sections</p>
+                <p class="text-decoration-underline">What are the sections?</p>
+                <ul>
+                    <li>Section 1 - Home Page
+                        <p>(The Task Section, The quote of the day section, The pomodormo section.)</p>
+                    </li>
+                    <li>Section 2 - Blog Page
+                        <p>(Suggested blog topic section, Create a new post section, Past blogs Section)</p>
+                    </li>
+                    <li>Section 3 - Word Segmentation Page
+                        <p>(Sentence recommender section, Enter a sentence with POS generation section)</p>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- wireframe row -->
+        <div class="row text-dark border my-inner-border bg-light">
+            <span class="bolded">Wireframes:</span>
+            <img src="img/final_project_wireframe.jpg" class="img-fluid" alt="my proposal wireframe">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

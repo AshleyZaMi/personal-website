@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Song Search Results</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 mt-4">Song Search Results</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+	<div class="container">
+		<div class="row mb-4 mt-4">
+			<div class="col-12">
+				<a href="/" role="button" class="btn btn-primary">Back to Form</a>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+		<div class="row">
+			<div class="col-12">
+
+				<!-- Search returned X result(s). -->
+				Search returned <%= totalResults %> result(s).
+
+			</div> <!-- .col -->
+			<div class="col-12">
+				<table class="table table-hover table-responsive mt-4">
+					<thead>
+						<tr>
+							<th>Track ID</th>
+							<th>Track</th>
+							<th>Genre</th>
+							<th>Media Type</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<% tracks.forEach( (row) => { %>
+							<tr>
+								<td><%= row.track_id %></td>
+								<td><%= row.track %></td>
+								<td><%= row.genre %></td>
+								<td><%= row.media %></td>
+							</tr>	
+						<% } ) %>
+
+					</tbody>
+				</table>
+			</div> <!-- .col -->
+
+			<div class="col-12">
+				<nav aria-label="Page navigation example">
+					<ul class="pagination justify-content-center">
+						<li class="page-item">
+							<!-- not enough to put ?page=1 must preserve what the user searched, will have to dynamically
+							 populate the search, so do it in the backend pass in the built url for the page -->
+							<a class="page-link" href="?<%= firstPageUrl %>">First</a>
+						</li>
+						<li class="page-item">
+							<!-- doing same thing for previous page -->
+							<a class="page-link" href="?<%= prevPageUrl%>">Previous</a>
+						</li>
+						<!-- pagination by default shows page 1 -->
+						<li class="page-item active">
+							<!-- <a class="page-link" href="">1</a> -->
+							<a class="page-link" href=""><%= currentPage %></a>
+						</li>
+						<li class="page-item">
+							<!-- using it in ejs -->
+							<a class="page-link" href="? <%= nextPageUrl %>">Next</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="?<%= lastPageUrl %>">Last</a>
+						</li>
+					</ul>
+				</nav>
+			</div> <!-- .col -->
+
+		</div> <!-- .row -->
+		<div class="row mt-4 mb-4">
+			<div class="col-12">
+				<a href="/" role="button" class="btn btn-primary">Back to Form</a>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+</body>
+</html>
